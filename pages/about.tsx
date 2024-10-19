@@ -3,21 +3,21 @@ import Image from 'next/image';
 import React from 'react';
 
 export default function About () {
-  const journey = ["nus.svg", "pslove.svg", "dbs.svg", "cornell.svg", "aimpower.svg", "aiecd.svg"]
+  const journey = ["nus.webp", "pslove.webp", "dbs.webp", "cornell.webp", "aimpower.webp", "aiecd.webp"]
   const hobbies = [
     {
       "title": "🧳 Travelling",
-      "asset": "travelling.svg",
+      "asset": "travelling.webp",
       "description": "My love for travelling spurred me to visit 13 counties, with many more to come!"
     },
     {
       "title": "🎨 Painting",
-      "asset": "painting.svg",
+      "asset": "painting.webp",
       "description": "Painting is therapeutic to me - an avenue to let my creativity flow~"
     },
     {
       "title": "🏃🏽‍♀️‍➡️ Running",
-      "asset": "running.svg",
+      "asset": "running.webp",
       "description": "Running is a form of stress relief as I am one with nature!"
     }
   ]
