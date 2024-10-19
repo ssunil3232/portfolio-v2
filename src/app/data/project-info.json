@@ -2,7 +2,7 @@
     {
       "header": "Insight Edge",
       "name": "<div class='flex flex-row'><p>Insight Edge -&nbsp;</p><p class='text-italic'> Instagram Suite</p></div>",
-      "preview": "/assets/insightEdge.svg",
+      "preview": "/assets/insightEdge.webp",
       "description": "Digital Technology Immersion Practicum project with Meta's Instagram client to design a suite of tools to enhance content creation process.",
       "link": "/projects/insightEdge",
       "tools": [
@@ -15,7 +15,7 @@
     {
         "header": "Microsoft Course Registration",
         "name": "<div class='flex flex-row'><p>Microsoft Course Registration System -&nbsp;</p><p class='text-italic'> MPS Project</p></div>",
-        "preview": "/assets/microsoft.svg",
+        "preview": "/assets/microsoft.webp",
         "description": "Collaboration with Microsoft clients to prototype a Course Registration platform utilizing Microsoft Azure and Angular.",
         "link": "/projects/microsoft",
         "tools": [
@@ -29,7 +29,7 @@
     {
       "header": "Prisoner Express PWA App",
       "name": "<div class='flex flex-row'><p>Prisoner Express App –&nbsp;</p><p class='text-italic'> App Design & Prototyping</p></div>",
-      "preview": "/assets/prisonerExpress.svg",
+      "preview": "/assets/prisonerExpress.webp",
       "description": "App Design & Prototyping project with Prisoner Express to develop a PWA application for both Prisoners and Prisoner Express admins.",
       "link": "/projects/prisonerExpress",
       "tools": [
@@ -43,7 +43,7 @@
     {
       "header": "BeautyAI",
       "name": "<div class='flex flex-row'><p>BeautyAI -&nbsp;</p><p class='text-italic'> Human Computer Interaction Project</p></div>",
-      "preview": "/assets/beautyAi.svg",
+      "preview": "/assets/beautyAi.webp",
       "description": "Human-Centered Design project that addresses the issue of makeup application for users with varied and unique facial compositions.",
       "link": "/projects/beautyAi",
       "tools": [
@@ -55,7 +55,7 @@
     {
       "header": "CaptionCore",
       "name": "<div class='flex flex-row'><p>CaptionCore -&nbsp;</p><p class='text-italic'> Designing Data Products</p></div>",
-      "preview": "/assets/captionCore.svg",
+      "preview": "/assets/captionCore.webp",
       "description": "Designed Data Product that helps companies generate brand-focused captions for publicity posts, using Machine Learning models.",
       "link": "https://github.com/ssunil3232/caption-generator",
       "tools": [
@@ -69,7 +69,7 @@
     {
       "header": "Swift Tunes Decoded",
       "name": "<div class='flex flex-row'><p>Swift Songs Decoded -&nbsp;</p><p class='text-italic'> Interactive Information Visualization</p></div>",
-      "preview": "/assets/swiftTunes.svg",
+      "preview": "/assets/swiftTunes.webp",
       "description": "Interactive Data Visualization analyzing Taylor Swift's songs for danceability, acousticness, etc, as well as use of colors.",
       "link": "https://sonia-sunil-d3.onrender.com/project1/",
       "tools": [
@@ -82,7 +82,7 @@
     {
       "header": "Under the Covers",
       "name": "<div class='flex flex-row'><p>Under the Covers -&nbsp;</p><p class='text-italic'> Interactive Information Visualization</p></div>",
-      "preview": "/assets/underTheCovers.svg",
+      "preview": "/assets/underTheCovers.webp",
       "description": "'Bridgerton' themed exploration of couples' sleeping apart habits, reasons and preferences, through an interactive data visual breakdown.",
       "link": "https://sonia-sunil-d3.onrender.com/project3/",
       "tools": [
