@@ -47,7 +47,7 @@ export default function About () {
               </div>
             </div>
             <div className="flex justify-center lg:w-1/3 md:w-full sm:w-full">
-              <Image src="/assets/about_pic.svg" alt="My Profile Picture" width={400} height={200} className="rounded-lg" />
+              <Image src="/assets/about_pic.webp" alt="My Profile Picture" width={400} height={200} className="rounded-lg" />
             </div>
           </div>
           <div className='flex flex-col w-full' style={{ paddingTop: '2rem'}}>
