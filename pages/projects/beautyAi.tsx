@@ -20,7 +20,7 @@ export default function BeautyAi () {
                     </div>
                 </div>
                 <div className='flex w-full lg:w-[50%] md:w-[50%]  justify-center items-center'>
-                    <Image src={`${baseAssetUrl}mockup.svg`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                    <Image src={`${baseAssetUrl}mockup.webp`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
                 </div>
             </div>
             
@@ -44,10 +44,10 @@ export default function BeautyAi () {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full py-4 ">
                     <div className="w-full">
-                    <Image src={`${baseAssetUrl}participants.svg`} alt="participants" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }} />
+                    <Image src={`${baseAssetUrl}participants.webp`} alt="participants" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }} />
                     </div>
                     <div className="w-full">
-                    <Image src={`${baseAssetUrl}recruitment.svg`} alt="recruitment" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }}/>
+                    <Image src={`${baseAssetUrl}recruitment.webp`} alt="recruitment" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }}/>
                     </div>
                 </div>
                 <div className='flex justify-center w-full'>
@@ -127,7 +127,7 @@ export default function BeautyAi () {
                     </div>
                     <div className="flex w-full justify-center items-center">
                         <div className="w-full lg:w-[60%] sm:w-full md:w-[60%]">
-                        <Image src={`${baseAssetUrl}pillars.svg`} alt="pillars" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={`${baseAssetUrl}pillars.webp`} alt="pillars" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                     </div>
                   </div>

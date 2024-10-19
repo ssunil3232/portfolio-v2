@@ -40,7 +40,7 @@ export default function PrisonerExpress () {
         <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/prisonerExpress/background.svg')] bg-no-repeat">
          <Navbar/>
             <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center px-4 pt-16'>
-                <Image src={`${baseAssetUrl}logo.svg`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+                <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='flex w-full lg:w-[50%] md:w-[50%]  justify-center items-center'>
                 <Image src={`${baseAssetUrl}preview.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
