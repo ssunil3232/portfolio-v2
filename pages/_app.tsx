@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <>
       <Head>
         <title>Sonia Sunil - Frontend Developer | UX Designer</title>
+        <meta property="og:image" content="https://sonias.vercel.app/web_preview_image.jpg" />
+        <meta property="og:url" content="https://sonias.vercel.app" />
         <meta
           name="description"
           content="Portfolio website of all my projects"
