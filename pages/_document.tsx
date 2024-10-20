@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Link to Google Fonts */}
         {/* <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
