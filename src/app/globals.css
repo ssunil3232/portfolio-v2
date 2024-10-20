@@ -41,13 +41,23 @@ html, body {
   padding-top: 12rem;
 }
 
+.sonia {
+  font-size: 7rem;
+  line-height: 8rem;
+  color: #d0f9a7;
+}
+
 @media (max-width: 640px) {
   .content-bg {
-    padding-top: 8rem;
+    padding-top: 4rem;
   }
   .content{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .sonia {
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 
@@ -58,6 +68,10 @@ html, body {
   .content{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .sonia {
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 
@@ -90,12 +104,6 @@ html, body {
   }
 }
 
-.sonia {
-  font-size: 7rem;
-  line-height: 8rem;
-  color: #d0f9a7;
-}
-
 .emphasis-line {
   text-decoration: underline;
   text-decoration-color: #ff00008a;
@@ -119,10 +127,11 @@ html, body {
     display: inline;
   }
 }
-@media (min-width: 1024px) {
-  .yellow-brick-lg {
-    top: 18rem;
-  }
+
+.yellow-brick {
+  object-fit: cover;
+  object-position: center;
+  top: 18rem;
 }
 
 @media (max-width: 768px) {
@@ -131,8 +140,13 @@ html, body {
   }
 }
 
-@media (max-width: 1023px) {
-  .yellow-brick-sm {
+@media (max-width: 640px) {
+  .yellow-brick {
+    top: 18rem;
+  }
+}
+@media (max-width: 1024px) {
+  .yellow-brick {
     top: 45rem;
   }
 }
