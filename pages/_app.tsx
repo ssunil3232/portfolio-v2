@@ -2,6 +2,7 @@ import { nunito } from '@/app/ui/fonts';
 import '../src/app/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
         <div className={nunito.className}>
           <Component {...pageProps} />
+          <Analytics />
         </div>
     </>
         
