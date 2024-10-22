@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Sonia's Portfolio",
@@ -14,6 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex-col">
           {children}
+          <Analytics />
       </body>
     </html>
   );
