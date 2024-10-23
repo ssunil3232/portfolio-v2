@@ -6,25 +6,25 @@ import { ScrollTop } from 'primereact/scrolltop';
 export default function BeautyAi () {
    const baseAssetUrl = "/assets/beautyAi/";
     return (
-        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/beautyAi/background.svg')] bg-no-repeat">
+        <div className="flex w-full min-h-screen flex-col items-center bg-[url('/assets/beautyAi/background.svg')] bg-no-repeat bg-cover">
          <Navbar/>
             {/* <div className="absolute top-0">
                 <Image src={`${baseAssetUrl}backgroundReverse.webp`} alt="bg" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
             </div> */}
-            <div className="flex w-[80%] lg:flex-row md:flex-col sm:flex-col flex-col">
-                <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center px-4 pt-16'>
+            <div className="flex w-[70%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center px-4 pt-16">
+                <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center'>
                     <div className="flex flex-col w-full justify-center">
                         <Image src={`${baseAssetUrl}logo.svg`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
                         <div className="pt-4 flex text-center justify-center" style={{color: '#4f293a', fontSize: 'larger'}}>AI-recommended makeup styles and techniques for you!</div>
                         <Image src={`${baseAssetUrl}hifi.webp`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
                     </div>
                 </div>
-                <div className='flex w-full lg:w-[50%] md:w-[50%]  justify-center items-center'>
+                <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
                     <Image src={`${baseAssetUrl}mockup.webp`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
                 </div>
             </div>
             
-            <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
+            <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%] pt-4'>
                 The aim of this project, was to utilise user-centered design concepts to address the <span className='bolder-text'>challenges faced in tailoring and learning makeup styles and techniques suitable for each unique facial structure, tone, complexion</span>.
                 </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col pt-8">

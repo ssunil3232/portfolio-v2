@@ -7,7 +7,7 @@ export default function Microsoft () {
    const baseAssetUrl = "/assets/microsoft/";
    const painPoints = ["pt1.webp", "pt2.webp", "pt3.webp","pt4.webp","pt5.webp","pt6.webp"];
     return (
-        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/microsoft/background.webp')] bg-no-repeat">
+        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/microsoft/bg.svg')] bg-no-repeat  bg-cover">
          <Navbar/>
             <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center px-4 pt-16'>
                 <Image src={`${baseAssetUrl}title.webp`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
