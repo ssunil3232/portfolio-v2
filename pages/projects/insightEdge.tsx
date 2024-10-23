@@ -38,12 +38,20 @@ export default function InsightEdge () {
       }
    ]
     return (
-        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/insightEdge/insightEdge-bg.svg')] bg-no-repeat ">
+        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/insightEdge/insightEdge-bg.svg')] bg-no-repeat bg-cover">
          <Navbar/>
-            <div className='flex sm:flex-col lg:flex-row md:flex-col flex-col w-[80%] justify-center items-center px-4 pt-8'>
+            <div className="flex w-[70%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center  px-4 pt-16">
+                <div className='flex w-full lg:w-[60%] md:w-[60%] justify-center items-center'>
+                    <Image src={`${baseAssetUrl}header.png`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
+                </div>
+                <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
+                <Image src={`${baseAssetUrl}graphic1.webp`} alt="graphic1" height={450} width={450}layout="responsive" className="flex w-full h-auto"/> 
+                </div>
+            </div>
+            {/* <div className='flex sm:flex-col lg:flex-row md:flex-col flex-col w-[70%] justify-center items-center px-4 pt-8'>
                <Image src={`${baseAssetUrl}header.png`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
                <Image src={`${baseAssetUrl}graphic1.webp`} alt="graphic1" height={450} width={450}layout="responsive" className="flex w-full h-auto"/> 
-            </div>
+            </div> */}
             <div>
                <Image src={`${baseAssetUrl}suiteDisplay.webp`} alt="suite" width={450} height={450} layout="responsive" className="flex w-full h-auto"/>
             </div>

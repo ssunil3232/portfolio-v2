@@ -37,7 +37,7 @@ export default function PrisonerExpress () {
       },
    ]
     return (
-        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/prisonerExpress/background.svg')] bg-no-repeat">
+        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/prisonerExpress/background.svg')] bg-no-repeat bg-cover">
          <Navbar/>
             <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center px-4 pt-16'>
                 <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
