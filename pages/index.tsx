@@ -5,11 +5,11 @@ import Projects from "@/app/components/projects";
 export default function Home() {
   return (
     <>
-    <div className="gradient-bg flex h-full flex-col">
+    <div className="gradient-bg flex min-h-screen flex-col">
         <div className="bg-transparent">
             <Navbar />
         </div>
-        <div className="grid grid-rows-[20px_1fr_20px] items-start lg:justify-items-start md:justify-items-center sm:justify-items-center h-full">
+        <div className="grid grid-rows-[20px_1fr_20px] items-start lg:justify-items-start md:justify-items-center sm:justify-items-center h-full pt-8">
             <IntroPage />
         </div>
     </div>
