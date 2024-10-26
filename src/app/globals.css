@@ -38,7 +38,8 @@ html, body {
 
 .content-bg {
   background: #ffffff;
-  padding-top: 12rem;
+  /* padding-top: 12rem; */
+  /* padding-top: 8rem; */
 }
 
 .sonia {
@@ -48,9 +49,9 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  .content-bg {
+  /* .content-bg {
     padding-top: 4rem;
-  }
+  } */
   .content{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -62,9 +63,9 @@ html, body {
 }
 
 @media (max-width: 1024px) and (min-width: 640px) {
-  .content-bg {
+  /* .content-bg {
     padding-top: 8rem;
-  }
+  } */
   .content{
     padding-left: 2rem;
     padding-right: 2rem;

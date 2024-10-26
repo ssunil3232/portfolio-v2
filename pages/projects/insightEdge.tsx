@@ -169,7 +169,7 @@ export default function InsightEdge () {
                <div className='header-underline mt-2 mb-4'></div>
                <div className="flex w-full justify-center items-center">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[90%]">
-                  <a href=".https://www.figma.com/design/BI2XetztSbvG5K00XR1eOT/User-Stories?node-id=128%3A1214&t=HXJJebhBfwa50Anq-1" target="_blank" rel="noopener noreferrer" title="Resume">
+                  <a href="https://www.figma.com/design/BI2XetztSbvG5K00XR1eOT/User-Stories?node-id=128%3A1214&t=HXJJebhBfwa50Anq-1" target="_blank" rel="noopener noreferrer" title="Resume">
                      <Image src={`${baseAssetUrl}wireframe.webp`} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                   </div>
