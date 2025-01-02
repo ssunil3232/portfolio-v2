@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import projects from "../data/project-info.json";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const Projects = () => {
     {projects.map((project, index) => (
         <Link href={project.link} key={index}>
             <div className="block h-full flex flex-col justify-between">
-                <div className="card-content flex flex-col flex-grow" style={{ background: colors[index] }}>
+                <div className="card-content flex flex-col flex-grow project-card" style={{ background: colors[index], '--glow-color': colors[index] } as CSSProperties}>
                     <Image src={project.preview} alt={`${project.id}-Preview`} width={600} height={400} layout="responsive" className="w-full h-auto rounded-lg" />
                     <h2 style={{ fontSize: 'x-large', color: 'var(--description-color)' }}>{project.header}</h2>
                     <p style={{ fontSize: 'large' }}>{project.description}</p>

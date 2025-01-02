@@ -151,3 +151,11 @@ html, body {
     top: 45rem;
   }
 }
+
+.project-card {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 30px var(--glow-color);
+}

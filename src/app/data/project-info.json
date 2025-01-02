@@ -71,7 +71,7 @@
       "name": "<div class='flex flex-row'><p>Swift Songs Decoded -&nbsp;</p><p class='text-italic'> Interactive Information Visualization</p></div>",
       "preview": "/assets/swiftTunes.webp",
       "description": "Interactive Data Visualization analyzing Taylor Swift's songs for danceability, acousticness, etc, as well as use of colors.",
-      "link": "https://sonia-sunil-d3.onrender.com/project1/",
+      "link": "https://sonia-sunil-d3.vercel.app/tswift-discography/",
       "tools": [
         "Figma",
         "D3.js",
@@ -84,7 +84,7 @@
       "name": "<div class='flex flex-row'><p>Under the Covers -&nbsp;</p><p class='text-italic'> Interactive Information Visualization</p></div>",
       "preview": "/assets/underTheCovers.webp",
       "description": "'Bridgerton' themed exploration of couples' sleeping apart habits, reasons and preferences, through an interactive data visual breakdown.",
-      "link": "https://sonia-sunil-d3.onrender.com/project3/",
+      "link": "https://sonia-sunil-d3.vercel.app/under-the-covers/",
       "tools": [
         "Figma",
         "D3.js",

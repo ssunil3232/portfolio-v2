@@ -22,13 +22,13 @@ export default function Intro() {
               <div> &nbsp;<p style={{ fontSize: 'small', display: 'inline'}}>🟢&nbsp;</p> Available for new projects</div>
             </div>
             <div className="flex flex-row pt-8 gap-2 z-10">
-              <a href="./assets/Resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
+              <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
                 <Image src="/assets/resume.svg" alt="Resume" width={50} height={50} className="rounded-lg" />
               </a>
               <a href="https://github.com/ssunil3232" target="_blank" rel="noopener noreferrer" title="GitHub">
                 <Image src="/assets/github.svg" alt="Github" width={50} height={50} className="rounded-lg" />
               </a>
-              <a href="https://sonia-sunil-d3.onrender.com/" target="_blank" rel="noopener noreferrer" title="D3 Data Visualization">
+              <a href="https://sonia-sunil-d3.vercel.app/" target="_blank" rel="noopener noreferrer" title="D3 Data Visualization">
                 <Image src="/assets/data.svg" alt="Data Visualization" width={50} height={50} className="rounded-lg" />
               </a>
               <a href="mailto:soniasunil47@gmail.com?cc=ss3587@cornell.edu" title="Email"  target="_blank" rel="noopener noreferrer">
