@@ -42,9 +42,9 @@ export default function Intro() {
           <div className="relative flex lg:w-2/3 sm:w-full mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
               <Image src="/assets/profile_pic.png" alt="My Profile Picture" width={500} height={800} className="rounded-lg" />
           </div>
-          {/* <div className="absolute flex left-0 w-full h-[70%] overflow-hidden z-0 yellow-brick" >
-              <Image src="/assets/yellow_bricks.webp" alt="Yellow Bricks" layout="fill" objectFit="cover" className="rounded-lg" />
-          </div> */}
+          <div className="absolute flex w-full h-[100%] overflow-hidden z-0 yellow-brick hidden sm:hidden md:hidden lg:block" >
+              <Image src="/assets/yellowbricks.svg" alt="Yellow Bricks" layout="fill" objectFit="cover" className="rounded-lg" />
+          </div>
         </div>
     );
 }

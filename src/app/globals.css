@@ -132,7 +132,7 @@ html, body {
 .yellow-brick {
   object-fit: cover;
   object-position: center;
-  top: 18rem;
+  /* top: 18rem; */
 }
 
 @media (max-width: 768px) {
