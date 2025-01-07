@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Projects = () => {
     const colors = [
-        "#f5febd", "#FA9D89", "#FDE298", "#F4B7D5", "#D9E5F9", "#E7D6FB", "#eddbc9", "#b8cff3" 
+        "#f5febd", "#FA9D89", "#FDE298", "#F4B7D5", "#D9E5F9", "#E7D6FB", "#eddbc9", "#f3edf7"
     ];
   return (
     <div className='flex flex-col min-h-screen w-full'>

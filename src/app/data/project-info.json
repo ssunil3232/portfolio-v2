@@ -91,5 +91,18 @@
         "Javascript"
       ],
       "id": "project-under-covers"
+    },
+    {
+      "header": "Connections Cherished",
+      "name": "<div class='flex flex-row'>Connections Cherished</div>",
+      "preview": "/assets/connectionsC.webp",
+      "description": "A mobile application that helps users to cherish their connections through tracking and reminders to connect with them again.",
+      "link": "/projects/connectionsCherished",
+      "tools": [
+        "Flutter",
+        "Firebase",
+        "Dart"
+      ],
+      "id": "project-connections-cherished"
     }
   ]

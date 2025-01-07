@@ -33,14 +33,28 @@
 }
 
 .custom-list {
-    list-style: decimal;
-  }
+  list-style: decimal;
+}
   
-  .custom-list li::marker {
-    /* font-size: 1.5rem; */
-    color: var(--focus-color);
-    font-weight: 600;
-  }
+.custom-list li::marker {
+  /* font-size: 1.5rem; */
+  color: var(--focus-color);
+  font-weight: 600;
+}
+
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.bullet-list li {
+    margin-bottom: 10px;
+}
+
+.bullet-list li::marker{
+  margin-bottom: 10px;
+  color: var(--focus-color);
+}
 
 @media (max-width: 640px) {
     .content-bg {
