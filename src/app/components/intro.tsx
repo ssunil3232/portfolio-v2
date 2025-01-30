@@ -1,25 +1,26 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from 'react';
+
 export default function Intro() {
     return (
-        <div className="flex flex-col lg:flex-row row-start-2 justify-between w-full">
-          <div className="flex flex-col lg:w-full items-center lg:items-start sm:items-center md:items-center px-16">
-            <p style={{ fontSize: 'xxx-large', color: '#ededed' }}>Hello I am,</p>
-            <p className="sonia">Sonia</p>
-            <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row row-start-2 justify-center w-full items-center">
+          <div className="flex flex-col w-full items-center px-4" style={{ alignItems: 'center' }}>
+            {/* <p style={{ fontSize: 'xxx-large', color: '#ededed' }} className={crafty_girls.className}>Hello I am,</p>
+            <p className={`${crafty_girls.className} sonia`}>Sonia</p> */}
+            <p style={{ fontSize: 'xxx-large', textAlign: "center"}}>I'm <span className="sonia">Sonia</span>, and I am a product engineer</p>
+            {/* <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col items-center lg:items-start text-center lg:text-left">
               <p style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>Frontend Developer |&nbsp;</p>
               <p style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>UX Designer</p>
+            </div> */}
+            <div className="center-align" style={{ fontSize: 'large', textAlign: "center"}}>
+              <p style={{ fontStyle: 'italic', display: 'inline' }}>with</p> 3+ years of <p style={{ color: 'var(--focus-color)', display: 'inline' }}>designing & developing</p> intuitive digital experiences,
             </div>
-            <div className="center-align-sm" style={{ fontSize: 'large' }}>
-              <p style={{ fontStyle: 'italic', display: 'inline' }}>with</p> a knack for <p style={{ color: 'var(--focus-color)', display: 'inline' }}>designing & developing</p>, aesthetically appealing User Interfaces.
-            </div>
-            <div style={{ fontSize: 'large'}} className="center-align-sm pt-2">
-              Passionate about Human-Centered computing that <p style={{ color: 'var(--focus-color)', display: 'inline' }}>enhance user experiences</p>.
+            <div style={{ fontSize: 'large', textAlign: "center"}} className="center-align pt-2">
+              I merge elegance and empathy to <p style={{ color: 'var(--focus-color)', display: 'inline' }}>craft accessible interfaces that connect with people</p> effortlessly.
             </div>
             <div className="pt-5">
-              <div><p style={{ fontSize: 'x-large', display: 'inline'}}>📍</p>New York, United States</div>
-              <div> &nbsp;<p style={{ fontSize: 'small', display: 'inline'}}>🟢&nbsp;</p> Available for new projects</div>
+              <div><p style={{ fontSize: 'x-large', display: 'inline'}}>📍</p>Boston, United States</div>
+              <div><p style={{ fontSize: 'x-large', display: 'inline'}}>👩🏽‍💻</p>Master's in HCI, Cornell University</div>
             </div>
             <div className="flex flex-row pt-8 gap-2 z-10">
               <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
@@ -39,12 +40,12 @@ export default function Intro() {
               </a>
             </div>
           </div>
-          <div className="relative flex lg:w-2/3 sm:w-full mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
+          {/* <div className="relative flex lg:w-2/3 sm:w-full mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
               <Image src="/assets/profile_pic.png" alt="My Profile Picture" width={500} height={800} className="rounded-lg" />
           </div>
           <div className="absolute flex w-full h-[100%] overflow-hidden z-0 yellow-brick hidden sm:hidden md:hidden lg:block" >
               <Image src="/assets/yellowbricks.svg" alt="Yellow Bricks" layout="fill" objectFit="cover" className="rounded-lg" />
-          </div>
+          </div> */}
         </div>
     );
 }

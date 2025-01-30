@@ -1,3 +1,5 @@
+import { josefin, poppins } from "@/app/ui/fonts";
+import { Gamja_Flower } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -14,6 +16,12 @@ const config: Config = {
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
+        josefin: ['Josefin Sans', 'sans-serif'],
+        caveat: ['Caveat', 'cursive'],
+        gamja: ['Gamja Flower', 'cursive'],
+        poppins: ['Poppins', 'sans-serif'],
+        reenie_beanie: ['Reenie Beanie', 'cursive'],
+        crafty_girls: ["Crafty Girls", 'cursive']
       },
     },
   },

@@ -1,4 +1,4 @@
-import { nunito } from '@/app/ui/fonts';
+import { crafty_girls, gamja, josefin, nunito, poppins, reenie_beanie } from '@/app/ui/fonts';
 import '../src/app/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -15,8 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Portfolio website of all my projects"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet"></link>
       </Head>
-        <div className={nunito.className}>
+        <div className={poppins.className}>
           <Component {...pageProps} />
           <Analytics />
         </div>

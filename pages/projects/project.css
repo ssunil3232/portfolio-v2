@@ -7,15 +7,19 @@
 }
 
 .header-text {
-    font-size: x-large;
+    /* font-size: x-large; */
     color: var(--title-color);
     text-align: center;
+    /* font-weight: 400; */
+    font-size: large;
     font-weight: 400;
 }
 
 .description-text {
-    font-size: large;
+    /* font-size: large; */
     color: var(--title-color);
+    font-size: medium;
+    font-weight: 200;
 }
 
 .bolder-text{
@@ -27,10 +31,10 @@
     color: var(--focus-secondary);
 }
 
-.header-title {
+/* .header-title {
     font-size: xx-large;
-    color: var(--focus-color)
-}
+    color: var(--focus-color);
+} */
 
 .custom-list {
   list-style: decimal;

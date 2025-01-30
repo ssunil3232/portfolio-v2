@@ -7,7 +7,7 @@ const Navbar = () => {
       <ul className="flex gap-4">
         <li style={{borderRadius: '30px', background: '#d0405891'}} className='px-5 py-1'><a href="/" className="hover:underline">Home</a></li>
         <li style={{borderRadius: '30px', background: '#d0405891'}} className='px-5 py-1'><a href="/#projects-section" className="hover:underline">Projects</a></li>
-        <li style={{borderRadius: '30px', background: '#d0405891'}} className='px-5 py-1'><a href="/about" className="hover:underline">About</a></li>
+        {/* <li style={{borderRadius: '30px', background: '#d0405891'}} className='px-5 py-1'><a href="/about" className="hover:underline">About</a></li> */}
       </ul>
     </nav>
   );

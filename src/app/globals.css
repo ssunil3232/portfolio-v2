@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
 :root {
   --background: #ffffff;
@@ -10,6 +11,12 @@
   --focus-color: #d40b37;
   --underline: #a1b2c4;
   --font-nunito: 'Nunito', sans-serif;
+  --font-josefin: 'Josefin Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-caveat: 'Caveat', cursive;
+  --font-gamja: "Gamja Flower", cursive;
+  --font-reenie-beanie: 'Reenie Beanie', cursive;
+  --font-crafty-girls: "Crafty Girls", cursive;
   --focus-secondary: #898582;
   --title-color: rgb(82 74 89);
 }
@@ -21,7 +28,7 @@ html, body {
   display: flex;
   width: 100%;
   scroll-behavior: smooth;
-  font-family: 'Nunito', sans-serif; 
+  font-family: 'Josefin Sans', sans-serif; 
   /* var(--font-nunito); */
   color: var(--foreground);
   background: var(--background);
@@ -43,9 +50,12 @@ html, body {
 }
 
 .sonia {
-  font-size: 7rem;
+  /* @apply font-gamja; */
+  /* font-size: 7rem; */
   line-height: 8rem;
-  color: #d0f9a7;
+  /* color: #d0f9a7; */
+  color: #fd5655;
+  /* font-family: var(--font-gamja); */
 }
 
 @media (max-width: 640px) {
@@ -135,6 +145,56 @@ html, body {
   /* top: 18rem; */
 }
 
+.arrow-down {
+  transform: none;
+  position: absolute;
+  bottom: -10%;
+  right: 25%;
+  width: fit-content;
+  height: fit-content;
+  transform: scale(0.5);
+  /* transform: translateX(-50%); */
+}
+
+.arrow-down img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.arrow-down-about {
+  position: absolute;
+  top: -6rem;
+  left: -18rem;
+  /* transform: translateX(-50%); */
+}
+
+.focus-arrow {
+  position: absolute;
+  top: -3rem;
+  right: -8rem;
+  transform: scale(0.5);
+}
+
+
+.profile-pic {
+  right: 0;
+  /* top: -50%; */
+}
+
+.arrow-1 {
+  justify-content: center;
+  /* transform: scale(0.8) rotate(-50deg); */
+  padding-left: 18%;
+}
+
+.arrow-2 {
+  justify-content: start;
+  /* transform: scale(0.8) rotate(-50deg); */
+  padding-right: 18%;
+}
+
 @media (max-width: 768px) {
   .center-align-sm {
     text-align: center;
@@ -145,6 +205,30 @@ html, body {
   .yellow-brick {
     top: 18rem;
   }
+  .arrow-1 img {
+    transform: rotate(-50deg);
+  }
+  .arrow-1 {
+    padding-left: 0;
+  }
+  /* .arrow-2 img {
+    transform: rotate(-50deg);
+  } */
+  .arrow-2 {
+    padding-left: 0;
+  }
+  .arrow-down {
+    bottom: revert-layer;
+    right: 0%;
+    /* left: 50%; */
+    position: relative;
+    /* transform: rotate(135deg); */
+    transform: rotate(-60deg) scale(0.5);
+  }
+  /* .profile-pic {
+    right: 0;
+    top: 0%;
+  } */
 }
 @media (max-width: 1024px) {
   .yellow-brick {
@@ -158,4 +242,33 @@ html, body {
 
 .project-card:hover {
   box-shadow: 0 0 30px var(--glow-color);
+}
+
+.underline-animation {
+  position: relative;
+  cursor: pointer;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--focus-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.underline-animation.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.header-title {
+  font-size: xx-large;
+  color: var(--focus-color);
+  font-family: var(--font-reenie-beanie);
 }

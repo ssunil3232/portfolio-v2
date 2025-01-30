@@ -9,10 +9,10 @@ export default function ConnectionsCherished () {
     return (
         <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/connectionsCherished/background.svg')] bg-no-repeat bg-cover">
          <Navbar/>
-            <div className='flex w-full lg:w-[50%] md:w-[50%]  justify-center items-center pb-8'>
+            <div className='flex w-[50%] lg:w-[30%] md:w-[30%] sm:w-[50%]  justify-center items-center pb-8'>
                 <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
-            <div className='flex w-full lg:w-[50%] md:w-[50%]  justify-center items-center py-8'>
+            <div className='flex w-[80%] lg:w-[50%] md:w-[50%] sm:w-[80%] justify-center items-center py-8'>
                 <Image src={`${baseAssetUrl}preview.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
@@ -45,52 +45,52 @@ export default function ConnectionsCherished () {
                     Development details
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
-                <div className='w-full flex flex-col items-center pt-4 pl-8'>
-                    <div className="w-full picture-header pl-8 justify-start">
+                <div className='w-full flex flex-col items-start pt-4'>
+                    <div className="w-full picture-header justify-start">
                         Flutter framework:
                     </div>
-                    <div className='w-[90%] flex flex-col items-center'>
+                    <div className='w-[90%] flex flex-col items-center pl-8'>
                     <ol className="bullet-list">
                         <li>
-                            <div>
+                            <div className="description-text">
                                 Leveraged Flutter’s cross-platform capabilities to create a smooth and responsive user experience on both iOS and Android.
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div className="description-text">
                                 Built reusable widgets for components like reminders and dashboards.
                             </div>
                         </li>
                     </ol>
                   </div>
                 </div>
-                <div className='w-full flex flex-col items-center pt-4 pl-8'>
-                    <div className="w-full picture-header pl-8 justify-start">
+                <div className='w-full flex flex-col items-start pt-4'>
+                    <div className="w-full picture-header justify-start">
                         Firestore Integration:
                     </div>
-                    <div className='w-[90%] flex flex-col items-start'>
+                    <div className='w-[90%] flex flex-col items-start pl-8'>
                     <ol className="bullet-list">
                         <li>
-                            <div>
+                            <div className="description-text">
                                 Implemented a Firestore backend to store user data and reminder settings, securely and in real-time.
                             </div>
                         </li>
                     </ol>
                   </div>
                 </div>
-                <div className='w-full flex flex-col items-center pt-4 pl-8'>
-                    <div className="w-full picture-header pl-8 justify-start">
+                <div className='w-full flex flex-col items-start pt-4'>
+                    <div className="w-full picture-header justify-start">
                         Connection Management:
                     </div>
-                    <div className='w-[90%] flex flex-col items-center'>
+                    <div className='w-[90%] flex flex-col items-center pl-8'>
                     <ul className="bullet-list">
                         <li>
-                            <div>
+                            <div className="description-text">
                                 Users can add and edit connections with detailed information such as contact frequency and birthdays.
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div className="description-text">
                                 A vibrant dashboard highlights pending connections needing attention, using color-coded prompts to signify urgency (e.g., “It’s been a long time, mate”).
                             </div>
                         </li>

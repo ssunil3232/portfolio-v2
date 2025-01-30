@@ -40,12 +40,12 @@ export default function InsightEdge () {
     return (
         <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/insightEdge/insightEdge-bg.svg')] bg-no-repeat bg-cover">
          <Navbar/>
-            <div className="flex w-[70%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center  px-4 pt-16">
-                <div className='flex w-full lg:w-[60%] md:w-[60%] justify-center items-center'>
+            <div className="flex w-[90%] sm:w-[90%] md:w-[60%] lg:w-[50%] flex-row justify-center px-4">
+                <div className='flex w-[60%] justify-center items-center'>
                     <Image src={`${baseAssetUrl}header.png`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
                 </div>
-                <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
-                <Image src={`${baseAssetUrl}graphic1.webp`} alt="graphic1" height={450} width={450}layout="responsive" className="flex w-full h-auto"/> 
+                <div className='flex w-[40%] justify-center items-center'>
+                  <Image src={`${baseAssetUrl}graphic1.webp`} alt="graphic1" height={450} width={450}layout="responsive" className="flex w-full h-auto"/> 
                 </div>
             </div>
             {/* <div className='flex sm:flex-col lg:flex-row md:flex-col flex-col w-[70%] justify-center items-center px-4 pt-8'>
@@ -138,10 +138,10 @@ export default function InsightEdge () {
             <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-[80%] gap-3">
                   {features.map((item)=>{
                      return(
-                        <div key={item.header} className='flex justify-start items-center flex-col' style={{ fontSize: '25px', marginTop: '20px', fontWeight:'600', color: 'var(--title-color)' }}>
+                        <div key={item.header} className='flex justify-start items-center flex-col' style={{ fontSize: '25px', marginTop: '20px', fontWeight:'500', color: 'var(--title-color)' }}>
                            {item.header}
                            <div className="flex w-full justify-center items-center pt-4">
-                              <span className='flex text-center justify-center w-full lg:w-[70%] sm:w-full md:w-[60%]' style={{ fontSize: '20px', fontWeight:'400', color: 'var(--focus-secondary)' }}>
+                              <span className='flex text-center justify-center w-full lg:w-[70%] sm:w-full md:w-[60%]' style={{ fontSize: 'medium', fontWeight:'400', color: 'var(--focus-secondary)' }}>
                                  {item.description}
                               </span>
                            </div>
