@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet"></link>
       </Head>
-        <div className={poppins.className}>
+        <div className={`${poppins.className} w-[100vw]`}>
           <Component {...pageProps} />
           <Analytics />
         </div>
