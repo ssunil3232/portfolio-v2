@@ -12,17 +12,17 @@ export default function Home() {
         {/* <div className="bg-transparent">
             <Navbar />
         </div> */}
-      <div className="grid grid-rows-[20px_1fr_20px] items-start lg:justify-items-start md:justify-items-center sm:justify-items-center h-full pt-4">
+      <div className="grid grid-rows-[20px_1fr_20px] items-start lg:justify-items-start md:justify-items-center sm:justify-items-center h-full">
         <IntroPage />
       </div>
     </div>
     <div className="flex w-full flex-row arrow-1">
-      <Image src="/assets/arrow-1.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
+      <Image src="/assets/arrow-1.gif" alt="arrow" width={120} height={120} className="rounded-lg" />
     </div>
     {/* <div className="arrow-down flex  justify-center ml-auto z-10">
       <Image src="/assets/arrow2.gif" alt="arrow" width={200} height={800} className="rounded-lg" />
     </div> */}
-    <div className="flex content-bg min-h-screen content pt-8">
+    <div className="flex content-bg min-h-screen content pt-2">
       <div className=" flex flex-col justify-between flex-grow w-full">
         <main className=" items-start lg:justify-items-start md:justify-items-center sm:justify-items-center flex w-full flex-grow">
           <section id="projects-section" className="flex h-full">
