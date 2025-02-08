@@ -6,17 +6,18 @@ import { ScrollTop } from 'primereact/scrolltop';
 export default function BeautyAi () {
    const baseAssetUrl = "/assets/beautyAi/";
     return (
-        <div className="flex w-full min-h-screen flex-col items-center bg-[url('/assets/beautyAi/background.svg')] bg-no-repeat bg-cover">
+        <div className="flex w-full min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
             {/* <div className="absolute top-0">
                 <Image src={`${baseAssetUrl}backgroundReverse.webp`} alt="bg" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
             </div> */}
-            <div className="flex w-[70%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center px-4 pt-16">
+            <div className="flex w-[80%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center px-4 pt-8">
                 <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center'>
                     <div className="flex flex-col w-full justify-center">
-                        <Image src={`${baseAssetUrl}logo.svg`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
-                        <div className="pt-4 flex text-center justify-center" style={{color: '#4f293a', fontSize: 'larger'}}>AI-recommended makeup styles and techniques for you!</div>
-                        <Image src={`${baseAssetUrl}hifi.webp`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+                        <Image src={`${baseAssetUrl}logo3.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+                        {/* <div className="pt-4 flex text-center justify-center" style={{color: '#4f293a', fontSize: 'larger'}}>AI-recommended makeup styles and techniques for you!</div> */}
+
+                        <Image src={`${baseAssetUrl}preview2.png`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
                     </div>
                 </div>
                 <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
@@ -25,8 +26,42 @@ export default function BeautyAi () {
             </div>
             
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%] pt-4'>
-                The aim of this project, was to utilise user-centered design concepts to address the <span className='bolder-text'>challenges faced in tailoring and learning makeup styles and techniques suitable for each unique facial structure, tone, complexion</span>.
-                </div>
+                The aim of this project, was to utilise user-centered design concepts to address the challenges faced in <span className='bolder-text'>tailoring and learning makeup styles</span> and techniques suitable <span className='bolder-text'>for each unique facial structure, tone, complexion</span>.
+            </div>
+            <div className="flex w-full justify-center perspective-container">
+               <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Scope</div>
+                     <div>Human-Computer Interaction Project
+                     </div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Role</div>
+                     <div>UX Researcher</div>
+                     <div>UX Designer</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Timeline</div>
+                     <div>Jul - Dec 2023</div>
+                  </div>
+                  
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Team</div>
+                     <div>1 UX Designer</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                    <div className="perspective-header">Process</div>
+                    <div>UX Research</div>
+                    <div>UX Design</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Recognition</div>
+                     <div><span className='bolder-text'>"Most creative" </span>
+                     award among 60 teams
+                     </div>
+                  </div>
+               </div>
+            </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col pt-8">
                 <div className="header-title">
                     Problem Statement
@@ -40,7 +75,7 @@ export default function BeautyAi () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                To understand the problem space better - to understand the varying challenges, significance of this problem to individuals, current methods and their limitations, we first developed a comprehensive interview protocol and plan.
+                To understand the problem space better - to understand the varying challenges, significance of this problem to individuals, current methods and their limitations, we first developed a comprehensive interview protocol plan.
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full py-4 ">
                     <div className="w-full">
@@ -67,12 +102,13 @@ export default function BeautyAi () {
                 <div className='description-text w-full'>
                     Extracting our raw interview notes, we created a descriptive <span className='bolder-text'>Session Essay on each interview</span> that describes the interview setting, process, users responses, reactions and demonstrations. We then created <span className='bolder-text'>Activity Notes from each session essay</span>, which we categorized under the following <span className='bolder-text'>Affinity Diagram</span>.
                 </div>
-                <div className="flex w-full justify-center items-center pt-4">
+                <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[90%]">
                     <a href="https://miro.com/app/board/uXjVK7eeTlM=/?share_link_id=93610415847" target="_blank" rel="noopener noreferrer">
                         <Image src={`${baseAssetUrl}affinity.webp`} alt="affinity" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
+                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     Insights Gathering
@@ -119,9 +155,15 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[70%]">
-                    <a href="https://miro.com/app/board/uXjVNbfPgj4=/?share_link_id=590673931007" target="_blank" rel="noopener noreferrer">
-                        <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a>
+                    {/* <div className="relative"> */}
+                    <div className="flex w-full justify-center items-center pb-2">
+                                        <Image src={`${baseAssetUrl}arrows_3.png`}  alt="arrow"  width={100} height={100}/>
+                                    </div>
+                        <a href="https://miro.com/app/board/uXjVNbfPgj4=/?share_link_id=590673931007" target="_blank" rel="noopener noreferrer">
+                            <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        </a>
+                        {/* <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-15%] right-[-25%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" /> */}
+                    {/* </div> */}
                     <div className='description-text w-full justify-center text-center py-8'>
                         We then identified <span className='bolder-text' style={{ color: '#B93278' }}>4 primary pillars</span> to implement in our solution:
                     </div>
@@ -166,15 +208,16 @@ export default function BeautyAi () {
                     </div>
                 </div>
                 <div className="header-title pt-4">
-                    Figma Link
+                    Wireframes
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
-                <div className="flex w-full justify-center items-center pt-4 pb-12">
+                <div className="flex w-full justify-center items-center pt-4 pb-12 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
                     <a href="https://www.figma.com/design/XguQMbQ4PK1XiE5dcndTkU/HCI-Figma?node-id=836-9283&t=D22wRVIrBqStiWuz-1" target="_blank" rel="noopener noreferrer">
                      <Image src={`${baseAssetUrl}figma.webp`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
+                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} style={{transform: 'rotate(-90deg)'}} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
             </div>
            <ScrollTop /> 

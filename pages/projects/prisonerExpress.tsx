@@ -37,16 +37,53 @@ export default function PrisonerExpress () {
       },
    ]
     return (
-        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/prisonerExpress/background.svg')] bg-no-repeat bg-cover">
+        <div className="flex w-screen min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
-            <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center px-4 pt-16'>
-                <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
-            </div>
-            <div className='flex w-full lg:w-[50%] md:w-[50%]  justify-center items-center'>
+            {/* <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center px-4'>
+                <Image src={`${baseAssetUrl}headliner2.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+            </div> */}
+            <div className='flex flex-col w-full lg:w-[50%] md:w-[50%]  justify-center items-center'>
+                <Image src={`${baseAssetUrl}headliner6.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
                 <Image src={`${baseAssetUrl}preview.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Prisoner Express creates an opportunity for incarcerated individuals to get information, education and a public forum for creative self-expression. Through newsletters and programs they hope to step through the isolation and alienation of prison life, bringing hope and fostering a sense of community among prisoners.
+            </div>
+            <div className="flex w-full justify-center perspective-container">
+               <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Scope</div>
+                     <div>Prisoner Express<br />
+                     collaboration</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Role</div>
+                     <div>UX Designer</div>
+                     <div>Frontend Developer</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Timeline</div>
+                     <div>Jan - May 2024</div>
+                  </div>
+                  
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Team</div>
+                     <div>2 UX Designers</div>
+                     <div>2 Frontend Developers</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Process</div>
+                     <div>UX Research</div>
+                     <div>UX Design</div>
+                     <div>Frontend Dev</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Recognition</div>
+                     <div><span className='bolder-text'>"Best prototype" </span>
+                     and invited to work with Prisoner Express
+                     </div>
+                  </div>
+               </div>
             </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col pt-8">
                 <div className="header-title">
@@ -72,7 +109,7 @@ export default function PrisonerExpress () {
                     <ol className="custom-list">
                         {keyFindings.map((item, index) => (
                             <li key={index}>
-                            <div>
+                            <div className="description-text">
                                 {item.text}
                                 <span className='bolder-text'>{item.boldText}</span>
                                 {item.suffix}
@@ -89,14 +126,15 @@ export default function PrisonerExpress () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Consolidating the findings from the User Research, we created an Affinity diagram, brainstorming and identifying themes. We extracted information from both the user interview and the survey data to create an Affinity Diagram. We went about to identify, consolidate and extract relevant information, which then narrowed to themes which potentially captures the essence of incarcerated individuals’ needs and expectations.
+                    Consolidating the findings from the User Research, we created an Affinity diagram, brainstorming and identifying themes. We extracted information from both the user interview and the survey data to create an Affinity Diagram. We went about to identify, consolidate and extract relevant information, which then narrowed to themes which potentially <span className='bolder-text'>captures the essence of incarcerated individuals’ needs and expectations</span>.
                 </div>
-                <div className="flex w-full justify-center items-center pt-4">
-                  <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
+                <div className="flex w-full justify-center items-center pt-4 relative">
+                  <div className="w-full lg:w-[90%] sm:w-full md:w-[80%]">
                     <a href="https://www.figma.com/board/mOhCaLDCwLS0LPKF4HtwBv/Prisoner-Express-Affinity-Diagram?node-id=0-1&t=TeS1PB1sBUZ3F0l6-1" target="_blank" rel="noopener noreferrer">
-                     <Image src={`${baseAssetUrl}affinity.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={`${baseAssetUrl}affinity.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
+                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     User Personas & Task Scenarios
@@ -142,6 +180,9 @@ export default function PrisonerExpress () {
                 <div className='description-text w-full'>
                     We then proceeded to research existing reading app interfaces, pasting them on an <span className='bolder-text'>“Idea Board”</span> and highlighting features we felt gelled and wanted our app to consider incorporating. We reviewed apps like <span className='bolder-text'>FBReader, Kindle, AppleBooks, Barnes & Noble, and RecipeKeeper</span> to brainstorm ideas for our Primary users. For the Administrative users, we referenced apps like <span className='bolder-text'>Cornell’s Canvas and Quizlet</span> app.
                 </div>
+                <div className="flex w-full justify-center items-center pt-2">
+                    <Image src={`${baseAssetUrl}arrows_3.png`}  alt="arrow"  width={100} height={100}/>
+                </div>
                 <div className="flex w-full justify-center items-center pt-6">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
                     <a href="https://www.figma.com/board/ZhovCH4zplCXi5do2lVPFF/Idea-Board-for-Prisoner-Express-App?node-id=0-1&t=qqnfSlB1AGa8EbD4-1" target="_blank" rel="noopener noreferrer">
@@ -152,12 +193,13 @@ export default function PrisonerExpress () {
                 <div className='description-text w-full pt-8'>
                     Taking all of these findings, we sketched out a design flow of what we envisioned the app to look like and features it should include. We then wore the hats of users and <span className='bolder-text'>walked through each task scenario</span> we had created with the design, to assess if the features and functionalities incorporated allowed the users to perform the task scenarios smoothly. This evaluation brought about some design changes, which culminated in our <span className='bolder-text'>Final Design</span>.
                 </div>
-                <div className="flex w-full justify-center items-center pt-6">
+                <div className="flex w-full justify-center items-center pt-6 relative">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
                     <a href="https://www.figma.com/board/MhCNAdnU4ZEkhDyAnHmMkM/Design-Flows?node-id=0-1&t=aX20NYmzJCllQQfR-1" target="_blank" rel="noopener noreferrer">
                      <Image src={`${baseAssetUrl}final.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
+                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     Prototyping in VueJS

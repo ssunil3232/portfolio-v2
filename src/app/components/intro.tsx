@@ -7,7 +7,7 @@ export default function Intro() {
           <div className="flex flex-col w-full items-center px-4" style={{ alignItems: 'center' }}>
             {/* <p style={{ fontSize: 'xxx-large', color: '#ededed' }} className={crafty_girls.className}>Hello I am,</p>
             <p className={`${crafty_girls.className} sonia`}>Sonia</p> */}
-            <p style={{ fontSize: 'xxx-large', textAlign: "center"}}>I'm <span className="sonia">Sonia</span>, and I am a product engineer</p>
+            <p style={{ fontSize: 'xxx-large', textAlign: "center"}}>I'm <span className="sonia">Sonia</span>, and I am a product engineer 🫶🏽</p>
             {/* <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col items-center lg:items-start text-center lg:text-left">
               <p style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>Frontend Developer |&nbsp;</p>
               <p style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>UX Designer</p>
@@ -15,14 +15,15 @@ export default function Intro() {
             <div className="center-align" style={{ fontSize: 'large', textAlign: "center"}}>
               <p style={{ fontStyle: 'italic', display: 'inline' }}>with</p> 3+ years of <p style={{ color: 'var(--focus-color)', display: 'inline' }}>designing & developing</p> intuitive digital experiences,
             </div>
-            <div style={{ fontSize: 'large', textAlign: "center"}} className="center-align pt-2">
+            <div style={{ fontSize: 'large', textAlign: "center"}} className="center-align">
               I merge elegance and empathy to <p style={{ color: 'var(--focus-color)', display: 'inline' }}>craft accessible interfaces that connect with people</p> effortlessly.
             </div>
-            <div className="pt-5">
-              <div><p style={{ fontSize: 'x-large', display: 'inline'}}>📍</p>Boston, United States</div>
-              <div><p style={{ fontSize: 'x-large', display: 'inline'}}>👩🏽‍💻</p>Master's in HCI, Cornell University</div>
+            <div className="pt-2" style={{fontWeight: '100', color: 'var(--description-color)'}}>
+              <div><p style={{ fontSize: 'x-large', display: 'inline', fontWeight: '100', color: 'var(--description-color)'}}>📍&nbsp;</p>Boston, United States</div>
+              <div><p style={{ fontSize: 'x-large', display: 'inline', fontWeight: '100', color: 'var(--description-color)'}}>👩🏽‍🎓&nbsp;</p>Master's in HCI, Cornell University</div>
+              <div className="flex flex-row"><p style={{ fontSize: 'x-large', display: 'inline', fontWeight: '100', color: 'var(--description-color)'}}>👩🏽‍💻&nbsp;</p>Product Engineer @ Kidooo.ai, <br/>ex. DBS Bank & Microsoft</div>
             </div>
-            <div className="flex flex-row pt-8 gap-2 z-10">
+            <div className="flex flex-row pt-4 gap-2 z-10">
               <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
                 <Image src="/assets/resume.svg" alt="Resume" width={50} height={50} className="rounded-lg" />
               </a>

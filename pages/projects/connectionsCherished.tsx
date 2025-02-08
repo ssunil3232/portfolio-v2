@@ -7,16 +7,39 @@ export default function ConnectionsCherished () {
    const baseAssetUrl = "/assets/connectionsCherished/";
    
     return (
-        <div className="flex w-screen min-h-screen flex-col items-center bg-[url('/assets/connectionsCherished/background.svg')] bg-no-repeat bg-cover">
+        <div className="flex w-screen min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
-            <div className='flex w-[50%] lg:w-[30%] md:w-[30%] sm:w-[50%]  justify-center items-center pb-8'>
+            <div className='flex w-[50%] lg:w-[30%] md:w-[30%] sm:w-[50%]  justify-center items-center pb-4'>
                 <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
-            <div className='flex w-[80%] lg:w-[50%] md:w-[50%] sm:w-[80%] justify-center items-center py-8'>
-                <Image src={`${baseAssetUrl}preview.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+            <div className='flex w-[80%] lg:w-[70%] md:w-[70%] sm:w-[80%] justify-center items-center pb-8'>
+                <Image src={`${baseAssetUrl}preview.svg`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
-                Connections Cherished is designed to help users nurture their friendships by providing thoughtful reminders to stay in touch. In today’s fast-paced world, maintaining meaningful relationships can often take a backseat. Cherished Connections seeks to address this gap by leveraging intuitive design and seamless functionality to make staying connected effortless.
+                Connections Cherished is designed to help users nurture their friendships by providing <span className='bolder-text'>thoughtful reminders to stay in touch</span>. In today’s fast-paced world, maintaining meaningful relationships can often take a backseat and Cherished Connections seeks to make staying connected effortless.
+            </div>
+            <div className="flex w-full justify-center perspective-container">
+               <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-4 grid-cols-4 gap-2 w-[90%]">
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Scope</div>
+                     <div>Personal Project
+                     </div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                     <div className="perspective-header">Timeline</div>
+                     <div>Jul - Dec 2024</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                    <div className="perspective-header">Process</div>
+                    <div>UX Research</div>
+                    <div>UX Design</div>
+                    <div>Frontend Development</div>
+                  </div>
+                  <div className="flex flex-col perspective-description">
+                    <div className="perspective-header">Recognition</div>
+                    <div>Launch-ready for App store</div>
+                  </div>
+               </div>
             </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col pt-8">
                 <div className="header-title">
