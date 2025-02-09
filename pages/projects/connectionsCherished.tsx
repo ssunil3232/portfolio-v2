@@ -13,7 +13,7 @@ export default function ConnectionsCherished () {
                 <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='flex w-[80%] lg:w-[70%] md:w-[70%] sm:w-[80%] justify-center items-center pb-8'>
-                <Image src={`${baseAssetUrl}preview.svg`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={`${baseAssetUrl}preview2.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Connections Cherished is designed to help users nurture their friendships by providing <span className='bolder-text'>thoughtful reminders to stay in touch</span>. In today’s fast-paced world, maintaining meaningful relationships can often take a backseat and Cherished Connections seeks to make staying connected effortless.

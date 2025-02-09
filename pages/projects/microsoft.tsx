@@ -13,7 +13,7 @@ export default function Microsoft () {
                 <Image src={`${baseAssetUrl}title2.svg`} alt="logo" height={50} width={200}layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='flex w-full lg:w-[80%] md:w-[70%]  justify-center items-center'>
-                <Image src={`${baseAssetUrl}mockup4.svg`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={`${baseAssetUrl}mockup5.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Designed & Prototyped a high-fidelity university course registration system, alleviating the tedious and overwhelming pain experienced by students using existing systems, in collaboration with Microsoft clients.
