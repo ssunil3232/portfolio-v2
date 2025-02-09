@@ -245,7 +245,7 @@ export default function InsightEdge () {
                         <Image src={`${baseAssetUrl}wireframe.webp`} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" />
                      </a>
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} style={{transform: 'rotate(-90deg)'}} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${baseAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title">
                   Files

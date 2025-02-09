@@ -12,8 +12,8 @@ export default function Microsoft () {
             <div className='flex w-full lg:w-[45%] md:w-[50%] justify-center items-center px-4 py-4'>
                 <Image src={`${baseAssetUrl}title2.svg`} alt="logo" height={50} width={200}layout="responsive" className="flex w-full h-auto"/>
             </div>
-            <div className='flex w-full lg:w-[90%] md:w-[50%]  justify-center items-center'>
-                <Image src={`${baseAssetUrl}mockup3.svg`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+            <div className='flex w-full lg:w-[80%] md:w-[70%]  justify-center items-center'>
+                <Image src={`${baseAssetUrl}mockup4.svg`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Designed & Prototyped a high-fidelity university course registration system, alleviating the tedious and overwhelming pain experienced by students using existing systems, in collaboration with Microsoft clients.
@@ -143,7 +143,7 @@ export default function Microsoft () {
                     We then delved into detailing the Figma Prototype, including <span className='bolder-text'>Lo-fi, Mid-fi, and Hi-fi Prototypes</span>. This comprehensive approach ensures a clear and systematic understanding of the essential elements guiding the course registration system’s development.
                </div>
                <div className="flex w-full justify-center items-center pt-4">
-                    <Image src={`${baseAssetUrl}arrows_3.png`}  alt="arrow"  width={100} height={100}/>
+                    <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
                </div>
                <div className='flex flex-col md:flex-row lg:flex-row sm:flex-col justify-center pt-4'>
                     <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/MooiMOAVEL7Oe0OiI0wp5R/Lo-Fi-Prototype?node-id=0-1&t=4IdGsfycJpHyoOJc-1" target="_blank" title="Lo-Fi Prototype">

@@ -157,7 +157,7 @@ export default function BeautyAi () {
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[70%]">
                     {/* <div className="relative"> */}
                     <div className="flex w-full justify-center items-center pb-2">
-                                        <Image src={`${baseAssetUrl}arrows_3.png`}  alt="arrow"  width={100} height={100}/>
+                                        <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
                                     </div>
                         <a href="https://miro.com/app/board/uXjVNbfPgj4=/?share_link_id=590673931007" target="_blank" rel="noopener noreferrer">
                             <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
@@ -217,7 +217,7 @@ export default function BeautyAi () {
                      <Image src={`${baseAssetUrl}figma.webp`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} style={{transform: 'rotate(-90deg)'}} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${baseAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
             </div>
            <ScrollTop /> 

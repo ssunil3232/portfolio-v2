@@ -181,7 +181,7 @@ export default function PrisonerExpress () {
                     We then proceeded to research existing reading app interfaces, pasting them on an <span className='bolder-text'>“Idea Board”</span> and highlighting features we felt gelled and wanted our app to consider incorporating. We reviewed apps like <span className='bolder-text'>FBReader, Kindle, AppleBooks, Barnes & Noble, and RecipeKeeper</span> to brainstorm ideas for our Primary users. For the Administrative users, we referenced apps like <span className='bolder-text'>Cornell’s Canvas and Quizlet</span> app.
                 </div>
                 <div className="flex w-full justify-center items-center pt-2">
-                    <Image src={`${baseAssetUrl}arrows_3.png`}  alt="arrow"  width={100} height={100}/>
+                    <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
                 </div>
                 <div className="flex w-full justify-center items-center pt-6">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
