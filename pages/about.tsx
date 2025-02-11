@@ -8,7 +8,8 @@ import Image from 'next/image';
 import React from 'react';
 
 export default function About () {
-  const journey = ["nus.webp", "pslove.webp", "dbs.webp", "cornell.webp", "aimpower.webp", "aiecd.webp"]
+  const journey = ["nus", "cornell"]
+  const journey2 = ["blood", "dbs", "ms", "aimpower", "psyflo", "aiecd"]
   // const hobbies = [
   //   {
   //     "title": "🧳 Travelling",
@@ -54,11 +55,20 @@ export default function About () {
         <div className={`${reenie_beanie.className} center-align-sm`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
           my <span style={{ color: 'var(--focus-color)' }}>journey</span> thus far
         </div>
-        <div className='flex flex-col lg:flex-row sm:flex-col justify-center'>
+        <div className='grid lg:grid-cols-6 sm:grid-cols-2 w-full'>
               {journey.map((item, index)=>{
                 return (
                   <div key={index} className='flex justify-center'>
-                    <Image src={`/assets/${item}`} alt="Journey" width={300} height={200} className="rounded-lg" />
+                    <Image src={`/assets/journey/${item}.png`} alt="Journey" width={300} height={200} />
+                  </div>
+                );
+              })}
+        </div>
+        <div className='grid lg:grid-cols-6 sm:grid-cols-2 w-full'>
+              {journey2.map((item, index)=>{
+                return (
+                  <div key={index} className='flex justify-center'>
+                    <Image src={`/assets/journey/${item}.png`} alt="Journey" width={300} height={200}  />
                   </div>
                 );
               })}
