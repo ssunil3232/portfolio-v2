@@ -114,19 +114,22 @@ export default function Microsoft () {
                 </div>
                 <div className='flex justify-center items-center flex-col lg:flex-row md:flex-row sm:flex-col gap-4' style={{ marginTop: '40px' }}>
                     <div className="w-[80%] lg:w-[31%] sm:w-[80%] md:w-[30%]">
-                        <Image src={`${baseAssetUrl}cornellPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" />
+                        <PrimeImage src={`${baseAssetUrl}cornellPrev.webp`} zoomSrc={`${baseAssetUrl}cornellPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                        {/* <Image src={`${baseAssetUrl}cornellPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" /> */}
                     </div>
                     <div className="w-[80%] lg:w-[30%] sm:w-[80%] md:w-[30%]">
-                        <Image src={`${baseAssetUrl}cmuPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" />
+                    <PrimeImage src={`${baseAssetUrl}cmuPrev.webp`} zoomSrc={`${baseAssetUrl}cmuPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                        {/* <Image src={`${baseAssetUrl}cmuPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" /> */}
                     </div>
                     <div className="w-[80%] lg:w-[28%] sm:w-[80%] md:w-[30%]">
-                        <Image src={`${baseAssetUrl}nusPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" />
+                    <PrimeImage src={`${baseAssetUrl}nusPrev.webp`} zoomSrc={`${baseAssetUrl}nusPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                        {/* <Image src={`${baseAssetUrl}nusPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" /> */}
                     </div>
                 </div>
                 <div className='description-text w-full pt-4'>
                     Subsequently, we synthesized the case study features, identifying five pivotal modules crucial to the student course registration experience: <span className='bolder-text'>the Home Page, Course Catalog, Schedule, Registration, and Student Information modules</span>. This analysis formed the basis for our  
                     <a href="https://www.figma.com/board/o5dLrJjEOfSNmdV8uqWGJM/Case-Study-feature-Synthesis?node-id=0-1&t=98jA5x2UiHanGBvG-1" target="_blank" title="Feature Analysis & Information Architecture">
-                            <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Research Analysis</span>
+                            &nbsp;<span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Research Analysis</span>
                         </a>, where we distilled key feature takeaways and defined must-haves and nice-to-haves based on our findings, as well as an information architecture to conclude.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4 relative">
