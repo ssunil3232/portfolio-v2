@@ -136,15 +136,21 @@ export default function ConnectionsCherished () {
                 2. Incorporate analytics to help users understand and improve their communication patterns.<br/>
                 3. Explore AI-driven suggestions for personalized gift ideas or conversation topics.<br/>
                 </div>
-            <div className="flex flex-row flex-wrap header-title pt-4 pb-12">
-                Artifacts: 
-                
-                <div className='flex flex-row w-[90%] justify-start'>
-                     <a className='mx-5' href="https://github.com/ssunil3232/connections-cherished" target="_blank" title="Github Link">
-                        <Image src={`${baseAssetUrl}github.webp`} alt="github" width={50} height={50} className="rounded-lg" />
+            <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
+                            <div className="header-title">
+                                Artifacts
+                            </div>
+                            <div className='header-underline mt-2 mb-4'></div>
+                                <div className="flex w-full flex-row">
+                                <a className='mx-5' href="https://github.com/ssunil3232/connections-cherished" target="_blank" title="Github Link">
+                        <Image src={`${baseAssetUrl}gitLogo.svg`} alt="github" width={100} height={100} className="rounded-lg" />
                      </a>
-                  </div>
-                </div>
+                                    
+                                    {/* <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
+                                        <Image src={`${baseAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    </a> */}
+                                </div>
+                            </div>
            <ScrollTop /> 
         </div>
         </div>

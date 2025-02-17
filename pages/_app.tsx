@@ -3,6 +3,8 @@ import '../src/app/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+import 'primeicons/primeicons.css'; 
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -17,10 +19,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet"></link>
       </Head>
+      <PrimeReactProvider>
         <div className={`${poppins.className} w-[100vw]`}>
           <Component {...pageProps} />
           <Analytics />
         </div>
+      </PrimeReactProvider>
     </>
         
       );

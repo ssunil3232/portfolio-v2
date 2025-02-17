@@ -2,6 +2,8 @@ import Image from "next/image";
 import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
+import { Image as PrimeImage } from 'primereact/image';
+import { PrimeIcons } from 'primereact/api';
 
 export default function Microsoft () {
    const baseAssetUrl = "/assets/microsoft/";
@@ -122,16 +124,24 @@ export default function Microsoft () {
                     </div>
                 </div>
                 <div className='description-text w-full pt-4'>
-                    Subsequently, using Figma, we synthesized the case study features, identifying five pivotal modules crucial to the student course registration experience: <span className='bolder-text'>the Home Page, Course Catalog, Schedule, Registration, and Student Information modules</span>. This analysis formed the basis for our Research Analysis, where we distilled key feature takeaways and defined must-haves and nice-to-haves based on our findings.
+                    Subsequently, we synthesized the case study features, identifying five pivotal modules crucial to the student course registration experience: <span className='bolder-text'>the Home Page, Course Catalog, Schedule, Registration, and Student Information modules</span>. This analysis formed the basis for our  
+                    <a href="https://www.figma.com/board/o5dLrJjEOfSNmdV8uqWGJM/Case-Study-feature-Synthesis?node-id=0-1&t=98jA5x2UiHanGBvG-1" target="_blank" title="Feature Analysis & Information Architecture">
+                            <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Research Analysis</span>
+                        </a>, where we distilled key feature takeaways and defined must-haves and nice-to-haves based on our findings, as well as an information architecture to conclude.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[80%]">
                     <div className="picture-header pb-2">
                        Feature Analysis
                     </div>
-                    <a href="https://www.figma.com/board/jeSb53KDMHuS19KytU4ipJ/Course-Registration_Case-Study-Feature-Synthesis?node-id=0-1&t=taHA45dyBOxfHHOS-1" target="_blank" rel="noopener noreferrer">
+                    {/* <a href="https://www.figma.com/board/jeSb53KDMHuS19KytU4ipJ/Course-Registration_Case-Study-Feature-Synthesis?node-id=0-1&t=taHA45dyBOxfHHOS-1" target="_blank" rel="noopener noreferrer">
                      <Image src={`${baseAssetUrl}featureAnalysis.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a>
+                    </a> */}
+                    <PrimeImage src={`${baseAssetUrl}featureAnalysis.webp`} zoomSrc={`${baseAssetUrl}featureAnalysisPreview.png`} alt="featureAnalysis" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <div className="picture-header pb-2">
+                       Information Architecture
+                    </div>
+                    <PrimeImage src={`${baseAssetUrl}infoArchitecture.png`} zoomSrc={`${baseAssetUrl}infoArchitecture.png`} alt="infoArchitecture" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
@@ -146,19 +156,19 @@ export default function Microsoft () {
                     <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
                </div>
                <div className='flex flex-col md:flex-row lg:flex-row sm:flex-col justify-center pt-4'>
-                    <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/MooiMOAVEL7Oe0OiI0wp5R/Lo-Fi-Prototype?node-id=0-1&t=4IdGsfycJpHyoOJc-1" target="_blank" title="Lo-Fi Prototype">
+                    <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/4Urpjn30p0MUpepNGaPuC5/Lo-fi-Prototype?node-id=0-1&t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Lo-Fi Prototype">
                         <Image src={`${baseAssetUrl}lofiDesign.webp`}  alt="lofi"  width={100} height={100} layout="responsive" className="rounded-lg"/>
                     </a>
-                    <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/w25Fq3HTZC20cfcb1wEaQR/Mid-Fi-Prototype?node-id=697-6&t=8bUwtuAQMtx0idjK-1" target="_blank" title="Mid-Fi Prototype">
+                    <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/jELe9TcBqsN50igb0pshwG/Mid-fi-Prototype?node-id=8-3713&t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Mid-Fi Prototype">
                         <Image src={`${baseAssetUrl}midfiDesign.webp`}  alt="midfi"  width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
-                    <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/WXSxqGwZogvZwJUQpvP73B/Hi-Fi-Prototype?node-id=697-6&t=Z0zfmZrIgfx6dmHK-1" target="_blank" title="Hi-Fi Prototype">
+                    <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/cKqZcpNPCRXtxWIM81qJuL/Hi-fi-Prototype?t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Hi-Fi Prototype">
                         <Image src={`${baseAssetUrl}hifiDesign.webp`}  alt="hifi"  width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                 </div>
                 <div className='description-text w-full pt-8'>
                     In developing the prototype, we implemented a&nbsp;
-                        <a href="https://www.figma.com/design/rjzrqWxZ1CkClEYtEd54yE/Design-System_Style-Guide-%26-Components?node-id=491-1064&t=0k6uosuUcul1ruxe-1" target="_blank" title="Design System">
+                        <a href="https://www.figma.com/design/0NK6o6aXwWWsVCHyAOXPvK/Design-System?t=pit8q8A7Jn9Iyerd-1" target="_blank" title="Design System">
                             <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>design system with a color and font scheme</span>
                         </a>&nbsp;
                         from Cornell University. It was chosen as an illustrative example due to our accessibility to its resources. This intentional design choice ensures scalability, facilitating the seamless replacement of colors to align with those of other universities. Within this framework, we integrated PrimeNG Components for development purposes, contributing to a cohesive and visually consistent design system.
@@ -187,11 +197,25 @@ export default function Microsoft () {
                      <Image src={`${baseAssetUrl}final.gif`} alt="teamPicture"  width={100} height={100} layout="responsive" className="rounded-lg" unoptimized style={{ marginBottom: 10, borderRadius: 15 }} />
                   </div>
             </div>
-            <div className="header-title pb-12">
+            {/* <div className="header-title pb-12">
                   <a href="https://github.com/ssunil3232/MPS_Project" target="_blank" title="Github Repository">
                     <span  style={{ textDecoration: 'underline', fontSize: '25px' }}>Github Repository Link</span>
                   </a>
-            </div>
+            </div> */}
+            <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
+                <div className="header-title">
+                Artifacts
+                </div>
+                <div className='header-underline mt-2 mb-4'></div>
+                    <div className="flex w-full flex-row">
+                        <a className='mx-1' href="https://www.figma.com/team_invite/redeem/bqGnTWc2AomnFRq7vDq82v" target="_blank" title="Figma">
+                            <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        </a>
+                        <a className='mx-1' href="https://github.com/ssunil3232/MPS_Project" target="_blank" title="Github">
+                            <Image src={`${baseAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        </a>
+                    </div>
+                </div>
            <ScrollTop /> 
         </div>
     );

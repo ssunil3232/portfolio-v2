@@ -131,6 +131,18 @@ html, body {
   transition: transform 0.3s ease-in-out;
 }
 
+.p-image-mask {
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Make the backdrop opaque */
+}
+
+.p-image-preview-enter-done {
+  background: white;
+}
+
+.expand-image-gif .p-image-preview-enter-done {
+    background: transparent !important;
+}
+
 .perspective-header {
   font-size: 1.2rem;
   color: var(--description-color);
@@ -348,4 +360,16 @@ html, body {
   font-size: xx-large;
   color: var(--focus-color);
   font-family: var(--font-reenie-beanie);
+}
+
+.expand-image {
+  position: relative;
+}
+
+.expand-image img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.expand-image:hover img {
+  opacity: 0.5;
 }

@@ -2,6 +2,8 @@ import Image from "next/image";
 import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
+import { Image as PrimeImage } from 'primereact/image';
+import { PrimeIcons } from 'primereact/api';
 
 export default function InsightEdge () {
    const baseAssetUrl = "/assets/insightEdge/";
@@ -133,7 +135,7 @@ export default function InsightEdge () {
                </div>
                <div className="flex w-full justify-center items-center">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[80%]">
-                     <Image src={`${baseAssetUrl}dtiResponses.webp`} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <PrimeImage src={`${baseAssetUrl}dtiResponses.webp`} alt="responses" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                </div>
                <div className="header-title">
@@ -141,13 +143,16 @@ export default function InsightEdge () {
                </div>
                <div className='header-underline mt-2 mb-4'></div>
                <div className='description-text w-full'>
-                  Consolidating the user interviews, we mapped out the user journey of content creators on Instagram, to understand the pain points and areas of improvement. The following is the <span className='bolder-text'>user journey map</span> we created:
+                  Consolidating the user interviews, we mapped out the user journey of content creators on Instagram, to understand the pain points and areas of improvement. The following is the <a href="https://www.figma.com/board/onJfBDzlQF39wfVq5dQt2U/User-Journey-Map?node-id=0-1&t=OmRqo8bepRFdKcz5-1" target="_blank" title="User Journey map">
+                     <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>user journey map</span>
+                  </a>&nbsp;we created:
                </div>
                <div className="flex w-full justify-center items-center mt-4 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                     <a className='mx-5' href={`${baseAssetUrl}UserJourneyMapping.pdf`} target="_blank" title="Journey Mapping">
+                     {/* <a className='mx-5' href={`${baseAssetUrl}UserJourneyMapping.pdf`} target="_blank" title="Journey Mapping">
                         <Image src={`${baseAssetUrl}userJouney.png`} alt="journeyMap" width={100} height={100} layout="responsive" className="rounded-lg" />
-                     </a>
+                     </a> */}
+                     <PrimeImage src={`${baseAssetUrl}userJouney.png`} zoomSrc={`${baseAssetUrl}UserJourneyMapPreview.png`} alt="journeyMap" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-10%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
@@ -178,7 +183,8 @@ export default function InsightEdge () {
                      <div className="picture-header pt-4">
                         Aspiring Content Creator
                      </div>
-                     <Image src={`${baseAssetUrl}aspiring.webp`} alt="aspiring" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <PrimeImage src={`${baseAssetUrl}aspiring.webp`} alt="aspiring" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     {/* <Image src={`${baseAssetUrl}aspiring.webp`} alt="aspiring" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                   </div>
                </div>
                <div className="flex w-full justify-center items-center">
@@ -186,7 +192,8 @@ export default function InsightEdge () {
                      <div className="picture-header pt-4">
                         Emerging Content Creator
                      </div>
-                     <Image src={`${baseAssetUrl}emerging.webp`} alt="emerging" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <PrimeImage src={`${baseAssetUrl}emerging.webp`} alt="emerging" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     {/* <Image src={`${baseAssetUrl}emerging.webp`} alt="emerging" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                   </div>
                </div>
                <div className="header-title pt-4">
@@ -219,7 +226,8 @@ export default function InsightEdge () {
                            </div>
                            <div className="flex w-full justify-center items-center pt-4">
                               <div className="w-[50%]">
-                                 <Image src={`${baseAssetUrl}${item.asset}`} alt="gif" width={100} height={100} layout="responsive" className="rounded-lg" unoptimized />
+                              <PrimeImage src={`${baseAssetUrl}${item.asset}`} alt="gif" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image expand-image-gif" />
+                                 {/* <Image src={`${baseAssetUrl}${item.asset}`} alt="gif" width={100} height={100} layout="responsive" className="rounded-lg" unoptimized /> */}
                               </div>
                            </div>
                         </div>
@@ -241,22 +249,25 @@ export default function InsightEdge () {
                <div className='header-underline mt-2 mb-4'></div>
                <div className="flex w-full justify-center items-center relative">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
-                     <a href="https://www.figma.com/design/BI2XetztSbvG5K00XR1eOT/User-Stories?node-id=128%3A1214&t=HXJJebhBfwa50Anq-1" target="_blank" rel="noopener noreferrer" title="Resume">
+                     <a href="https://www.figma.com/design/BI2XetztSbvG5K00XR1eOT/User-Stories?m=auto&t=ofbK0Fn1ltTrWqia-1" target="_blank" rel="noopener noreferrer" title="Wireframe user story">
                         <Image src={`${baseAssetUrl}wireframe.webp`} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" />
                      </a>
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title">
-                  Files
+               Artifacts
                </div>
                <div className='header-underline mt-2 mb-4'></div>
                <div className="flex w-full flex-row">
-                  <a className='mx-5' href={`${baseAssetUrl}PRD_Document.pdf`} target="_blank" title="PRD Document">
+                  <a className='mx-1' href={`${baseAssetUrl}PRD_Document.pdf`} target="_blank" title="PRD Document">
                      <Image src={`${baseAssetUrl}prdLogo.svg`} alt="Prd" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
-                  <a className='mx-5' href={`${baseAssetUrl}PitchDeck.pdf`} target="_blank" title="Pitch Deck">
+                  <a className='mx-1' href={`${baseAssetUrl}PitchDeck.pdf`} target="_blank" title="Pitch Deck">
                      <Image src={`${baseAssetUrl}deckLogo.svg`} alt="Pitch Deck" width={100} height={100} layout="responsive" className="rounded-lg" />
+                  </a>
+                  <a className='mx-1' href="https://www.figma.com/team_invite/redeem/Cq3UG3JRcQ3RSDPNTbWlMG" target="_blank" title="Figma">
+                     <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                </div>
             </div>

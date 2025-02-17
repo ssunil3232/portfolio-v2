@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
+import { Image as PrimeImage } from 'primereact/image';
 
 export default function PrisonerExpress () {
    const baseAssetUrl = "/assets/prisonerExpress/";
@@ -126,13 +127,16 @@ export default function PrisonerExpress () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Consolidating the findings from the User Research, we created an Affinity diagram, brainstorming and identifying themes. We extracted information from both the user interview and the survey data to create an Affinity Diagram. We went about to identify, consolidate and extract relevant information, which then narrowed to themes which potentially <span className='bolder-text'>captures the essence of incarcerated individuals’ needs and expectations</span>.
+                    Consolidating the findings from the User Research, we created an  <a href="https://www.figma.com/board/mOhCaLDCwLS0LPKF4HtwBv/Affinity-Diagram?node-id=0-1&t=fm3Se6HrOn485c1j-1" target="_blank" title="Affinity">
+                            <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Affinity diagram</span>
+                        </a>, brainstorming and identifying themes. We extracted information from both the user interview and the survey data to create an Affinity Diagram. We went about to identify, consolidate and extract relevant information, which then narrowed to themes which potentially <span className='bolder-text'>captures the essence of incarcerated individuals’ needs and expectations</span>.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[80%]">
-                    <a href="https://www.figma.com/board/mOhCaLDCwLS0LPKF4HtwBv/Prisoner-Express-Affinity-Diagram?node-id=0-1&t=TeS1PB1sBUZ3F0l6-1" target="_blank" rel="noopener noreferrer">
+                  <PrimeImage src={`${baseAssetUrl}affinity.webp`} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    {/* <a href="https://www.figma.com/board/mOhCaLDCwLS0LPKF4HtwBv/Prisoner-Express-Affinity-Diagram?node-id=0-1&t=TeS1PB1sBUZ3F0l6-1" target="_blank" rel="noopener noreferrer">
                         <Image src={`${baseAssetUrl}affinity.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a>
+                    </a> */}
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
@@ -141,7 +145,10 @@ export default function PrisonerExpress () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Using our user research findings, we thoroughly understood the different users and their goals with our app - our <span className='bolder-text'>primary audience (prisoners)</span> and the <span className='bolder-text'>administrative audience (Prisoner Express admins)</span>, and created suitable Personas and Task Scenarios for future testing to understand if our app is intuitive and performs the goals of our users.
+                    Using our user research findings, we thoroughly understood the different users and their goals with our app - our <span className='bolder-text'>primary audience (prisoners)</span> and the <span className='bolder-text'>administrative audience (Prisoner Express admins)</span>, and created suitable 
+                    &nbsp;<a href="https://www.figma.com/design/wqAYjXlbAzMAaRlr1RzYNn/Personas?node-id=0-1&t=keyRG9jr7JTGT4cL-1" target="_blank" title="Personas and Task Scenarios">
+                            <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Personas and Task Scenarios</span>
+                        </a> for future testing to understand if our app is intuitive and performs the goals of our users.
                 </div>
                 <div className="w-full picture-header justify-start pt-4" style={{fontWeight: '600'}}>
                     Primary User - Prisoners
@@ -151,7 +158,8 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                     <Image src={`${baseAssetUrl}prisonerPersona.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <PrimeImage src={`${baseAssetUrl}prisonerPersona.webp`} alt="prisonerPersona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     {/* <Image src={`${baseAssetUrl}prisonerPersona.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                      <div className="w-full picture-header justify-start py-4">
                         Goals & Task Scenarios
                      </div>
@@ -166,7 +174,8 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                     <Image src={`${baseAssetUrl}adminPersona.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
+                  <PrimeImage src={`${baseAssetUrl}adminPersona.webp`} alt="adminPersona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     {/* <Image src={`${baseAssetUrl}adminPersona.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                      <div className="w-full picture-header justify-start py-4">
                         Goals & Task Scenarios
                      </div>
@@ -191,13 +200,27 @@ export default function PrisonerExpress () {
                   </div>
                 </div>
                 <div className='description-text w-full pt-8'>
-                    Taking all of these findings, we sketched out a design flow of what we envisioned the app to look like and features it should include. We then wore the hats of users and <span className='bolder-text'>walked through each task scenario</span> we had created with the design, to assess if the features and functionalities incorporated allowed the users to perform the task scenarios smoothly. This evaluation brought about some design changes, which culminated in our <span className='bolder-text'>Final Design</span>.
+                    Taking all of these findings, we sketched out an &nbsp;
+                    <a href="https://www.figma.com/board/n7VrSyVB4OsdRR4nDcJxwU/Initial-Design-Flow-Sketch?node-id=0-1&t=RT0PtvPUT1fySezk-1" target="_blank" title="initial design flows">
+                        <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>initial design flow</span>
+                    </a>&nbsp;
+                     of what we envisioned the app to look like and features it should include. We then wore the hats of users and <span className='bolder-text'>walked through each task scenario</span> we had created with the design, to assess if the features and functionalities incorporated allowed the users to perform the task scenarios smoothly. This brought about some design changes, which culminated in our 
+                     &nbsp;<a href="https://www.figma.com/board/MhCNAdnU4ZEkhDyAnHmMkM/Final-Design-Flow?t=7SR7uek7NcF3KFFQ-1s" target="_blank" title="Final Design">
+                        <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Final Design</span>
+                    </a>
+                     <span className='bolder-text'></span>.
+                </div>
+                <div className="flex w-full justify-center items-center pt-6">
+                  <div className="w-full lg:w-[60%] sm:w-full md:w-[60%]">
+                    <Image src={`${baseAssetUrl}initialDesign.png`} alt="intialDesign" width={100} height={100} layout="responsive" className="rounded-lg" />
+                  </div>
                 </div>
                 <div className="flex w-full justify-center items-center pt-6 relative">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
-                    <a href="https://www.figma.com/board/MhCNAdnU4ZEkhDyAnHmMkM/Design-Flows?node-id=0-1&t=aX20NYmzJCllQQfR-1" target="_blank" rel="noopener noreferrer">
+                    <PrimeImage src={`${baseAssetUrl}final.webp`} alt="final" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    {/* <a href="https://www.figma.com/board/MhCNAdnU4ZEkhDyAnHmMkM/Design-Flows?node-id=0-1&t=aX20NYmzJCllQQfR-1" target="_blank" rel="noopener noreferrer">
                      <Image src={`${baseAssetUrl}final.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a>
+                    </a> */}
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
@@ -262,7 +285,7 @@ export default function PrisonerExpress () {
                 <Image src={`${baseAssetUrl}pres2.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg object-cover" />
                 </div>
             </div>
-            <div className="flex flex-row flex-wrap header-title pt-4 pb-12">
+            {/* <div className="flex flex-row flex-wrap header-title pt-4 pb-12">
                 Artifacts: 
                 <div className='flex flex-row w-[90%] justify-start'>
                      <a className='mx-5' href="https://github.com/ssunil3232/prisoner-express-project" target="_blank" title="Github Link">
@@ -275,7 +298,27 @@ export default function PrisonerExpress () {
                         <Image src={`${baseAssetUrl}report.webp`} alt="report" width={40} height={40} className="rounded-lg" />
                      </a>
                   </div>
-            </div>
+            </div> */}
+            <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
+                            <div className="header-title">
+                                Artifacts
+                            </div>
+                            <div className='header-underline mt-2 mb-4'></div>
+                                <div className="flex w-full flex-row">
+                                    <a className='mx-1' href="https://www.figma.com/team_invite/redeem/gHUUg5J8xkMKfBUQa4agdC" target="_blank" title="Figma">
+                                        <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    </a>
+                                    <a className='mx-1' href="https://github.com/ssunil3232/prisoner-express-project" target="_blank" title="Github">
+                                        <Image src={`${baseAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    </a>
+                                    <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
+                                        <Image src={`${baseAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    </a>
+                                    <a className='mx-1' href="https://cornell-info4340-2024sp.github.io/vue-nicorn-project/" target="_blank" title="PWA App">
+                                        <Image src={`${baseAssetUrl}pwaLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    </a>
+                                </div>
+                            </div>
            <ScrollTop /> 
         </div>
     );

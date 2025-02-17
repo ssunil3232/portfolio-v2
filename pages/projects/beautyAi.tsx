@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
+import { Image as PrimeImage } from 'primereact/image';
 
 export default function BeautyAi () {
    const baseAssetUrl = "/assets/beautyAi/";
@@ -47,6 +48,7 @@ export default function BeautyAi () {
                   
                   <div className="flex flex-col perspective-description">
                      <div className="perspective-header">Team</div>
+                     <div>4 UX Researchers</div>
                      <div>1 UX Designer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
@@ -100,13 +102,17 @@ export default function BeautyAi () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Extracting our raw interview notes, we created a descriptive <span className='bolder-text'>Session Essay on each interview</span> that describes the interview setting, process, users responses, reactions and demonstrations. We then created <span className='bolder-text'>Activity Notes from each session essay</span>, which we categorized under the following <span className='bolder-text'>Affinity Diagram</span>.
+                    Extracting our raw interview notes, we created a descriptive <span className='bolder-text'>Session Essay on each interview</span> that describes the interview setting, process, users responses, reactions and demonstrations. We then created <span className='bolder-text'>Activity Notes from each session essay</span>, which we categorized under the following 
+                    &nbsp;<a href="https://miro.com/app/board/uXjVIdsGogo=/?share_link_id=901207500131" target="_blank" title="Affinity Diagram">
+                        <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Affinity Diagram</span>
+                    </a>.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[90%]">
-                    <a href="https://miro.com/app/board/uXjVK7eeTlM=/?share_link_id=93610415847" target="_blank" rel="noopener noreferrer">
+                  <PrimeImage src={`${baseAssetUrl}affinity.webp`} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    {/* <a href="https://miro.com/app/board/uXjVIdsGogo=/?share_link_id=901207500131" target="_blank" rel="noopener noreferrer">
                         <Image src={`${baseAssetUrl}affinity.webp`} alt="affinity" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a>
+                    </a> */}
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
@@ -131,7 +137,8 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                    <Image src={`${baseAssetUrl}personaCard.webp`} alt="persona" width={100} height={100} layout="responsive" className="rounded-lg" />
+                  <PrimeImage src={`${baseAssetUrl}personaCard.webp`} alt="persona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    {/* <Image src={`${baseAssetUrl}personaCard.webp`} alt="persona" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -151,7 +158,12 @@ export default function BeautyAi () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Exploring the existing solution space, we <span className='bolder-text'>evaluated 20 solutions in this problem space</span> and weighed the features we liked and the limitations they pose. This allowed us to then brainstorm and <span className='bolder-text'>sketch around 20 design ideas each</span>, thinking out-of-the-box, yet feasible ideas. These idea sketches were gathered and <span className='bolder-text'>categorized on an “Idea Board”</span>. Using Miro as our collaborative platform, we highlighted ideas that were perceived as innovative, concurrently identifying and linking ideas that had potential synergies, streamlining the process of integrating them into a cohesive solution later on.
+                    Exploring the existing solution space, we <span className='bolder-text'>evaluated 20 solutions in this problem space</span> and weighed the features we liked and the limitations they pose. This allowed us to then brainstorm and <span className='bolder-text'>sketch around 20 design ideas each</span>, thinking out-of-the-box, yet feasible ideas. These idea sketches were gathered and <span className='bolder-text'>categorized on an 
+                        </span>
+                        &nbsp;"<a href="https://miro.com/app/board/uXjVIdsrtU4=/?share_link_id=285701816603" target="_blank" title="Idea Board">
+                        <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Idea Board</span>
+                    </a>"
+                        . Using Miro as our collaborative platform, we highlighted ideas that were perceived as innovative, concurrently identifying and linking ideas that had potential synergies, streamlining the process of integrating them into a cohesive solution later on.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[70%]">
@@ -159,7 +171,7 @@ export default function BeautyAi () {
                     <div className="flex w-full justify-center items-center pb-2">
                                         <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
                                     </div>
-                        <a href="https://miro.com/app/board/uXjVNbfPgj4=/?share_link_id=590673931007" target="_blank" rel="noopener noreferrer">
+                        <a href="https://miro.com/app/board/uXjVIdsrtU4=/?share_link_id=285701816603" target="_blank" rel="noopener noreferrer">
                             <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                         {/* <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-15%] right-[-25%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" /> */}
@@ -192,7 +204,7 @@ export default function BeautyAi () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Using the insights from the usability testing feedback with the paper prototype, it informed the creation of our <span className='bolder-text'>Mid-fidelity Figma prototype</span>. Post a design critique session, we were able to further improve the design, culminating in our <span className='bolder-text'>Hi-Fidelity Prototype</span>. We performed <span className='bolder-text'>heuristic evaluations</span> on the prototype based on Nielsen’s 10 heuristics for user interface design, which led to a few more iterations to match the goals and needs of our target users.
+                    Using the insights from the usability testing feedback with the paper prototype, it informed the creation of our <span className='bolder-text'>Mid-fidelity Figma prototype</span>. Post a design critique session, we were able to further improve the design, culminating in our <span className='bolder-text'>Hi-Fidelity Prototype</span>. We performed <span className='bolder-text'>heuristic evaluations</span> on the prototype based on <span className='bolder-text'>Nielsen’s 10 heuristics for user interface design</span>, which led to a few more iterations to match the goals and needs of our target users.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
@@ -213,13 +225,30 @@ export default function BeautyAi () {
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className="flex w-full justify-center items-center pt-4 pb-12 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                    <a href="https://www.figma.com/design/XguQMbQ4PK1XiE5dcndTkU/HCI-Figma?node-id=836-9283&t=D22wRVIrBqStiWuz-1" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.figma.com/design/XguQMbQ4PK1XiE5dcndTkU/Prototype?node-id=1392-2757&t=oDMFZcWci2CiIwSS-1" target="_blank" rel="noopener noreferrer">
                      <Image src={`${baseAssetUrl}figma.webp`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
                   <Image src={`${baseAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
             </div>
+            <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
+                <div className="header-title">
+                    Artifacts
+                </div>
+                <div className='header-underline mt-2 mb-4'></div>
+                    <div className="flex w-full flex-row">
+                        <a className='mx-1' href="https://www.figma.com/team_invite/redeem/nfmw77SfA9on5GZKD9I3TH" target="_blank" title="Figma">
+                            <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        </a>
+                        <a className='mx-1' href="https://miro.com/welcome/bHR5dG5ldVBBR3ljSWQ3K04yejdXNXFya1dDbkljT1BONTYyT3dtYnRWNzQ4Tmxhc0J3aHdNWGw0a3JCVGVyK0RUSis0VW96bm4yWnZOc00yYzZxd0FRcEFQdHkxclN3Wk5sZERDT1kyR1pPaHNPWjg0aHJxWXRSQUsxRmhpbExnbHpza3F6REdEcmNpNEFOMmJXWXBBPT0hdjE=?share_link_id=525723574784" target="_blank" title="Miro">
+                            <Image src={`${baseAssetUrl}miroLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        </a>
+                        {/* <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
+                            <Image src={`${baseAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        </a> */}
+                    </div>
+                </div>
            <ScrollTop /> 
         </div>
     );
