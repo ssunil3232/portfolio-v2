@@ -335,13 +335,13 @@ export default function PrisonerExpress () {
                                     <a className='mx-1' href="https://www.figma.com/team_invite/redeem/gHUUg5J8xkMKfBUQa4agdC" target="_blank" title="Figma">
                                         <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
-                                    <a className='mx-1' href="https://github.com/ssunil3232/prisoner-express-project" target="_blank" title="Github">
+                                    <a className='mx-1' href="https://github.com/ssunil3232/prisoner-express-24" target="_blank" title="Github">
                                         <Image src={`${baseAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
                                     <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
                                         <Image src={`${baseAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
-                                    <a className='mx-1' href="https://cornell-info4340-2024sp.github.io/vue-nicorn-project/" target="_blank" title="PWA App">
+                                    <a className='mx-1' href="https://ssunil3232.github.io/prisoner-express-24/" target="_blank" title="PWA App">
                                         <Image src={`${baseAssetUrl}pwaLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
                                 </div>
