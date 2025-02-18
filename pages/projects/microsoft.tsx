@@ -195,10 +195,16 @@ export default function Microsoft () {
                         <span className='bolder-text' style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Microsoft’s Dev Blogs</span>
                      </a>, indicating a successful demonstration of the system's capabilities.
             </div>
-            <div className="flex w-full justify-center items-center pt-4">
+            {/* <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-[80%] lg:w-[50%] sm:w-[80%] md:w-[60%]">
                      <Image src={`${baseAssetUrl}final.gif`} alt="teamPicture"  width={100} height={100} layout="responsive" className="rounded-lg" unoptimized style={{ marginBottom: 10, borderRadius: 15 }} />
                   </div>
+            </div> */}
+            <div className='flex justify-center w-full py-4' >
+                <video className='w-[70%]' height="auto" controls autoPlay muted loop>
+                    <source src={`${baseAssetUrl}msVideo.mp4`} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
             {/* <div className="header-title pb-12">
                   <a href="https://github.com/ssunil3232/MPS_Project" target="_blank" title="Github Repository">

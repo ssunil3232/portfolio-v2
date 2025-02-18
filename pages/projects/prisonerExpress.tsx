@@ -275,15 +275,22 @@ export default function PrisonerExpress () {
             <div className='pt-12 description-text w-[80%] md:w-[80%] lg:w-[80%] sm:w-[80%] text-center'>
                 Our Prisoner Express received high praise from the client and was awarded the <span className='bolder-text'>“Best Prototype”</span> title! It was an honor to work with Prisoner Express on this project and to be given the opportunity to create an app that could potentially bring hope and foster a sense of community among prisoners.
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-[80%] px-4 py-8">
-                <div className="flex w-full justify-end">
+            <div className='flex justify-center w-full py-4' >
+                <video className='w-[70%]' height="auto" controls autoPlay muted loop>
+                    <source src={`${baseAssetUrl}prisonerEVideo.mp4`} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div className="flex w-[60%] px-2">
+                <Image src={`${baseAssetUrl}groupPic.png`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg object-cover" />
+                {/* <div className="flex w-full justify-end">
                     <div className="w-full md:w-[60%] lg:w-[70%] justify-center">
                         <Image src={`${baseAssetUrl}pres1.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg object-cover" />
                     </div>
                 </div>
                 <div className="w-full md:w-[40%] lg:w-[52%]">
                 <Image src={`${baseAssetUrl}pres2.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg object-cover" />
-                </div>
+                </div> */}
             </div>
             {/* <div className="flex flex-row flex-wrap header-title pt-4 pb-12">
                 Artifacts: 

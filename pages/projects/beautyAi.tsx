@@ -22,7 +22,7 @@ export default function BeautyAi () {
                     </div>
                 </div>
                 <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
-                    <Image src={`${baseAssetUrl}mockup.webp`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                    <Image src={`${baseAssetUrl}mockup2.gif`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
                 </div>
             </div>
             
@@ -194,7 +194,7 @@ export default function BeautyAi () {
                     Starting off the low-fidelity design of our solution, we created a paper prototype of the idea we envisioned. This <span className='bolder-text'>Paper Prototype was used to conduct Usability tests</span> to gather feedback and understand how the design and utility of the solution can be improved.
                 </div>
                 <div className='flex justify-center w-full py-4' >
-                    <video className='w-[70%]' height="auto" controls>
+                    <video className='w-[70%]' height="auto" controls autoPlay muted loop>
                         <source src={`${baseAssetUrl}paperPrototype.mp4`} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
