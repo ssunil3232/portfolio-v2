@@ -9,7 +9,8 @@
         "UX Design",
         "Product Management"
       ],
-      "id": "project-insight-edge"
+      "id": "project-insight-edge",
+      "new": false
     },
     {
         "header": "Microsoft Course Registration",
@@ -22,7 +23,8 @@
           "User Research",
           "Figma"
         ],
-        "id": "project-ms-course"
+        "id": "project-ms-course",
+        "new": false
       },
     {
       "header": "Prisoner Express PWA App",
@@ -35,7 +37,8 @@
         "Bootstrap",
         "User Research"
       ],
-      "id": "project-prisoner-express"
+      "id": "project-prisoner-express",
+      "new": false
     },
     {
       "header": "BeautyAI",
@@ -47,12 +50,13 @@
         "User Research",
         "Figma"
       ],
-      "id": "project-beauty-ai"
+      "id": "project-beauty-ai",
+      "new": false
     },
     {
       "header": "Connections Cherished",
       "name": "<div class='flex flex-row'>Connections Cherished</div>",
-      "preview": "/assets/connectionsC.webp",
+      "preview": "/assets/connectionsCherished.webp",
       "description": "An application that allows users to cherish their connections",
       "link": "/projects/connectionsCherished",
       "tools": [
@@ -60,7 +64,8 @@
         "Firebase",
         "Dart"
       ],
-      "id": "project-connections-cherished"
+      "id": "project-connections-cherished",
+      "new": true
     },
     {
       "header": "CaptionCore",
@@ -74,7 +79,8 @@
         "AI",
         "Figma"
       ],
-      "id": "project-caption-core"
+      "id": "project-caption-core",
+      "new": false
     },
     {
       "header": "Swift Tunes Decoded",
@@ -87,7 +93,8 @@
         "D3.js",
         "Javascript"
       ],
-      "id": "project-swift-tunes"
+      "id": "project-swift-tunes",
+      "new": false
     },
     {
       "header": "Under the Covers",
@@ -100,6 +107,7 @@
         "D3.js",
         "Javascript"
       ],
-      "id": "project-under-covers"
+      "id": "project-under-covers",
+      "new": false
     }
   ]

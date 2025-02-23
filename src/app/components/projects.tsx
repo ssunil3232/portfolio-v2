@@ -40,12 +40,15 @@ const Projects = () => {
         <div className='project-section w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 pb-8'>
     {projects.map((project, index) => (
         <Link href={project.link} key={index}>
-            <div className="block h-full flex flex-col justify-between">
+            <div className="block h-full flex flex-col justify-between relative">
                 <div className="card-content flex flex-col flex-grow project-card" style={{ background: colors[index], '--glow-color': colors[index] } as CSSProperties}>
                     <Image src={project.preview} alt={`${project.id}-Preview`} width={600} height={600} layout="responsive" className="w-full h-auto rounded-lg" />
                     {/* <h2 style={{ fontSize: 'x-large', color: 'var(--description-color)' }}>{project.header}</h2> */}
                     <p style={{ fontSize: 'small', textAlign: 'center' }}>{project.description}</p>
                 </div>
+                {project.new && (
+                    <div className={`${reenie_beanie.className} center-align absolute right-[5%]`} style={{ fontSize: 'x-large', color: 'var(--focus-color)' }}>new!</div>
+                )}
                 {/* <div className="flex flex-row flex-wrap space-x-3 pt-3">
                     {project.tools.map((point, idx) => (
                         <div key={idx} className="py-1 px-3 bg-[#ECECEC] rounded-3xl mb-3">
