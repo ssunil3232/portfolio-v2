@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import 'primeicons/primeicons.css'; 
+// import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (

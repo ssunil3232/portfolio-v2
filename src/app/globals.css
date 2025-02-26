@@ -373,3 +373,53 @@ html, body {
 .expand-image:hover img {
   opacity: 0.5;
 }
+
+.p-menuitem-link {
+  padding: 10px;
+}
+
+.p-menuitem-link:hover {
+  /* background: #ecc6c75e; */
+  color:#d40b37
+}
+
+.p-menuitem-content:hover {
+  background: #ecc6c75e;
+  color:#d40b37
+}
+
+.p-menuitem-content{
+  transition: box-shadow 0.2s;
+  border-radius: 6px;
+  color: var(--description-color);
+}
+
+.menu-separator{
+  border-top: 1px solid #d40b37;
+}
+
+.p-menubar .p-menuitem.p-highlight > .p-menuitem-content {
+  background: #ecc6c75e;
+  color:#d40b37
+}
+
+.p-submenu-list{
+  right: 0%;
+  background: #ffffff;
+  border: 0 none;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  width: 12.5rem;
+  border-radius: 6px;
+  color: var(--description-color);
+}
+
+.p-image-action .p-icon {
+  height: 20px!important;
+  width: 20px!important;
+  color: #d40b37;
+  /* padding: 10px; */
+}
+
+.p-image-action  {
+  padding: 5px;
+}
