@@ -64,32 +64,46 @@ export default function InsightEdge () {
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Scope</div>
-                     <div>Meta-Cornell <br />
-                     DTI project</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Scope</span>
+                     </div>
+                     <div>
+                        Meta-Cornell <br />
+                        DTI project
+                     </div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Role</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Role</span>
+                     </div>
                      <div>Product Designer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Timeline</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Timeline</span>
+                     </div>
                      <div>Jan - May 2024</div>
                   </div>
                   
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Team</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Team</span>
+                     </div>
                      <div>4 Product Managers</div>
                      <div>1 Product Designer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Process</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Process</span>
+                     </div>
                      <div>UX Research</div>
                      <div>UX Design</div>
                      <div>Product Management</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Recognition</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Recognition</span>
+                     </div>
                      <div><span className='bolder-text'>"Best presented"</span> product idea award <span className='bolder-text'>among 10 teams</span></div>
                   </div>
                </div>

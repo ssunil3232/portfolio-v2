@@ -32,32 +32,44 @@ export default function BeautyAi () {
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Scope</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Scope</span>
+                     </div>
                      <div>Human-Computer Interaction Project
                      </div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Role</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Role</span>
+                     </div>
                      <div>UX Researcher</div>
                      <div>UX Designer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Timeline</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Timeline</span>
+                     </div>
                      <div>Jul - Dec 2023</div>
                   </div>
                   
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Team</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Team</span>
+                     </div>
                      <div>4 UX Researchers</div>
                      <div>1 UX Designer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                    <div className="perspective-header">Process</div>
+                    <div className="relative w-fit">
+                        <span className="perspective-header">Process</span>
+                     </div>
                     <div>UX Research</div>
                     <div>UX Design</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Recognition</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Recognition</span>
+                     </div>
                      <div><span className='bolder-text'>"Most creative" </span>
                      award among 60 teams
                      </div>

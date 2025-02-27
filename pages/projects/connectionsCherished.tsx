@@ -25,22 +25,30 @@ export default function ConnectionsCherished () {
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-4 grid-cols-4 gap-2 w-[90%]">
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Scope</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Scope</span>
+                     </div>
                      <div>Personal Project
                      </div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Timeline</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Timeline</span>
+                     </div>
                      <div>Aug 2024 - <span className='bolder-text'>Ongoing</span></div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                    <div className="perspective-header">Process</div>
+                    <div className="relative w-fit">
+                        <span className="perspective-header">Process</span>
+                     </div>
                     <div>UX Research</div>
                     <div>UX Design</div>
                     <div>Frontend Development</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                    <div className="perspective-header">Recognition</div>
+                    <div className="relative w-fit">
+                        <span className="perspective-header">Recognition</span>
+                     </div>
                     <div>Launch-ready for App store</div>
                   </div>
                </div>

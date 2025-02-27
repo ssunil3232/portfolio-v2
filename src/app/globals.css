@@ -146,6 +146,8 @@ html, body {
 .perspective-header {
   font-size: 1.2rem;
   color: var(--description-color);
+  display: inline-block;
+  position: relative;
 }
 .perspective-description {
   font-size: 0.9rem;
@@ -422,4 +424,15 @@ html, body {
 
 .p-image-action  {
   padding: 5px;
+}
+
+.perspective-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em; /* Adjust based on alignment needs */
+  width: 100%;
+  height: 0.5em; /* Adjust for thickness */
+  background-color: #f0556733; /*rgba(255, 192, 203, 0.5); Light pink */
+  z-index: -1;
 }

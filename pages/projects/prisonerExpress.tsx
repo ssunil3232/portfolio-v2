@@ -53,33 +53,45 @@ export default function PrisonerExpress () {
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Scope</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Scope</span>
+                     </div>
                      <div>Prisoner Express<br />
                      collaboration</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Role</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Role</span>
+                     </div>
                      <div>UX Designer</div>
                      <div>Frontend Developer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Timeline</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Timeline</span>
+                     </div>
                      <div>Jan - May 2024</div>
                   </div>
                   
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Team</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Team</span>
+                     </div>
                      <div>2 UX Designers</div>
                      <div>2 Frontend Developers</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Process</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Process</span>
+                     </div>
                      <div>UX Research</div>
                      <div>UX Design</div>
                      <div>Frontend Dev</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Recognition</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Recognition</span>
+                     </div>
                      <div><span className='bolder-text'>"Best prototype" </span>
                      and invited to work with Prisoner Express
                      </div>

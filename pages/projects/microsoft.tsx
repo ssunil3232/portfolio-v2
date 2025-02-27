@@ -23,35 +23,47 @@ export default function Microsoft () {
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Scope</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Scope</span>
+                     </div>
                      <div>Microsoft-Cornell <br />
                      Capstone project</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Role</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Role</span>
+                     </div>
                      <div>UX Designer</div>
                      <div>Frontend Developer</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Timeline</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Timeline</span>
+                     </div>
                      <div>Jul - Dec 2023</div>
                   </div>
                   
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Team</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Team</span>
+                     </div>
                      <div>1 UX Researcher</div>
                      <div>1 UI/UX Engineer</div>
                      <div>2 Backend Engineers</div>
                      <div>2 Project Managers</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Process</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Process</span>
+                     </div>
                      <div>UX Research</div>
                      <div>UX Design</div>
                      <div>Frontend Dev</div>
                   </div>
                   <div className="flex flex-col perspective-description">
-                     <div className="perspective-header">Recognition</div>
+                     <div className="relative w-fit">
+                        <span className="perspective-header">Recognition</span>
+                     </div>
                      <div><span className='bolder-text'>Published </span>on Microsoft Dev Blogs (
                         <a href="https://devblogs.microsoft.com/azure-sql/course-registration-project-with-azure-sql-database/" target="_blank" title="Microsoft Dev Blog">
                             <span className='bolder-text' style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>link</span>
