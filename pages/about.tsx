@@ -38,17 +38,32 @@ export default function About () {
   // ];
   return (
     <div className="flex flex-col justify-start w-full min-h-screen">
-      <div className="lg:relative md:unset sm:unset unset flex lg:flex-row md:flex-row sm:flex-col flex-col justify-start w-full item-center">
-        <div className="flex flex-col w-full lg:w-3/5 pr-4">
-          <div className={`${reenie_beanie.className} center-align`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
-            a bit <span style={{ color: 'var(--focus-color)' }}>about me</span>
-          </div>
-          <div>
-            I'm an end-to-end Product Engineer, with a <span style={{ color: 'var(--focus-color)' }}>Master's in Information Science</span> (focus on HCI/UX) at <span style={{ color: 'var(--focus-color)' }}>Cornell University</span>, and a <span style={{ color: 'var(--focus-color)' }}>Bachelor's in Computer Engineering</span> from the <span style={{ color: 'var(--focus-color)' }}>National University of Singapore (NUS)</span>. My journey began at the intersection of three distinct yet interconnected worlds: science, technology, and arts. These fields, while seemingly divergent, harmoniously satisfied my innate curiosity and desire to drive meaningful change.
-          </div>
+      <div className="about-id-row flex flex-col lg:flex-row w-full items-end gap-6 lg:gap-[5%] md:gap-[5%] pt-4 pb-12">
+        <div className="about-id-wrap w-[40%] flex justify-center">
+          <Image src="/assets/common/id_card.svg" alt="ID card illustration" width={520} height={520} priority className="about-id-card top-[15%]" />
         </div>
-        <div className="lg:absolute md:unset sm:unset unset lg:top-[-50%] md:top-[0%] sm:top-[0%] top-[0%] flex w-full lg:w-2/5 justify-center ml-auto z-10 profile-pic">
-          <Image src="/assets/me.svg" alt="My Profile Picture" width={400} height={400} className="rounded-lg" />
+        <div className="flex flex-col w-full lg:w-[60%] gap-6 pr-8 justify-end">
+          <div className={`${poppins.className} font-light text-[3rem] leading-[0.95] text-[#111111]`}>
+            a bit
+            <span className={`${reenie_beanie.className} text-[#ff6b6b] ml-[1rem] text-[4rem]`}>about me</span>
+          </div>
+          <div className={`${poppins.className} text-md leading-7 text-[#1f1f1f]`}>
+            <p className={`mb-4 ${reenie_beanie.className} text-[2rem]`}>
+              Hey, I’m Sonia — and thank you for scrolling!
+            </p>
+            <p className="mb-4 font-light">
+              I’ve been building and shipping things for <strong style={{ color: 'var(--focus-color)' }}>over 5 years</strong>, and I like owning the whole journey: from the first sketch in Figma to the final line of code that actually makes it to production.
+            </p>
+            <p className="mb-4 font-light">
+              I’ve got a <strong style={{ color: 'var(--focus-color)' }}>Bachelor’s in Computer Engineering</strong> and a <strong style={{ color: 'var(--focus-color)' }}>Master’s in Information Science</strong> from Cornell. When I’m not working, I’m usually tinkering with a personal project or taking on freelance design/dev work.
+            </p>
+            <p className="mb-4 font-light">
+              What I’m most into is that sweet spot where good UX meets solid engineering—when it looks simple, but it’s thoughtfully built.
+            </p>
+            <p className="mb-2 font-light">
+              Right now, I’m looking for work where I can keep <strong style={{ color: 'var(--focus-color)' }}>living in that design-to-dev sweet spot</strong> and <strong style={{ color: 'var(--focus-color)' }}>ship things people genuinely enjoy using.</strong>
+            </p>
+          </div>
         </div>
       </div>
       <div className="flex flex-col w-full lg:pt-32 md:pt-8 sm:pt-8 pt-8">

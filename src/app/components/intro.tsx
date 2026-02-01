@@ -18,7 +18,7 @@ export default function Intro() {
           />
         </div>
 
-        <div className="absolute left-[-40px] top-0 sm:top-6 md:top-10 flex flex-col items-start text-left">
+        <div className="absolute left-[2%] top-0 sm:top-6 md:top-10 flex flex-col items-start text-left">
           <p className={`${poppins.className} text-lg font-light tracking-[0.4rem] text-[#b3a9a9]`}>
             sonia sunil
           </p>
@@ -33,20 +33,25 @@ export default function Intro() {
         </div>
 
         <div className="absolute right-0 bottom-0 sm:right-6 sm:bottom-2 md:right-10 md:bottom-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade">
-          <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume" className="col-start-2">
+          <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" className="col-start-2 intro-icon-wrap">
             <Image src="/assets/common/cv.svg" alt="Resume" width={60} height={60} className="intro-icon" />
+            <span className="intro-tooltip">Resume</span>
           </a>
-          <a href="mailto:soniasunil47@gmail.com?cc=ss3587@cornell.edu" title="Email" target="_blank" rel="noopener noreferrer" className="col-start-3">
+          <a href="mailto:soniasunil47@gmail.com?cc=ss3587@cornell.edu" target="_blank" rel="noopener noreferrer" className="col-start-3 intro-icon-wrap">
             <Image src="/assets/common/email.svg" alt="E-Mail" width={60} height={60} className="intro-icon" />
+            <span className="intro-tooltip">Email</span>
           </a>
-          <a href="https://www.linkedin.com/in/sonia-sunil-ss32" title="LinkedIn" target="_blank" rel="noopener noreferrer" className="row-start-2 col-start-1">
+          <a href="https://www.linkedin.com/in/sonia-sunil-ss32" target="_blank" rel="noopener noreferrer" className="row-start-2 col-start-1 intro-icon-wrap">
             <Image src="/assets/common/linkedin.svg" alt="LinkedIn" width={60} height={60} className="intro-icon" />
+            <span className="intro-tooltip">LinkedIn</span>
           </a>
-          <a href="https://github.com/ssunil3232" target="_blank" rel="noopener noreferrer" title="GitHub" className="row-start-2 col-start-2">
+          <a href="https://github.com/ssunil3232" target="_blank" rel="noopener noreferrer" className="row-start-2 col-start-2 intro-icon-wrap">
             <Image src="/assets/common/github.svg" alt="Github" width={60} height={60} className="intro-icon" />
+            <span className="intro-tooltip">GitHub</span>
           </a>
-          <a href="https://sonia-sunil-d3.vercel.app/" target="_blank" rel="noopener noreferrer" title="Data Visualization" className="row-start-2 col-start-3">
+          <a href="https://sonia-sunil-d3.vercel.app/" target="_blank" rel="noopener noreferrer" className="row-start-2 col-start-3 intro-icon-wrap">
             <Image src="/assets/common/viz.svg" alt="Data Visualization" width={60} height={60} className="intro-icon" />
+            <span className="intro-tooltip">Data Viz</span>
           </a>
         </div>
       </div>

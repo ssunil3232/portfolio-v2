@@ -8,6 +8,7 @@ const Navbar = () => {
   const [hovered, setHovered] = useState(false);
   const [atTop, setAtTop] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [time, setTime] = useState('');
 
   useEffect(() => {
     setMounted(true);
@@ -22,6 +23,21 @@ const Navbar = () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const displayHours = hours % 12 || 12;
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      const paddedMinutes = minutes.toString().padStart(2, '0');
+      setTime(`${displayHours}.${paddedMinutes}${ampm.toLowerCase()}`);
+    };
+    updateTime();
+    const timer = setInterval(updateTime, 30 * 1000);
+    return () => clearInterval(timer);
   }, []);
 
   const expanded = hovered || atTop;
@@ -40,9 +56,9 @@ const Navbar = () => {
         <Image className="nav-button-icon" width={20} height={20} sizes="100vw" alt="" src="/assets/common/hover_arrow_icon.svg" />
         {expanded && (
           <>
-            <div className={`nav-item ${poppins.className}`}>Work</div>
-            <div className={`nav-item ${poppins.className}`}>About</div>
-            <div className={`nav-item ${poppins.className}`}>Play</div>
+            <div className={`nav-item ${poppins.className} text-[#6f737a]`}>Work</div>
+            <div className={`nav-item ${poppins.className} text-[#6f737a]`}>About</div>
+            <div className={`nav-item ${poppins.className} text-[#6f737a]`}>Play</div>
           </>
         )}
         <div className="nav-progress">
@@ -59,7 +75,7 @@ const Navbar = () => {
           </svg>
         </div>
       </div>
-      <div className={`nav-item ${poppins.className}`}>11.10am</div>
+      <div className={`nav-item ${poppins.className}`}>{time}</div>
     </div>
   );
 };
