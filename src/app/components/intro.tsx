@@ -1,21 +1,63 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { reenie_beanie, poppins } from "../ui/fonts";
 
 export default function Intro() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const imageRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let rafId = 0;
+    const handleScroll = () => {
+      if (!sectionRef.current || !imageRef.current) return;
+
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        const sectionTop = sectionRef.current?.offsetTop ?? 0;
+        const sectionHeight = sectionRef.current?.offsetHeight ?? 1;
+        const scrollY = window.scrollY;
+        const progress = Math.min(Math.max((scrollY - sectionTop) / sectionHeight, 0), 1);
+        const translateY = Math.round(progress * 70);
+
+        imageRef.current!.style.transform = `translateY(${translateY}px)`;
+        rafId = 0;
+      });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   return (
-    <div className="relative flex min-h-screen flex-col justify-center items-center w-[80%] px-4 lg:px-12 pt-2 pb-16 overflow-hidden">
+    <div
+      ref={sectionRef}
+      className="relative flex min-h-screen flex-col justify-center items-center w-[80%] px-4 lg:px-12 pt-2 overflow-hidden"
+    >
       <div className="relative w-full max-w-6xl flex justify-center items-center min-h-[520px]">
         <div className="absolute h-[320px] w-[320px] sm:h-[420px] sm:w-[420px] md:h-[400px] md:w-[400px] rounded-full bg-gradient-to-b from-[#f6d8db] to-[#ffdee1] opacity-90" />
         <div className="relative z-10 intro-fade">
-          <Image
-            src="/assets/common/sonia.svg"
-            alt="Sonia Sunil illustration"
-            width={300}
-            height={400}
-            className="h-auto w-[280px] sm:w-[360px] md:w-[350px]"
-            priority
-          />
+          <div ref={imageRef} className="intro-scroll-shift">
+            <Image
+              src="/assets/common/sonia.svg"
+              alt="Sonia Sunil illustration"
+              width={300}
+              height={400}
+              className="h-auto w-[280px] sm:w-[360px] md:w-[350px]"
+              priority
+            />
+          </div>
         </div>
 
         <div className="absolute left-[2%] top-0 sm:top-6 md:top-10 flex flex-col items-start text-left">
@@ -32,7 +74,7 @@ export default function Intro() {
           </div>
         </div>
 
-        <div className="absolute right-0 bottom-0 sm:right-6 sm:bottom-2 md:right-10 md:bottom-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade">
+        <div className="absolute right-0 bottom-0 sm:right-6 sm:bottom-2 md:right-10 md:bottom-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade pb-8">
           <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" className="col-start-2 intro-icon-wrap">
             <Image src="/assets/common/cv.svg" alt="Resume" width={60} height={60} className="intro-icon" />
             <span className="intro-tooltip">Resume</span>

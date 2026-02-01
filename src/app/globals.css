@@ -489,6 +489,12 @@ html, body {
   animation: introFadeUp 0.8s ease-out both;
 }
 
+.intro-scroll-shift {
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
 .intro-icon {
   /* border-radius: 16px; */
   /* box-shadow: 0 14px 24px rgba(255, 160, 170, 0.25); */
