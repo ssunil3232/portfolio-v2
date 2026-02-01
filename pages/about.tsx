@@ -43,12 +43,12 @@ export default function About () {
           <Image src="/assets/common/id_card.svg" alt="ID card illustration" width={520} height={520} priority className="about-id-card top-[15%]" />
         </div>
         <div className="flex flex-col w-full lg:w-[60%] gap-6 pr-8 justify-end">
-          <div className={`${poppins.className} font-light text-[3rem] leading-[0.95] text-[#111111]`}>
+          <div className={`${poppins.className} font-light text-[2rem] leading-[0.95] text-[#111111]`}>
             a bit
-            <span className={`${reenie_beanie.className} text-[#ff6b6b] ml-[1rem] text-[4rem]`}>about me</span>
+            <span className={`${reenie_beanie.className} text-[#ff6b6b] ml-[1rem] text-[3rem]`}>about me</span>
           </div>
-          <div className={`${poppins.className} text-md leading-7 text-[#1f1f1f]`}>
-            <p className={`mb-4 ${reenie_beanie.className} text-[2rem]`}>
+          <div className={`${poppins.className} text-sm pr-[4rem] leading-7 text-[#1f1f1f]`}>
+            <p className={`mb-4 ${reenie_beanie.className} text-[1.5rem]`}>
               Hey, I’m Sonia — and thank you for scrolling!
             </p>
             <p className="mb-4 font-light">
@@ -65,6 +65,15 @@ export default function About () {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col w-full pt-10 items-center">
+        <div className={`${reenie_beanie.className} center-align-sm relative`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
+          what are my <span style={{ color: 'var(--focus-color)' }}>skills</span>?
+          <div className="focus-arrow flex  mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
+            <Image src="/assets/focus-arrow.gif" alt="focus" width={200} height={300} className="rounded-lg" />
+          </div>
+        </div>
+        <CirclePacking />
       </div>
       <div className="flex flex-col w-full lg:pt-32 md:pt-8 sm:pt-8 pt-8">
         <div className={`${reenie_beanie.className} center-align-sm`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
@@ -88,15 +97,6 @@ export default function About () {
                 );
               })}
         </div>
-      </div>
-      <div className="flex flex-col w-full pt-10 items-center">
-        <div className={`${reenie_beanie.className} center-align-sm relative`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
-          what are my <span style={{ color: 'var(--focus-color)' }}>skills</span>?
-          <div className="focus-arrow flex  mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
-            <Image src="/assets/focus-arrow.gif" alt="focus" width={200} height={300} className="rounded-lg" />
-          </div>
-        </div>
-        <CirclePacking />
       </div>
       <div className="flex flex-col w-full pt-5 items-center justify-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' , textAlign: 'center'}}>

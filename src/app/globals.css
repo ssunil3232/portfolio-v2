@@ -686,7 +686,7 @@ html, body {
 .nav-item {
   position: relative;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Fallback font stacks for offline stubs */
