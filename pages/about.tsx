@@ -5,11 +5,65 @@ import Navbar from '@/app/components/navbar';
 import { crafty_girls, poppins, reenie_beanie } from '@/app/ui/fonts';
 import { image } from 'd3';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function About () {
   const journey = ["nus", "cornell"]
   const journey2 = ["blood", "dbs", "ms", "aimpower", "psyflo", "aiecd"]
+  const timelineSectionRef = useRef<HTMLDivElement | null>(null);
+  const timelineScrollRef = useRef<HTMLDivElement | null>(null);
+  const timelineTitleRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const sectionEl = timelineSectionRef.current;
+    const scrollEl = timelineScrollRef.current;
+    const titleEl = timelineTitleRef.current;
+    if (!sectionEl || !scrollEl || !titleEl) return;
+
+    let rafId = 0;
+
+    const updateSectionHeight = () => {
+      const maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+      const sectionHeight = window.innerHeight + Math.max(0, maxScroll);
+      sectionEl.style.height = `${sectionHeight}px`;
+    };
+
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = 0;
+        const rect = sectionEl.getBoundingClientRect();
+        const sectionTop = window.scrollY + rect.top;
+        const maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+        if (maxScroll <= 0) return;
+        if (rect.top > 0) {
+          scrollEl.scrollLeft = 0;
+          return;
+        }
+        const progress = Math.min(
+          Math.max((window.scrollY - sectionTop) / maxScroll, 0),
+          1
+        );
+        scrollEl.scrollLeft = maxScroll * progress;
+        if (progress < 1 && rect.top <= 0 && rect.bottom > 0) {
+          titleEl.classList.add('timeline-title--sticky');
+        } else {
+          titleEl.classList.remove('timeline-title--sticky');
+        }
+      });
+    };
+
+    updateSectionHeight();
+    onScroll();
+    window.addEventListener('resize', updateSectionHeight);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('resize', updateSectionHeight);
+      window.removeEventListener('scroll', onScroll);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
+  }, []);
   // const hobbies = [
   //   {
   //     "title": "🧳 Travelling",
@@ -66,7 +120,7 @@ export default function About () {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full pt-10 items-center">
+      {/* <div className="flex flex-col w-full pt-10 items-center">
         <div className={`${reenie_beanie.className} center-align-sm relative`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
           what are my <span style={{ color: 'var(--focus-color)' }}>skills</span>?
           <div className="focus-arrow flex  mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
@@ -74,29 +128,21 @@ export default function About () {
           </div>
         </div>
         <CirclePacking />
+      </div> */}
+      <div className="flex w-full flex-row arrow-2 content ml-[10%]">
+        <Image src="/assets/arrow-2.gif" alt="arrow" width={100} height={100} className="rounded-lg" />
       </div>
-      <div className="flex flex-col w-full lg:pt-32 md:pt-8 sm:pt-8 pt-8">
-        <div className={`${reenie_beanie.className} center-align-sm`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
-          my <span style={{ color: 'var(--focus-color)' }}>journey</span> thus far
-        </div>
-        <div className='grid lg:grid-cols-6 sm:grid-cols-2 w-full'>
-              {journey.map((item, index)=>{
-                return (
-                  <div key={index} className='flex justify-center'>
-                    <Image src={`/assets/journey/${item}.png`} alt="Journey" width={300} height={200} />
-                  </div>
-                );
-              })}
-        </div>
-        <div className='grid lg:grid-cols-6 sm:grid-cols-2 w-full'>
-              {journey2.map((item, index)=>{
-                return (
-                  <div key={index} className='flex justify-center'>
-                    <Image src={`/assets/journey/${item}.png`} alt="Journey" width={300} height={200}  />
-                  </div>
-                );
-              })}
-        </div>
+      <div className="flex flex-col w-full">
+        <section className="timeline-section" ref={timelineSectionRef}>
+          <div ref={timelineTitleRef} className={`${poppins.className} font-light text-[2rem] leading-[0.95] text-[#111111] content timeline-title`}>
+            <span className={`${reenie_beanie.className} text-[#ff6b6b] ml-[1rem] text-[3rem]`}>my journey </span>
+            across a timeline
+          </div>
+          <div className="timeline-scroll h-screen" ref={timelineScrollRef}>
+            {/* <Image src="/assets/common/timeline.svg" alt="Journey" width={300} height={100} className='h-[100%] w-auto' /> */}
+            <img src="/assets/common/timeline.svg" alt="Timeline of my journey" className="timeline-svg h-[50%]" />
+          </div>
+        </section>
       </div>
       <div className="flex flex-col w-full pt-5 items-center justify-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' , textAlign: 'center'}}>

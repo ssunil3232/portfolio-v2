@@ -199,6 +199,55 @@ html, body {
   border-radius: 30px;
 }
 
+.timeline-section {
+  position: relative;
+  width: 100%;
+  padding-top: 4rem;
+}
+
+.timeline-title {
+  z-index: 2;
+  background: var(--background);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.timeline-title--sticky {
+  position: sticky;
+  top: 4rem;
+}
+
+.timeline-scroll {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 8rem);
+  position: sticky;
+  top: 8rem;
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-svg {
+  display: block;
+  height: 80%;
+  max-width: none;
+  width: 180vw;
+  min-width: 180vw;
+  pointer-events: none;
+  user-select: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

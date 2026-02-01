@@ -15,22 +15,22 @@ export default function Home() {
         <IntroPage />
       </div>
     </div>
-    <div className="flex w-full flex-row arrow-1">
+    {/* <div className="flex w-full flex-row arrow-1">
       <Image src="/assets/arrow-1.gif" alt="arrow" width={120} height={120} className="rounded-lg" />
-    </div>
+    </div> */}
     {/* <div className="arrow-down flex  justify-center ml-auto z-10">
       <Image src="/assets/arrow2.gif" alt="arrow" width={200} height={800} className="rounded-lg" />
     </div> */}
-    <div className="flex content-bg min-h-screen pt-2">
+    <div className="flex content-bg min-h-screen">
       <div className=" flex flex-col justify-between flex-grow w-full">
-        <main className="content items-start lg:justify-items-start md:justify-items-center sm:justify-items-center flex w-full flex-grow">
+        {/* <main className="content items-start lg:justify-items-start md:justify-items-center sm:justify-items-center flex w-full flex-grow">
           <section id="projects-section" className="flex h-full">
             <Projects />
           </section>
-        </main>
-        <div className="flex w-full flex-row arrow-2">
+        </main> */}
+        {/* <div className="flex w-full flex-row arrow-2">
           <Image src="/assets/arrow-2.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
-        </div>
+        </div> */}
         <div className="flex content-bg min-h-screen">
           <div className=" flex flex-col justify-between flex-grow w-full">
             <main className="relative justify-center items-start lg:justify-items-start md:justify-items-center sm:justify-items-center flex w-full flex-grow">
@@ -40,7 +40,7 @@ export default function Home() {
               {/* <div className="flex w-full flex-row arrow-1">
                 <Image src="/assets/arrow3.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
               </div> */}
-              <section id="about-section" className="flex h-full justify-center w-full pr-8">
+              <section id="about-section" className="flex h-full justify-center w-full">
                 <About />
               </section>
             </main>
