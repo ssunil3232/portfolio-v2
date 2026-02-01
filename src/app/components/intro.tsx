@@ -4,7 +4,12 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { reenie_beanie, poppins } from "../ui/fonts";
 
-export default function Intro() {
+type IntroProps = {
+  flightOriginRef?: React.RefObject<HTMLDivElement>;
+  hideSonia?: boolean;
+};
+
+export default function Intro({ flightOriginRef, hideSonia }: IntroProps) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const imageRef = useRef<HTMLDivElement | null>(null);
 
@@ -45,18 +50,23 @@ export default function Intro() {
       ref={sectionRef}
       className="relative flex min-h-screen flex-col justify-center items-center w-[80%] px-4 lg:px-12 pt-2 overflow-hidden"
     >
-      <div className="relative w-full max-w-6xl flex justify-center items-center min-h-[520px]">
+      <div className="relative w-full max-w-6xl flex justify-center items-center min-h-[520px] mb-8">
         <div className="absolute h-[320px] w-[320px] sm:h-[420px] sm:w-[420px] md:h-[400px] md:w-[400px] rounded-full bg-gradient-to-b from-[#f6d8db] to-[#ffdee1] opacity-90" />
         <div className="relative z-10 intro-fade">
-          <div ref={imageRef} className="intro-scroll-shift">
-            <Image
-              src="/assets/common/sonia.svg"
-              alt="Sonia Sunil illustration"
-              width={300}
-              height={400}
-              className="h-auto w-[280px] sm:w-[360px] md:w-[350px]"
-              priority
-            />
+          <div
+            ref={flightOriginRef}
+            className={hideSonia ? "intro-flight-placeholder" : ""}
+          >
+            <div ref={imageRef} className="intro-scroll-shift">
+              <Image
+                src="/assets/common/sonia.svg"
+                alt="Sonia Sunil illustration"
+                width={300}
+                height={400}
+                className="h-auto w-[400px] sm:w-[400px] md:w-[400px]"
+                priority
+              />
+            </div>
           </div>
         </div>
 

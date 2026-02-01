@@ -238,6 +238,100 @@ html, body {
   display: none;
 }
 
+.intro-flight-placeholder {
+  visibility: hidden;
+}
+
+.flight-layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.4s ease;
+}
+
+.flight-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+}
+
+.flight-burst {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.9), rgba(255, 107, 107, 0));
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.flight--explode .flight-image {
+  animation: flight-pop 0.6s ease forwards;
+}
+
+.flight--explode .flight-burst {
+  animation: flight-burst 0.7s ease forwards;
+}
+
+.flight--explode {
+  opacity: 0;
+}
+
+@keyframes flight-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.35);
+  }
+}
+
+@keyframes flight-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(3.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(6);
+  }
+}
+
+.about-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.about-section--revealed {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 .timeline-svg {
   display: block;
   height: 80%;

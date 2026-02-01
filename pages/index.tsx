@@ -2,18 +2,133 @@ import IntroPage from "@/app/components/intro";
 import Navbar from "@/app/components/navbar";
 import Projects from "@/app/components/projects";
 import About from "./about";
-import Image from 'next/image';
+import Image from "next/image";
 import { reenie_beanie } from "@/app/ui/fonts";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+  const introFlightOriginRef = useRef<HTMLDivElement | null>(null);
+  const aboutSectionRef = useRef<HTMLElement | null>(null);
+  const flightLayerRef = useRef<HTMLDivElement | null>(null);
+  const [aboutRevealed, setAboutRevealed] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      setAboutRevealed(true);
+      return;
+    }
+
+    let rafId = 0;
+    const updateFlight = () => {
+      if (!introFlightOriginRef.current || !aboutSectionRef.current || !flightLayerRef.current) return;
+
+      const originRect = introFlightOriginRef.current.getBoundingClientRect();
+      const aboutRect = aboutSectionRef.current.getBoundingClientRect();
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      const startScroll = scrollY + originRect.top - viewportHeight * 0.2;
+      const endScroll = scrollY + aboutRect.top - viewportHeight * 0.2;
+      const total = Math.max(endScroll - startScroll, 1);
+      const progress = Math.min(Math.max((scrollY - startScroll) / total, 0), 1);
+
+      const startX = originRect.left + originRect.width / 2;
+      const startY = originRect.top + originRect.height / 2;
+      const endX = aboutRect.left + aboutRect.width / 2;
+      const endY = aboutRect.top + 120;
+
+      const currentX = startX + (endX - startX) * progress;
+      const currentY = startY + (endY - startY) * progress;
+
+      const flightEl = flightLayerRef.current;
+      flightEl.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(${1 - progress * 0.15})`;
+
+      if (progress >= 1) {
+        flightEl.classList.add("flight--explode");
+        setAboutRevealed((prev) => (prev ? prev : true));
+      } else {
+        flightEl.classList.remove("flight--explode");
+        setAboutRevealed((prev) => (prev ? false : prev));
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        updateFlight();
+        rafId = 0;
+      });
+    };
+
+    updateFlight();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", updateFlight);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", updateFlight);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const onWheel = (event: WheelEvent) => {
+      if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+        event.preventDefault();
+      }
+    };
+
+    const onTouchStart = (event: TouchEvent) => {
+      if (event.touches.length !== 1) return;
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+    };
+
+    const onTouchMove = (event: TouchEvent) => {
+      if (event.touches.length !== 1) return;
+      const deltaX = event.touches[0].clientX - touchStartX;
+      const deltaY = event.touches[0].clientY - touchStartY;
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        event.preventDefault();
+      }
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchmove", onTouchMove, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchmove", onTouchMove);
+    };
+  }, []);
+
   return (
     <>
     <Navbar />
     <div className="flex flex-col min-h-[100%]">
         
-      <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen ">
-        <IntroPage />
+      <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen">
+        <IntroPage flightOriginRef={introFlightOriginRef} hideSonia />
       </div>
+    </div>
+    <div className="flight-layer" ref={flightLayerRef} aria-hidden="true">
+      <Image
+        src="/assets/common/sonia.svg"
+        alt=""
+        width={300}
+        height={400}
+        className="flight-image"
+        priority
+      />
+      <span className="flight-burst" />
     </div>
     {/* <div className="flex w-full flex-row arrow-1">
       <Image src="/assets/arrow-1.gif" alt="arrow" width={120} height={120} className="rounded-lg" />
@@ -40,7 +155,11 @@ export default function Home() {
               {/* <div className="flex w-full flex-row arrow-1">
                 <Image src="/assets/arrow3.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
               </div> */}
-              <section id="about-section" className="flex h-full justify-center w-full">
+              <section
+                id="about-section"
+                ref={aboutSectionRef}
+                className={`flex h-full justify-center w-full about-section ${aboutRevealed ? "about-section--revealed" : ""}`}
+              >
                 <About />
               </section>
             </main>
