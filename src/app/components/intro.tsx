@@ -57,7 +57,7 @@ export default function Intro({ flightOriginRef, hideSonia }: IntroProps) {
             ref={flightOriginRef}
             className={hideSonia ? "intro-flight-placeholder" : ""}
           >
-            <div ref={imageRef} className="intro-scroll-shift">
+            <div ref={imageRef} className="relative intro-scroll-shift">
               <Image
                 src="/assets/common/sonia.svg"
                 alt="Sonia Sunil illustration"
@@ -82,6 +82,16 @@ export default function Intro({ flightOriginRef, hideSonia }: IntroProps) {
             <p className={`${poppins.className} font-extralight mb-2`}>crafting interfaces,</p>
             <p className={`${reenie_beanie.className} text-[1.8rem] text-[#222222]`}>design → code</p>
           </div>
+        </div>
+        <div className="absolute right-0 top-0 sm:right-6 sm:bottom-2 md:right-10 md:top-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade pb-8 w-[500px]">
+          <Image
+                src="/assets/common/background_texts.gif"
+                alt=""
+                width={110}
+                height={110}
+                className="pointer-events-none absolute -top-4 -right-6 h-auto w-[110px] sm:-top-6 sm:-right-8 sm:w-[500px]"
+                priority
+              />
         </div>
 
         <div className="absolute right-0 bottom-0 sm:right-6 sm:bottom-2 md:right-10 md:bottom-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade pb-8">

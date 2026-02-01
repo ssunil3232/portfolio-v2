@@ -45,6 +45,12 @@ export default function Home() {
       const flightEl = flightLayerRef.current;
       flightEl.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(${1 - progress * 0.15})`;
 
+      if (progress > 0.32 && progress < 1) {
+        flightEl.classList.add("flight--active");
+      } else {
+        flightEl.classList.remove("flight--active");
+      }
+
       if (progress >= 1) {
         flightEl.classList.add("flight--explode");
         setAboutRevealed((prev) => (prev ? prev : true));
@@ -126,6 +132,14 @@ export default function Home() {
         width={300}
         height={400}
         className="flight-image"
+        priority
+      />
+      <Image
+        src="/assets/common/tea_time.gif"
+        alt=""
+        width={300}
+        height={300}
+        className="flight-tea"
         priority
       />
       <span className="flight-burst" />

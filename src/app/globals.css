@@ -202,7 +202,7 @@ html, body {
 .timeline-section {
   position: relative;
   width: 100%;
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 
 .timeline-title {
@@ -262,6 +262,22 @@ html, body {
   height: auto;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+}
+
+.flight-tea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: auto;
+  transform: translate(-50%, -50%) translate(-210px, -40px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+}
+
+.flight--active .flight-tea {
+  opacity: 1;
 }
 
 .flight-burst {
@@ -731,16 +747,42 @@ html, body {
 }
 
 .about-id-card {
-  transform: rotate(-9deg) translateX(10%);
+  opacity: 0;
+  transform: rotate(-9deg) translateX(-45%);
   transform-origin: bottom left;
+  will-change: transform, opacity;
+  transition: transform 700ms ease-out, opacity 500ms ease-out;
+}
+
+.about-section--revealed .about-id-card {
+  opacity: 1;
+  transform: rotate(-9deg) translateX(10%);
 }
 
 @media (max-width: 1024px) {
   .about-id-card {
+    transform: rotate(-6deg) translateX(-35%);
+  }
+
+  .about-section--revealed .about-id-card {
     transform: rotate(-6deg) translateX(0);
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .about-id-card,
+  .about-section--revealed .about-id-card {
+    transition: none;
+    opacity: 1;
+    transform: rotate(-9deg) translateX(10%);
+  }
+  @media (max-width: 1024px) {
+    .about-id-card,
+    .about-section--revealed .about-id-card {
+      transform: rotate(-6deg) translateX(0);
+    }
+  }
+}
 .nav-player--collapsible {
   max-width: 120px;
   gap: 40px;
