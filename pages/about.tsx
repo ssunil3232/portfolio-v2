@@ -10,6 +10,17 @@ import React, { useEffect, useRef } from 'react';
 export default function About () {
   const journey = ["nus", "cornell"]
   const journey2 = ["blood", "dbs", "ms", "aimpower", "psyflo", "aiecd"]
+  const getYearsExperience = () => {
+    const startYear = 2021;
+    const startMonth = 7; // July
+    const now = new Date();
+    const nowYear = now.getFullYear();
+    const nowMonth = now.getMonth() + 1;
+    const months = (nowYear - startYear) * 12 + (nowMonth - startMonth);
+    const years = months / 12;
+    return Math.round(years * 10) / 10;
+  };
+  const yearsExperience = getYearsExperience();
   const timelineSectionRef = useRef<HTMLDivElement | null>(null);
   const timelineScrollRef = useRef<HTMLDivElement | null>(null);
   const timelineTitleRef = useRef<HTMLDivElement | null>(null);
@@ -106,7 +117,7 @@ export default function About () {
               Hey, I’m Sonia — and thank you for scrolling!
             </p>
             <p className="mb-4 font-light">
-              I’ve been building and shipping things for <strong style={{ color: 'var(--focus-color)' }}>over 5 years</strong>, and I like owning the whole journey: from the first sketch in Figma to the final line of code that actually makes it to production.
+              I’ve been building and shipping things for <strong style={{ color: 'var(--focus-color)' }}>over {yearsExperience} years</strong>, and I like owning the whole journey: from the first sketch in Figma to the final line of code that actually makes it to production.
             </p>
             <p className="mb-4 font-light">
               I’ve got a <strong style={{ color: 'var(--focus-color)' }}>Bachelor’s in Computer Engineering</strong> and a <strong style={{ color: 'var(--focus-color)' }}>Master’s in Information Science</strong> from Cornell. When I’m not working, I’m usually tinkering with a personal project or taking on freelance design/dev work.
