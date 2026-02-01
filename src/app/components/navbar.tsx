@@ -6,19 +6,31 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     setMounted(true);
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 12);
+      setAtTop(y <= 4);
+      const doc = document.documentElement;
+      const total = doc.scrollHeight - doc.clientHeight;
+      setProgress(total > 0 ? Math.min(1, Math.max(0, y / total)) : 0);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const expanded = hovered || atTop;
 
   return (
     <div className={`nav-body ${scrolled ? 'nav-body--scrolled' : ''} ${mounted ? 'nav-body--mounted' : ''}`}>
       <Image className="nav-icon" width={40} height={40} sizes="100vw" alt="" src="/assets/common/icon.svg" />
       <div
-        className={`nav-player nav-player--collapsible ${hovered ? 'nav-player--expanded' : ''}`}
+        className={`nav-player nav-player--collapsible ${expanded ? 'nav-player--expanded' : ''}`}
         tabIndex={0}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -26,14 +38,26 @@ const Navbar = () => {
         onBlur={() => setHovered(false)}
       >
         <Image className="nav-button-icon" width={20} height={20} sizes="100vw" alt="" src="/assets/common/hover_arrow_icon.svg" />
-        {hovered && (
+        {expanded && (
           <>
             <div className={`nav-item ${poppins.className}`}>Work</div>
             <div className={`nav-item ${poppins.className}`}>About</div>
             <div className={`nav-item ${poppins.className}`}>Play</div>
           </>
         )}
-        <Image className="nav-button-icon nav-button-icon--end" width={20} height={20} sizes="100vw" alt="" src="/assets/common/hover_arrow_icon.svg" />
+        <div className="nav-progress">
+          <svg viewBox="0 0 24 24" className="nav-progress__svg" aria-hidden="true">
+            <circle className="nav-progress__track" cx="12" cy="12" r="8" />
+            <circle
+              className="nav-progress__bar"
+              cx="12"
+              cy="12"
+              r="8"
+              strokeDasharray="62.83"
+              strokeDashoffset={62.83 * (1 - progress)}
+            />
+          </svg>
+        </div>
       </div>
       <div className={`nav-item ${poppins.className}`}>11.10am</div>
     </div>
