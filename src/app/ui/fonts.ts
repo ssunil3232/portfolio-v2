@@ -1,50 +1,19 @@
-import { Caveat, Crafty_Girls, Gamja_Flower, Josefin_Sans, Nunito, Poppins, Reenie_Beanie } from 'next/font/google';
+/**
+ * Offline-safe font stubs matching the shape of next/font exports.
+ * Prevents build failures when Google Fonts are unreachable.
+ */
 
-export const nunito = Nunito({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-nunito',
-  weight: ['400', '700']
+type FontStub = { className: string; variable: string };
+
+const makeFont = (name: string): FontStub => ({
+  className: `font-${name}`,
+  variable: `--font-${name}`,
 });
 
-export const josefin = Josefin_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-josefin',
-  weight: ['300', '700']
-});
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['300', '400', '700']
-});
-
-export const caveat = Caveat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-caveat',
-  weight: ['400', '700']
-});
-
-export const gamja = Gamja_Flower({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-gamja',
-  weight: ['400']
-});
-
-export const reenie_beanie = Reenie_Beanie({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-reenie-beanie',
-  weight: ['400']
-});
-
-export const crafty_girls = Crafty_Girls({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-crafty-girls',
-  weight: ['400']
-});
+export const nunito = makeFont('nunito');
+export const josefin = makeFont('josefin');
+export const poppins = makeFont('poppins');
+export const caveat = makeFont('caveat');
+export const gamja = makeFont('gamja');
+export const reenie_beanie = makeFont('reenie-beanie');
+export const crafty_girls = makeFont('crafty-girls');

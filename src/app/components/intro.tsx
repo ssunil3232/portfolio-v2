@@ -4,7 +4,7 @@ import { reenie_beanie, poppins } from "../ui/fonts";
 
 export default function Intro() {
   return (
-    <div className="relative flex min-h-screen flex-col justify-center items-center w-[80%] px-4 lg:px-12 pt-20 pb-16 overflow-hidden">
+    <div className="relative flex min-h-screen flex-col justify-center items-center w-[80%] px-4 lg:px-12 pt-2 pb-16 overflow-hidden">
       <div className="relative w-full max-w-6xl flex justify-center items-center min-h-[520px]">
         <div className="absolute h-[320px] w-[320px] sm:h-[420px] sm:w-[420px] md:h-[450px] md:w-[450px] rounded-full bg-gradient-to-b from-[#f6d8db] to-[#ffdee1] opacity-90" />
         <div className="relative z-10 intro-fade">

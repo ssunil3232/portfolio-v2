@@ -8,10 +8,9 @@ import { reenie_beanie } from "@/app/ui/fonts";
 export default function Home() {
   return (
     <>
-    <div className="flex flex-col min-h-[100%] pt-4">
-        {/* <div className="bg-transparent">
-            <Navbar />
-        </div> */}
+    <Navbar />
+    <div className="flex flex-col min-h-[100%]">
+        
       <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen ">
         <IntroPage />
       </div>
