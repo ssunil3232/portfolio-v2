@@ -11,17 +11,18 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
       <>
       <Head>
-        <title>Sonia Sunil - Frontend Developer | UX Designer</title>
+        <title>Sonia Sunil - Portfolio</title>
         <meta property="og:image" content="https://sonias.vercel.app/web_preview_image.jpg" />
         <meta property="og:url" content="https://sonias.vercel.app" />
         <meta
           name="description"
           content="Portfolio website of all my projects"
         />
+        <link rel="icon" href="/assets/common/icon.svg" />
         <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet"></link>
       </Head>
       <PrimeReactProvider>
-        <div className={`${poppins.className} w-[100vw]`}>
+        <div className={`${poppins.className} w-[100vw] overflow-clip`}>
           <Component {...pageProps} />
           <Analytics />
         </div>

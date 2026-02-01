@@ -155,7 +155,7 @@ export default function About () {
           </div>
         </section>
       </div>
-      <div className="flex flex-col w-full pt-5 items-center justify-center">
+      {/* <div className="flex flex-col w-full pt-5 items-center justify-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' , textAlign: 'center'}}>
           professional & personal <span style={{ color: 'var(--focus-color)' }}>ethos</span>
           <div className={`${poppins.className}`} style={{ fontSize: 'medium', color: 'black' }}>
@@ -179,7 +179,7 @@ export default function About () {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col w-full py-20 items-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
           when i'm<span style={{ color: 'var(--focus-color)' }}> not working</span>...
