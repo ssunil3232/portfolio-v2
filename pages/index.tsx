@@ -12,7 +12,7 @@ export default function Home() {
         {/* <div className="bg-transparent">
             <Navbar />
         </div> */}
-      <div className="grid grid-rows-[20px_1fr_20px] items-start lg:justify-items-start md:justify-items-center sm:justify-items-center h-full">
+      <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen ">
         <IntroPage />
       </div>
     </div>
