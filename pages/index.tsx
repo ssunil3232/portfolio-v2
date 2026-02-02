@@ -182,7 +182,7 @@ export default function Home() {
       </div>
     </div>
     <footer className="content row-start-3 flex flex-col gap-6 flex-wrap items-center justify-center">
-          <div className="flex flex-col" style={{ fontSize: 'x-large', alignItems: "center"}}>
+          <div className="flex flex-col gap-6" style={{ fontSize: 'x-large', alignItems: "center"}}>
             <p className={`${poppins.className} flex flex-inline font-light`}>
               If this sparked a <span className={bristol.className}>"hmm"</span>— let’s&nbsp;
               <span style={{color: "#fd5655"}}> connect</span>!
