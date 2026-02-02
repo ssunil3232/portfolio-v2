@@ -224,7 +224,7 @@ export default function About () {
         </div>
       </section>
       <HowInfo />
-      <div className="flex flex-col w-full py-20 items-center">
+      {/* <div className="flex flex-col w-full py-20 items-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
           when i'm<span style={{ color: 'var(--focus-color)' }}> not working</span>...
           <div className={`${poppins.className}`} style={{ fontSize: 'medium', color: 'black' }}>
@@ -237,7 +237,7 @@ export default function About () {
             <Image src="/assets/jog.png" alt="jog" width={200} height={300} className='pt-5' />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
     
     );

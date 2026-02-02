@@ -30,9 +30,7 @@ const HowInfo = () => {
     if (!sectionEl) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowHowSection(entry.isIntersecting);
-      },
+      ([entry]) => setShowHowSection(entry.isIntersecting),
       { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
     );
 
@@ -45,9 +43,7 @@ const HowInfo = () => {
     if (!sectionEl) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowHowSectionTwo(entry.isIntersecting);
-      },
+      ([entry]) => setShowHowSectionTwo(entry.isIntersecting),
       { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
     );
 
@@ -60,9 +56,7 @@ const HowInfo = () => {
     if (!sectionEl) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowHowSectionThree(entry.isIntersecting);
-      },
+      ([entry]) => setShowHowSectionThree(entry.isIntersecting),
       { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
     );
 
@@ -75,9 +69,7 @@ const HowInfo = () => {
     if (!sectionEl) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowHowSectionFour(entry.isIntersecting);
-      },
+      ([entry]) => setShowHowSectionFour(entry.isIntersecting),
       { threshold: 0.55, rootMargin: '0px 0px -20% 0px' }
     );
 
@@ -90,9 +82,7 @@ const HowInfo = () => {
     if (!sectionEl) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowHowSectionFive(entry.isIntersecting);
-      },
+      ([entry]) => setShowHowSectionFive(entry.isIntersecting),
       { threshold: 0.25, rootMargin: '0px 0px -10% 0px' }
     );
 
@@ -105,10 +95,8 @@ const HowInfo = () => {
     if (!sectionEl) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowHowSectionSix(entry.isIntersecting);
-      },
-      { threshold: 0.6, rootMargin: '0px 0px -20% 0px' }
+      ([entry]) => setShowHowSectionSix(entry.isIntersecting),
+      { threshold: 0.2, rootMargin: '0px 0px -25% 0px' }
     );
 
     observer.observe(sectionEl);
@@ -116,14 +104,14 @@ const HowInfo = () => {
   }, []);
 
   return (
-    <>
+    <div className="how-stack">
       <section
         ref={howSectionRef}
         className={`how-section ${showHowSection ? 'how-section--visible' : ''}`}
       >
         <div className={`${poppins.className} how-copy`}>
           I focus on designing systems to work,<br />
-          <span className={`${crafty_girls.className} how-copy__emphasis`}>
+          <span className={`${poppins.className} how-copy__emphasis`}>
             not simply screens that impress.
           </span>
         </div>
@@ -145,7 +133,7 @@ const HowInfo = () => {
       >
         <div className={`${poppins.className} how-copy`}>
           I <span className="how-copy__bold">zoom out</span> to frame the system,<br />
-          <span className={`${crafty_girls.className} how-copy__emphasis`}>
+          <span className={`${poppins.className} how-copy__emphasis`}>
             then <span className="how-copy__bold">zoom in</span> to build the pixels.
           </span>
         </div>
@@ -189,7 +177,7 @@ const HowInfo = () => {
       >
         <div className={`${poppins.className} how-copy`}>
           <span className="how-copy__bold">Ideating</span> broadly, then narrowing fast<br />
-          <span className={`${crafty_girls.className} how-copy__emphasis`}>
+          <span className={`${poppins.className} how-copy__emphasis`}>
             toward the simplest working answer.
           </span>
         </div>
@@ -231,7 +219,7 @@ const HowInfo = () => {
       >
         <div className={`${poppins.className} how-copy`}>
           Defining the <span className="how-copy__bold">user flows, error states, and structure</span><br />
-          <span className={`${crafty_girls.className} how-copy__emphasis`}>
+          <span className={`${poppins.className} how-copy__emphasis`}>
             that make the experience coherent.
           </span>
         </div>
@@ -299,7 +287,7 @@ const HowInfo = () => {
           />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

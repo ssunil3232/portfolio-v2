@@ -1039,17 +1039,40 @@ body.about-scroll-snap {
   pointer-events: none;
 }
 
+.how-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  scroll-snap-type: y proximity;
+}
+
+.how-stack::after {
+  content: '';
+  display: block;
+  height: 40vh; /* spacer to keep last section pinned a bit longer */
+}
+
 .how-section {
+  position: sticky;
+  top: 5%;
+  min-height: 100vh;
   width: 100%;
-  padding: 80px 8vw 120px;
+  /* padding: 80px 8vw 120px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 600ms ease, transform 700ms ease;
   will-change: opacity, transform;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background: #fff;
+  isolation: isolate;
+  /* box-shadow: 0 30px 90px rgba(0, 0, 0, 0.05); */
 }
 
 .how-section.how-section--visible {
@@ -1154,10 +1177,11 @@ body.about-scroll-snap {
   width: min(42vw, 380px);
   height: auto;
   opacity: 0;
-  transform: translate(var(--from-x), var(--from-y)) scale(0.96);
-  transition: transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1),
-    opacity 600ms ease;
+  transform: translate3d(var(--from-x), var(--from-y), 0) scale(0.9) rotate(var(--from-rot, -6deg));
+  transition: transform 1100ms cubic-bezier(0.18, 0.9, 0.22, 1),
+    opacity 720ms ease;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.08));
+  transform-origin: center;
 }
 
 .how-copy--center {
@@ -1173,34 +1197,38 @@ body.about-scroll-snap {
 .how-corner--tl {
   top: -6%;
   left: -6%;
-  --from-x: -220px;
-  --from-y: -200px;
+  --from-x: -280px;
+  --from-y: -220px;
+  --from-rot: -14deg;
 }
 
 .how-corner--tr {
   top: -6%;
   right: -6%;
-  --from-x: 220px;
-  --from-y: -200px;
+  --from-x: 280px;
+  --from-y: -220px;
+  --from-rot: 14deg;
 }
 
 .how-corner--bl {
   bottom: -8%;
   left: -4%;
-  --from-x: -220px;
-  --from-y: 200px;
+  --from-x: -260px;
+  --from-y: 230px;
+  --from-rot: -12deg;
 }
 
 .how-corner--br {
   bottom: -8%;
   right: -4%;
-  --from-x: 220px;
-  --from-y: 200px;
+  --from-x: 260px;
+  --from-y: 230px;
+  --from-rot: 12deg;
 }
 
 .how-section.how-section--visible .how-corner {
   opacity: 1;
-  transform: translate(0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
 }
 
 .how-section.how-section--visible .how-corner--tr {
@@ -1208,11 +1236,11 @@ body.about-scroll-snap {
 }
 
 .how-section.how-section--visible .how-corner--bl {
-  transition-delay: 220ms;
+  transition-delay: 240ms;
 }
 
 .how-section.how-section--visible .how-corner--br {
-  transition-delay: 320ms;
+  transition-delay: 340ms;
 }
 
 .how-pop-section {
@@ -1273,6 +1301,16 @@ body.about-scroll-snap {
 
 @media (max-width: 900px) {
   .how-section {
+    position: relative;
+    min-height: auto;
+    box-shadow: none;
+  }
+
+  .how-stack {
+    scroll-snap-type: none;
+  }
+
+  .how-section {
     padding: 64px 6vw 96px;
   }
 
@@ -1317,5 +1355,81 @@ body.about-scroll-snap {
 
   .how-pop-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.footer-shell {
+  margin-top: 4rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.footer-card {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2.5rem 0 0.5rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  color: #141414;
+  margin-bottom: 1.75rem;
+  z-index: 2;
+}
+
+.footer-highlight {
+  color: #fd5655;
+  font-weight: 600;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.footer-signoff {
+  text-align: center;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  color: #0f0f0f;
+  z-index: 2;
+}
+
+.footer-portrait {
+  position: absolute;
+  right: clamp(-40px, -4vw, 0px);
+  bottom: -16px;
+  z-index: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.footer-portrait img {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.15));
+}
+
+@media (max-width: 820px) {
+  .footer-card {
+    padding: 2.5rem 1rem 0.5rem;
+  }
+
+  .footer-portrait {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    transform: none;
   }
 }

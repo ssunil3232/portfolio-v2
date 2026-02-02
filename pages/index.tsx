@@ -181,37 +181,43 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <footer className="content row-start-3 flex flex-col gap-6 flex-wrap items-center justify-center">
-          <div className="flex flex-col gap-6" style={{ fontSize: 'x-large', alignItems: "center"}}>
-            <p className={`${poppins.className} flex flex-inline font-light`}>
-              If this sparked a <span className={bristol.className}>"hmm"</span>— let’s&nbsp;
-              <span style={{color: "#fd5655"}}> connect</span>!
-            </p>
-            <div className="flex flex-row pl-2 gap-2 z-10">
-                          <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume" className="intro-icon-wrap">
-                            <Image src="/assets/common/cv.svg" alt="Resume" width={60} height={60} className="intro-icon" />
-                            <span className="intro-tooltip">Resume</span>
-                          </a>
-                          <a href="https://github.com/ssunil3232" target="_blank" rel="noopener noreferrer" title="GitHub" className="intro-icon-wrap">
-                            <Image src="/assets/common/github.svg" alt="Github" width={60} height={60} className="intro-icon" />
-                            <span className="intro-tooltip">GitHub</span>
-                          </a>
-                          <a href="https://sonia-sunil-d3.vercel.app/" target="_blank" rel="noopener noreferrer" title="D3 Data Visualization" className="intro-icon-wrap">
-                            <Image src="/assets/common/viz.svg" alt="Data Visualization" width={60} height={60} className="intro-icon" />
-                            <span className="intro-tooltip">Data Viz</span>
-                          </a>
-                          <a href="mailto:soniasunil47@gmail.com?cc=ss3587@cornell.edu" title="Email"  target="_blank" rel="noopener noreferrer" className="intro-icon-wrap">
-                            <Image src="/assets/common/email.svg" alt="E-Mail" width={60} height={60} className="intro-icon" />
-                            <span className="intro-tooltip">Email</span>
-                          </a>
-                          <a href="https://www.linkedin.com/in/sonia-sunil-ss32" title="LinkedIn"  target="_blank" rel="noopener noreferrer" className="intro-icon-wrap">
-                            <Image src="/assets/common/linkedin.svg" alt="LinkedIn" width={60} height={60} className="intro-icon" />
-                            <span className="intro-tooltip">LinkedIn</span>
-                          </a>
-                        </div>
-          </div>
-          <p className={`${reenie_beanie.className} flex text-center`} style={{fontSize: 'x-large'}}>© 2024 Sonia Sunil · Developed with React ✨</p>
-      </footer>
+    <footer className="footer-shell content row-start-3">
+      <div className="footer-card">
+        <div className="footer-text">
+          <p className={`${poppins.className} font-light`}>
+            If this sparked a <span className={bristol.className}>"hmm"</span>— let’s <span className="footer-highlight">connect</span>!
+          </p>
+        </div>
+
+        <div className="footer-icons">
+          <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume" className="intro-icon-wrap">
+            <Image src="/assets/common/cv.svg" alt="Resume" width={64} height={64} className="intro-icon" />
+            <span className="intro-tooltip">Resume</span>
+          </a>
+          <a href="https://github.com/ssunil3232" target="_blank" rel="noopener noreferrer" title="GitHub" className="intro-icon-wrap">
+            <Image src="/assets/common/github.svg" alt="Github" width={64} height={64} className="intro-icon" />
+            <span className="intro-tooltip">GitHub</span>
+          </a>
+          <a href="https://sonia-sunil-d3.vercel.app/" target="_blank" rel="noopener noreferrer" title="D3 Data Visualization" className="intro-icon-wrap">
+            <Image src="/assets/common/viz.svg" alt="Data Visualization" width={64} height={64} className="intro-icon" />
+            <span className="intro-tooltip">Data Viz</span>
+          </a>
+          <a href="mailto:soniasunil47@gmail.com?cc=ss3587@cornell.edu" title="Email" target="_blank" rel="noopener noreferrer" className="intro-icon-wrap">
+            <Image src="/assets/common/email.svg" alt="E-Mail" width={64} height={64} className="intro-icon" />
+            <span className="intro-tooltip">Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sonia-sunil-ss32" title="LinkedIn" target="_blank" rel="noopener noreferrer" className="intro-icon-wrap">
+            <Image src="/assets/common/linkedin.svg" alt="LinkedIn" width={64} height={64} className="intro-icon" />
+            <span className="intro-tooltip">LinkedIn</span>
+          </a>
+        </div>
+        <p className={`${reenie_beanie.className} footer-signoff`}>© 2024 Sonia Sunil · Developed with React ✨</p>
+
+        <div className="footer-portrait" aria-hidden="true">
+          <Image src="/assets/common/me.svg" alt="Sonia" width={480} height={520} priority />
+        </div>
+      </div>
+    </footer>
     </>
   );
 }
