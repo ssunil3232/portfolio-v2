@@ -1,11 +1,9 @@
-import CirclePacking from '@/app/components/bubble';
-import BubbleChart from '@/app/components/bubble';
-import CircularPackGraph from '@/app/components/bubble';
+import SkillsBubbles from '@/app/components/bubble';
+import HowInfo from '@/app/components/how';
 import Navbar from '@/app/components/navbar';
-import { crafty_girls, poppins, reenie_beanie } from '@/app/ui/fonts';
-import { image } from 'd3';
+import { poppins, reenie_beanie } from '@/app/ui/fonts';
 import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function About () {
   const journey = ["nus", "cornell"]
@@ -24,6 +22,15 @@ export default function About () {
   const timelineSectionRef = useRef<HTMLDivElement | null>(null);
   const timelineScrollRef = useRef<HTMLDivElement | null>(null);
   const timelineTitleRef = useRef<HTMLDivElement | null>(null);
+  const [burstKey, setBurstKey] = useState(0);
+  const [showTapArrow, setShowTapArrow] = useState(true);
+
+  useEffect(() => {
+    document.body.classList.add('about-scroll-snap');
+    return () => {
+      document.body.classList.remove('about-scroll-snap');
+    };
+  }, []);
 
   useEffect(() => {
     const sectionEl = timelineSectionRef.current;
@@ -82,6 +89,7 @@ export default function About () {
       if (rafId) window.cancelAnimationFrame(rafId);
     };
   }, []);
+
   // const hobbies = [
   //   {
   //     "title": "🧳 Travelling",
@@ -109,7 +117,7 @@ export default function About () {
   //   { name: "AI ECD", size: 1000, imageUrl: "/assets/aiecd.webp"  },
   // ];
   return (
-    <div className="flex flex-col justify-start w-full min-h-screen">
+    <div className="about-page flex flex-col justify-start w-full min-h-screen">
       <div className="about-id-row flex flex-col lg:flex-row w-full items-end gap-6 lg:gap-[5%] md:gap-[5%] pt-4 pb-12">
         <div className="about-id-wrap w-[40%] flex justify-center">
           <Image src="/assets/common/id_card.svg" alt="ID card illustration" width={520} height={520} priority className="about-id-card top-[15%]" />
@@ -138,15 +146,6 @@ export default function About () {
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col w-full pt-10 items-center">
-        <div className={`${reenie_beanie.className} center-align-sm relative`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
-          what are my <span style={{ color: 'var(--focus-color)' }}>skills</span>?
-          <div className="focus-arrow flex  mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
-            <Image src="/assets/focus-arrow.gif" alt="focus" width={200} height={300} className="rounded-lg" />
-          </div>
-        </div>
-        <CirclePacking />
-      </div> */}
       <div className="flex w-full flex-row arrow-2 content ml-[10%]">
         <Image src="/assets/arrow-2.gif" alt="arrow" width={100} height={100} className="rounded-lg" />
       </div>
@@ -198,15 +197,33 @@ export default function About () {
         </div>
       </div> */}
       <section className="skills_info flex w-full items-center justify-center py-12">
-        <Image
-          src="/assets/common/cherry.gif"
-          alt="Cherry"
-          width={500}
-          height={500}
-          className="mx-auto"
-        />
-        
+        <div className="skills-orbit-wrap">
+          {showTapArrow && (
+            <Image
+              src="/assets/common/arrow_tap.svg"
+              alt="Tap arrow"
+              width={140}
+              height={140}
+              className="skills-arrow-tap"
+              priority
+            />
+          )}
+          <Image
+            src="/assets/common/cherry.gif"
+            alt="Cherry"
+            width={500}
+            height={500}
+            className="skills-cherry"
+            onClick={() => {
+              setBurstKey((prev) => prev + 1);
+              setShowTapArrow(false);
+            }}
+            style={{ cursor: 'pointer' }}
+          />
+          <SkillsBubbles burstKey={burstKey} />
+        </div>
       </section>
+      <HowInfo />
       <div className="flex flex-col w-full py-20 items-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
           when i'm<span style={{ color: 'var(--focus-color)' }}> not working</span>...

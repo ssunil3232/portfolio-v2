@@ -13,6 +13,7 @@ const makeFont = (name: string): FontStub => ({
 export const nunito = makeFont('nunito');
 export const josefin = makeFont('josefin');
 export const poppins = makeFont('poppins');
+export const bristol = makeFont('bristol');
 export const caveat = makeFont('caveat');
 export const gamja = makeFont('gamja');
 export const reenie_beanie = makeFont('reenie-beanie');

@@ -3,7 +3,7 @@ import Navbar from "@/app/components/navbar";
 import Projects from "@/app/components/projects";
 import About from "./about";
 import Image from "next/image";
-import { reenie_beanie } from "@/app/ui/fonts";
+import { bristol, poppins, reenie_beanie } from "@/app/ui/fonts";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -182,8 +182,11 @@ export default function Home() {
       </div>
     </div>
     <footer className="content row-start-3 flex flex-col gap-6 flex-wrap items-center justify-center">
-          <div className="flex sm:flex-col md:flex-row lg:flex-row flex-col" style={{ fontSize: 'xx-large', alignItems: "center"}}>
-            <p className="flex flex-inline">Let's&nbsp;<span style={{color: "#fd5655"}}> connect</span>!</p>
+          <div className="flex flex-col" style={{ fontSize: 'x-large', alignItems: "center"}}>
+            <p className={`${poppins.className} flex flex-inline font-light`}>
+              If this sparked a <span className={bristol.className}>"hmm"</span>— let’s&nbsp;
+              <span style={{color: "#fd5655"}}> connect</span>!
+            </p>
             <div className="flex flex-row pl-2 gap-2 z-10">
                           <a href="./assets/Resume_2025.pdf" target="_blank" rel="noopener noreferrer" title="Resume" className="intro-icon-wrap">
                             <Image src="/assets/common/cv.svg" alt="Resume" width={60} height={60} className="intro-icon" />

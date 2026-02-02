@@ -126,93 +126,284 @@ const sampleData: CircleData[] = [
   { name: "AI ECD", image: "/assets/skills/vue.png", value: 30 },
 ];
 
-const CirclePacking = () => {
+interface SkillsBubblesProps {
+  burstKey?: number;
+}
+
+const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
   const ref = useRef<SVGSVGElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const nodesRef = useRef<CircleData[]>([]);
+  const simulationRef = useRef<d3.Simulation<CircleData, undefined> | null>(
+    null
+  );
+  const nodesSelRef = useRef<d3.Selection<SVGGElement, CircleData, SVGGElement, unknown> | null>(
+    null
+  );
+  const sizeRef = useRef<{ width: number; height: number }>({
+    width: 1,
+    height: 1,
+  });
+  const explodedRef = useRef(false);
+  const burstTimerRef = useRef<d3.Timer | null>(null);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current || !wrapRef.current) return;
 
-    const width = 400;
-    const height = 400;
+    const svg = d3.select(ref.current).style("background", "transparent");
+    let simulation: d3.Simulation<CircleData, undefined> | null = null;
+    let ticker: d3.Timer | null = null;
 
-    // Create SVG
-    const svg = d3
-      .select(ref.current)
-      .attr("viewBox", `0 0 ${width} ${height}`)
-      .attr("height", height)
-      .style("background", "#fff");
+    const render = () => {
+      if (!wrapRef.current) return;
+      const rect = wrapRef.current.getBoundingClientRect();
+      const width = Math.max(1, rect.width);
+      const height = Math.max(1, rect.height);
+      const pad = 10;
+      sizeRef.current = { width, height };
 
-    svg.selectAll("*").remove(); // Clear previous render
+      svg.attr("viewBox", `0 0 ${width} ${height}`).attr("height", height);
+      svg.selectAll("*").remove();
 
-    // Create simulation
-    const simulation = d3
-      .forceSimulation<CircleData>(sampleData)
-      .force("x", d3.forceX(width / 2).strength(0.5)) // Attract to center X
-      .force("y", d3.forceY(height / 2).strength(0.5)) // Attract to center Y
-      
-      // .force("charge", d3.forceManyBody().strength(-100)) // Repelling force
-      // .force("center", d3.forceCenter(width / 2, height / 2)) // Center nodes
-      .force(
-        "collision",
-        d3.forceCollide<CircleData>().radius((d) => d.value + 5) // Avoid overlaps
-      );
+      explodedRef.current = false;
+      const nodesData = sampleData.map((node) => ({
+        ...node,
+        x: node.x ?? width / 2,
+        y: node.y ?? height / 2,
+      }));
+      nodesRef.current = nodesData;
 
-    // Add nodes
-    const nodes = svg
-      .selectAll("g")
-      .data(sampleData)
-      .enter()
-      .append("g")
-      .call(
-        d3
-          .drag<SVGGElement, CircleData>()
-          .on("start", (event, d) => {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = event.x;
-            d.fy = event.y;
-          })
-          .on("drag", (event, d) => {
-            d.fx = event.x;
-            d.fy = event.y;
-          })
-          .on("end", (event, d) => {
-            if (!event.active) simulation.alphaTarget(0);
-            d.fx = null;
-            d.fy = null;
-          })
-      );
+      const wanderForce = (): d3.Force<CircleData, undefined> => {
+        let nodes: CircleData[] = [];
+        const strength = 0.35;
+        const force = (alpha: number) => {
+          for (const d of nodes) {
+            d.vx = (d.vx ?? 0) + (Math.random() - 0.5) * strength * alpha;
+            d.vy = (d.vy ?? 0) + (Math.random() - 0.5) * strength * alpha;
+          }
+        };
+        force.initialize = (ns: CircleData[]) => {
+          nodes = ns;
+        };
+        return force;
+      };
 
-    // Add circles
-    nodes
-      .append("circle")
-      .attr("r", (d) => d.value)
-      .attr("stroke", "rgb(253 87 87)")
-      .attr("stroke-width", 2)
-      .attr("fill", "#fbe1e3");
+      const avoidCenterForce = (): d3.Force<CircleData, undefined> => {
+        let nodes: CircleData[] = [];
+        const deadZone = Math.min(width, height) * 0.3;
+        const strength = 0.7;
+        const force = (alpha: number) => {
+          const cx = width / 2;
+          const cy = height / 2;
+          for (const d of nodes) {
+            if (d.x === undefined || d.y === undefined) continue;
+            const dx = d.x - cx;
+            const dy = d.y - cy;
+            const dist = Math.hypot(dx, dy) || 1;
+            const minDist = deadZone + d.value;
+            if (dist < minDist) {
+              const push = (minDist - dist) / minDist;
+              d.vx = (d.vx ?? 0) + (dx / dist) * strength * push * alpha * 24;
+              d.vy = (d.vy ?? 0) + (dy / dist) * strength * push * alpha * 24;
+            }
+          }
+        };
+        force.initialize = (ns: CircleData[]) => {
+          nodes = ns;
+        };
+        return force;
+      };
 
-    nodes
-      .append("clipPath")
-      .attr("id", (d) => `clip-${d.name}`)
-      .append("circle")
-      .attr("r", 1000); // Fixed radius
+      const flowForce = (): d3.Force<CircleData, undefined> => {
+        let nodes: CircleData[] = [];
+        let t = Math.random() * 1000;
+        const force = (alpha: number) => {
+          t += 0.01;
+          for (const d of nodes) {
+            const x = d.x ?? width / 2;
+            const y = d.y ?? height / 2;
+            const vx = Math.sin(y * 0.012 + t) * 0.6;
+            const vy = Math.cos(x * 0.012 + t * 0.9) * 0.6;
+            d.vx = (d.vx ?? 0) + vx * alpha;
+            d.vy = (d.vy ?? 0) + vy * alpha;
+          }
+        };
+        force.initialize = (ns: CircleData[]) => {
+          nodes = ns;
+        };
+        return force;
+      };
 
-    // Add images
-    nodes
-      .append("image")
-      .attr("xlink:href", (d) => d.image)
-      .attr("clip-path", (d) => `url(#clip-${d.name})`)
-      .attr("x", (d) => -d.value)
-      .attr("y", (d) => -d.value)
-      .attr("width", (d) => d.value * 2)
-      .attr("height", (d) => d.value * 2);
+      simulation?.stop();
+      ticker?.stop();
+      simulation = d3
+        .forceSimulation<CircleData>(nodesData)
+        .alpha(1)
+        .alphaDecay(0.003)
+        .velocityDecay(0.26)
+        .force("charge", d3.forceManyBody().strength(-0.9))
+        .force("wander", wanderForce())
+        .force("flow", flowForce())
+        .force("avoid-center", avoidCenterForce())
+        .force(
+          "collision",
+          d3.forceCollide<CircleData>().radius((d) => d.value + 2).iterations(3)
+        );
 
-    // Update positions during simulation
-    simulation.nodes(sampleData).on("tick", () => {
-      nodes.attr("transform", (d) => `translate(${d.x},${d.y})`);
-    });
+      simulationRef.current = simulation;
+      simulation.alphaTarget(0.12).restart();
+
+      const nodes = svg
+        .selectAll("g")
+        .data(nodesData)
+        .enter()
+        .append("g")
+        .call(
+          d3
+            .drag<SVGGElement, CircleData>()
+            .on("start", (event, d) => {
+              if (!event.active) simulation?.alphaTarget(0.3).restart();
+              d.fx = event.x;
+              d.fy = event.y;
+            })
+            .on("drag", (event, d) => {
+              d.fx = event.x;
+              d.fy = event.y;
+            })
+            .on("end", (event, d) => {
+              if (!event.active) simulation?.alphaTarget(0);
+              d.fx = null;
+              d.fy = null;
+            })
+        );
+
+      nodes
+        .append("circle")
+        .attr("r", (d) => d.value)
+        .attr("stroke", "rgb(253 87 87)")
+        .attr("stroke-width", 2)
+        .attr("fill", "#fbe1e3");
+
+      nodes
+        .append("clipPath")
+        .attr("id", (d) => `clip-${d.name}`)
+        .append("circle")
+        .attr("r", 1000);
+
+      nodes
+        .append("image")
+        .attr("xlink:href", (d) => d.image)
+        .attr("clip-path", (d) => `url(#clip-${d.name})`)
+        .attr("x", (d) => -d.value)
+        .attr("y", (d) => -d.value)
+        .attr("width", (d) => d.value * 2)
+        .attr("height", (d) => d.value * 2);
+
+      nodes.attr("opacity", 0);
+      nodesSelRef.current = nodes;
+
+      simulation.on("tick", () => {
+        const cx = width / 2;
+        const cy = height / 2;
+        const deadZone = Math.min(width, height) * 0.3;
+        if (!explodedRef.current) {
+          for (const d of nodesData) {
+            d.x = cx;
+            d.y = cy;
+            d.vx = 0;
+            d.vy = 0;
+          }
+          nodes.attr("transform", `translate(${cx},${cy})`);
+          return;
+        }
+        for (const d of nodesData) {
+          const r = d.value + 2;
+          if (d.x === undefined || d.y === undefined) continue;
+          if (d.x < r + pad) d.x = r + pad;
+          if (d.x > width - r - pad) d.x = width - r - pad;
+          if (d.y < r + pad) d.y = r + pad;
+          if (d.y > height - r - pad) d.y = height - r - pad;
+          const dx = d.x - cx;
+          const dy = d.y - cy;
+          const dist = Math.hypot(dx, dy) || 1;
+          const minDist = deadZone + r;
+          if (dist < minDist) {
+            d.x = cx + (dx / dist) * minDist;
+            d.y = cy + (dy / dist) * minDist;
+          }
+        }
+        nodes.attr("transform", (d) => `translate(${d.x},${d.y})`);
+      });
+
+      // Keep the simulation alive so motion continues after alpha decay.
+      ticker = d3.timer(() => {
+        if (simulation) simulation.alphaTarget(0.12);
+        if (!explodedRef.current) return;
+        for (const d of nodesData) {
+          if (Math.random() < 0.03) {
+            d.vx = (d.vx ?? 0) + (Math.random() - 0.5) * 2;
+            d.vy = (d.vy ?? 0) + (Math.random() - 0.5) * 2;
+          }
+        }
+      });
+    };
+
+    const observer = new ResizeObserver(() => render());
+    observer.observe(wrapRef.current);
+    render();
+
+    return () => {
+      observer.disconnect();
+      simulation?.stop();
+      ticker?.stop();
+      burstTimerRef.current?.stop();
+      simulationRef.current = null;
+      nodesRef.current = [];
+    };
   }, []);
 
-  return <svg ref={ref}></svg>;
+  useEffect(() => {
+    const simulation = simulationRef.current;
+    const nodes = nodesRef.current;
+    if (!simulation || nodes.length === 0) return;
+    const { width, height } = sizeRef.current;
+    const cx = width / 2;
+    const cy = height / 2;
+
+    explodedRef.current = true;
+    nodesSelRef.current
+      ?.transition()
+      .duration(650)
+      .ease(d3.easeCubicOut)
+      .attr("opacity", 1);
+
+    burstTimerRef.current?.stop();
+    const burstDuration = 950;
+    const maxImpulse = 4;
+    const start = performance.now();
+    burstTimerRef.current = d3.timer(() => {
+      const t = Math.min(1, (performance.now() - start) / burstDuration);
+      const eased = d3.easeCubicInOut(t);
+      const impulse = maxImpulse * (1 - eased);
+      for (const d of nodes) {
+        if (d.x === undefined || d.y === undefined) continue;
+        const dx = d.x - cx;
+        const dy = d.y - cy;
+        const dist = Math.hypot(dx, dy) || 1;
+        d.vx = (d.vx ?? 0) + (dx / dist) * impulse;
+        d.vy = (d.vy ?? 0) + (dy / dist) * impulse;
+      }
+      if (t >= 1) burstTimerRef.current?.stop();
+    });
+
+    simulation.alpha(0.8).alphaTarget(0.2).restart();
+  }, [burstKey]);
+
+  return (
+    <div ref={wrapRef} className="skills-bubbles-wrap">
+      <svg ref={ref} className="skills-bubbles-svg"></svg>
+    </div>
+  );
 };
 
-export default CirclePacking;
+export default SkillsBubbles;
