@@ -914,6 +914,14 @@ body.about-scroll-snap {
   font-size: 14px;
 }
 
+.nav-link {
+  transition: color 160ms ease;
+}
+
+.nav-link:hover {
+  color: #dd5757;
+}
+
 /* Fallback font stacks for offline stubs */
 .font-poppins {
   font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;

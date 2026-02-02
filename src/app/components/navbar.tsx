@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { poppins } from '../ui/fonts';
 
 const Navbar = () => {
@@ -44,7 +45,9 @@ const Navbar = () => {
 
   return (
     <div className={`nav-body ${scrolled ? 'nav-body--scrolled' : ''} ${mounted ? 'nav-body--mounted' : ''}`}>
-      <Image className="nav-icon" width={40} height={40} sizes="100vw" alt="" src="/assets/common/icon.svg" />
+      <Link href="/" aria-label="Home">
+        <Image className="nav-icon" width={40} height={40} sizes="100vw" alt="" src="/assets/common/icon.svg" />
+      </Link>
       <div
         className={`nav-player nav-player--collapsible ${expanded ? 'nav-player--expanded' : ''}`}
         tabIndex={0}
@@ -56,9 +59,15 @@ const Navbar = () => {
         <Image className="nav-button-icon" width={20} height={20} sizes="100vw" alt="" src="/assets/common/hover_arrow_icon.svg" />
         {expanded && (
           <>
-            <div className={`nav-item ${poppins.className} text-[#6f737a]`}>Work</div>
-            <div className={`nav-item ${poppins.className} text-[#6f737a]`}>About</div>
-            <div className={`nav-item ${poppins.className} text-[#6f737a]`}>Play</div>
+            <Link href="/projects" className={`nav-item nav-link ${poppins.className} text-[#6f737a]`}>
+              Work
+            </Link>
+            <Link href="/" className={`nav-item nav-link ${poppins.className} text-[#6f737a]`}>
+              About
+            </Link>
+            <Link href="/play" className={`nav-item nav-link ${poppins.className} text-[#6f737a]`}>
+              Play
+            </Link>
           </>
         )}
         <div className="nav-progress">
