@@ -46,6 +46,13 @@ export default function About () {
         const rect = sectionEl.getBoundingClientRect();
         const sectionTop = window.scrollY + rect.top;
         const maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+        const isTitleVisible =
+          rect.bottom > 0 && rect.top < window.innerHeight;
+        if (isTitleVisible) {
+          titleEl.classList.remove('timeline-title--hidden');
+        } else {
+          titleEl.classList.add('timeline-title--hidden');
+        }
         if (maxScroll <= 0) return;
         if (rect.top > 0) {
           scrollEl.scrollLeft = 0;
@@ -146,8 +153,18 @@ export default function About () {
       <div className="flex flex-col w-full">
         <section className="timeline-section" ref={timelineSectionRef}>
           <div ref={timelineTitleRef} className={`${poppins.className} font-light text-[2rem] leading-[0.95] text-[#111111] content timeline-title`}>
-            <span className={`${reenie_beanie.className} text-[#ff6b6b] ml-[1rem] text-[3rem]`}>my journey </span>
-            across a timeline
+            <div className="timeline-title-text">
+              <span className={`${reenie_beanie.className} text-[#ff6b6b] ml-[1rem] text-[3rem]`}>my journey</span>&nbsp;
+              across a timeline
+            </div>
+            <Image
+              src="/assets/common/moving_girl.gif"
+              alt="Moving girl walking"
+              width={160}
+              height={160}
+              className="timeline-title-gif"
+              priority
+            />
           </div>
           <div className="timeline-scroll h-screen" ref={timelineScrollRef}>
             {/* <Image src="/assets/common/timeline.svg" alt="Journey" width={300} height={100} className='h-[100%] w-auto' /> */}
