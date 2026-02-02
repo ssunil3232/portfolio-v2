@@ -197,6 +197,16 @@ export default function About () {
           </div>
         </div>
       </div> */}
+      <section className="skills_info flex w-full items-center justify-center py-12">
+        <Image
+          src="/assets/common/cherry.gif"
+          alt="Cherry"
+          width={500}
+          height={500}
+          className="mx-auto"
+        />
+        
+      </section>
       <div className="flex flex-col w-full py-20 items-center">
         <div className={`${reenie_beanie.className} center-align-sm relative w-full`} style={{ fontSize: 'xx-large', color: 'var(--description-color)' }}>
           when i'm<span style={{ color: 'var(--focus-color)' }}> not working</span>...
