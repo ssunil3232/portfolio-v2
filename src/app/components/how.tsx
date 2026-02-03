@@ -70,7 +70,7 @@ const HowInfo = () => {
 
     const observer = new IntersectionObserver(
       ([entry]) => setShowHowSectionFour(entry.isIntersecting),
-      { threshold: 0.55, rootMargin: '0px 0px -20% 0px' }
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
     );
 
     observer.observe(sectionEl);
@@ -171,7 +171,7 @@ const HowInfo = () => {
 
       <section
         ref={howSectionFourRef}
-        className={`how-section how-pop-section ${
+        className={`how-section how-pop-section how-pop-section--long ${
           showHowSectionFour ? 'how-section--visible how-pop-section--visible' : ''
         }`}
       >
@@ -212,6 +212,7 @@ const HowInfo = () => {
           />
         </div>
       </section>
+      <div className="how-pop-spacer" aria-hidden="true" />
 
       <section
         ref={howSectionFiveRef}

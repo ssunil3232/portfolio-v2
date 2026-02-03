@@ -1260,6 +1260,14 @@ body.about-scroll-snap {
   gap: 16px;
 }
 
+.how-pop-section--long {
+  min-height: 100vh;
+}
+
+.how-pop-spacer {
+  height: 40vh;
+}
+
 .how-pop-grid {
   width: min(90vw, 920px);
   display: grid;
@@ -1280,20 +1288,20 @@ body.about-scroll-snap {
 
 .how-pop-section--visible .how-pop-item {
   visibility: visible;
-  animation: howPopReveal 1400ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+  animation: howPopReveal 900ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
 }
 
 .how-pop-section--visible .how-pop-item:nth-child(1) {
-  animation-delay: 2000ms;
+  animation-delay: 800ms;
 }
 .how-pop-section--visible .how-pop-item:nth-child(2) {
-  animation-delay: 2520ms;
+  animation-delay: 1100ms;
 }
 .how-pop-section--visible .how-pop-item:nth-child(3) {
-  animation-delay: 3040ms;
+  animation-delay: 1400ms;
 }
 .how-pop-section--visible .how-pop-item:nth-child(4) {
-  animation-delay: 3560ms;
+  animation-delay: 1700ms;
 }
 
 @keyframes howPopReveal {
