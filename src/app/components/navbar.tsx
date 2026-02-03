@@ -34,7 +34,7 @@ const Navbar = () => {
       const displayHours = hours % 12 || 12;
       const ampm = hours >= 12 ? 'PM' : 'AM';
       const paddedMinutes = minutes.toString().padStart(2, '0');
-      setTime(`${displayHours}.${paddedMinutes}${ampm.toLowerCase()}`);
+      setTime(`${displayHours}.${paddedMinutes} ${ampm.toUpperCase()}`);
     };
     updateTime();
     const timer = setInterval(updateTime, 30 * 1000);
@@ -84,7 +84,7 @@ const Navbar = () => {
           </svg>
         </div>
       </div>
-      <div className={`nav-item ${poppins.className}`}>{time}</div>
+      <div className={`nav-item ${poppins.className} text-[#6f737a]`}>{time}</div>
     </div>
   );
 };
