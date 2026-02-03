@@ -106,6 +106,8 @@ interface CircleData extends d3.SimulationNodeDatum {
   value: number;
 }
 
+type CircleNode = CircleData & { x: number; y: number };
+
 const sampleData: CircleData[] = [
   { name: "angular", image: "/assets/skills/angular.png", value: 30 },
   { name: "Pslove", image: "/assets/skills/azure.png", value: 30 },
@@ -133,11 +135,13 @@ interface SkillsBubblesProps {
 const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
   const ref = useRef<SVGSVGElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
-  const nodesRef = useRef<CircleData[]>([]);
-  const simulationRef = useRef<d3.Simulation<CircleData, undefined> | null>(
+  const nodesRef = useRef<CircleNode[]>([]);
+  const simulationRef = useRef<d3.Simulation<CircleNode, undefined> | null>(
     null
   );
-  const nodesSelRef = useRef<d3.Selection<SVGGElement, CircleData, SVGGElement, unknown> | null>(
+  const nodesSelRef = useRef<
+    d3.Selection<SVGGElement, CircleNode, SVGGElement, unknown> | null
+  >(
     null
   );
   const sizeRef = useRef<{ width: number; height: number }>({
@@ -151,7 +155,7 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
     if (!ref.current || !wrapRef.current) return;
 
     const svg = d3.select(ref.current).style("background", "transparent");
-    let simulation: d3.Simulation<CircleData, undefined> | null = null;
+    let simulation: d3.Simulation<CircleNode, undefined> | null = null;
     let ticker: d3.Timer | null = null;
 
     const render = () => {
@@ -166,15 +170,15 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
       svg.selectAll("*").remove();
 
       explodedRef.current = false;
-      const nodesData = sampleData.map((node) => ({
+      const nodesData: CircleNode[] = sampleData.map((node) => ({
         ...node,
         x: node.x ?? width / 2,
         y: node.y ?? height / 2,
       }));
       nodesRef.current = nodesData;
 
-      const wanderForce = (): d3.Force<CircleData, undefined> => {
-        let nodes: CircleData[] = [];
+      const wanderForce = (): d3.Force<CircleNode, undefined> => {
+        let nodes: CircleNode[] = [];
         const strength = 0.35;
         const force = (alpha: number) => {
           for (const d of nodes) {
@@ -182,14 +186,14 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
             d.vy = (d.vy ?? 0) + (Math.random() - 0.5) * strength * alpha;
           }
         };
-        force.initialize = (ns: CircleData[]) => {
+        force.initialize = (ns: CircleNode[]) => {
           nodes = ns;
         };
         return force;
       };
 
-      const avoidCenterForce = (): d3.Force<CircleData, undefined> => {
-        let nodes: CircleData[] = [];
+      const avoidCenterForce = (): d3.Force<CircleNode, undefined> => {
+        let nodes: CircleNode[] = [];
         const deadZone = Math.min(width, height) * 0.3;
         const strength = 0.7;
         const force = (alpha: number) => {
@@ -208,14 +212,14 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
             }
           }
         };
-        force.initialize = (ns: CircleData[]) => {
+        force.initialize = (ns: CircleNode[]) => {
           nodes = ns;
         };
         return force;
       };
 
-      const flowForce = (): d3.Force<CircleData, undefined> => {
-        let nodes: CircleData[] = [];
+      const flowForce = (): d3.Force<CircleNode, undefined> => {
+        let nodes: CircleNode[] = [];
         let t = Math.random() * 1000;
         const force = (alpha: number) => {
           t += 0.01;
@@ -228,7 +232,7 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
             d.vy = (d.vy ?? 0) + vy * alpha;
           }
         };
-        force.initialize = (ns: CircleData[]) => {
+        force.initialize = (ns: CircleNode[]) => {
           nodes = ns;
         };
         return force;
@@ -237,7 +241,7 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
       simulation?.stop();
       ticker?.stop();
       simulation = d3
-        .forceSimulation<CircleData>(nodesData)
+        .forceSimulation<CircleNode>(nodesData)
         .alpha(1)
         .alphaDecay(0.003)
         .velocityDecay(0.26)
@@ -247,7 +251,7 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
         .force("avoid-center", avoidCenterForce())
         .force(
           "collision",
-          d3.forceCollide<CircleData>().radius((d) => d.value + 2).iterations(3)
+          d3.forceCollide<CircleNode>().radius((d) => d.value + 2).iterations(3)
         );
 
       simulationRef.current = simulation;
@@ -260,7 +264,7 @@ const SkillsBubbles = ({ burstKey = 0 }: SkillsBubblesProps) => {
         .append("g")
         .call(
           d3
-            .drag<SVGGElement, CircleData>()
+            .drag<SVGGElement, CircleNode>()
             .on("start", (event, d) => {
               if (!event.active) simulation?.alphaTarget(0.3).restart();
               d.fx = event.x;
