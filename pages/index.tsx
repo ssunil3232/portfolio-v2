@@ -44,6 +44,7 @@ export default function Home() {
 
       const flightEl = flightLayerRef.current;
       flightEl.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(${1 - progress * 0.15})`;
+      flightEl.classList.add("flight--ready");
 
       if (progress > 0.32 && progress < 1) {
         flightEl.classList.add("flight--active");

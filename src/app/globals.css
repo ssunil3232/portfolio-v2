@@ -285,7 +285,12 @@ body.about-scroll-snap {
   pointer-events: none;
   z-index: 50;
   transform: translate3d(0, 0, 0);
+  opacity: 0;
   transition: opacity 0.4s ease;
+}
+
+.flight-layer.flight--ready {
+  opacity: 1;
 }
 
 .flight-image {
