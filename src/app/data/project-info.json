@@ -42,7 +42,7 @@
       "label": "Prisoner Express",
       "new": false,
       "timeline": "Jan – May 2024",
-      "previewVideo": ""
+      "previewVideo": "/assets/previews/prisonerExpress.mp4"
     },
     {
       "header": "BeautyAI",
@@ -106,7 +106,7 @@
       "label": "Swift Tunes Decoded",
       "new": false,
       "timeline": "Jan - May 2024",
-      "previewVideo": ""
+      "previewVideo": "/assets/previews/swiftTunes.mp4"
     },
     {
       "header": "Under the Covers",
@@ -122,6 +122,6 @@
       "label": "Under the Covers",
       "new": false,
       "timeline": "Jan - May 2024",
-      "previewVideo": ""
+      "previewVideo": "/assets/previews/underTheCovers.mp4"
     }
   ]
