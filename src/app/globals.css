@@ -688,8 +688,9 @@ body.about-scroll-snap {
 }
 
 .project-row:hover .project-media {
-  border-color: #ff9989;
-  box-shadow: 0 20px 40px rgba(191, 74, 18, 0.22);
+  border-color: var(--focus-border-color, #ff9989);
+  border-width: 4.5px;
+  box-shadow: 0 18px 38px color-mix(in srgb, var(--focus-border-color, #ff9989) 55%, transparent);
   transform: rotate(0deg) translateY(-2px);
 }
 

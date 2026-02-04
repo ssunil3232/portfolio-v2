@@ -7,6 +7,9 @@ import '../globals.css';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
+    const colors = [
+        "#eaf8bb", "#ffd1c7", "#ffe9c4", "#f9d7ea", "#e6d3f7", "#e7f0ff", "#f3c6f5", "#f4e6d8"
+    ];
     const [hovered, setHovered] = React.useState(false);
 
     const projectsRef = useRef<HTMLDivElement>(null);
@@ -35,7 +38,6 @@ const Projects = () => {
                 Large, case-study style highlights inspired by clean editorial layouts.
             </p>
         </div>
-
         <div className="projects-list">
             {projects.map((project, index) => (
                 <motion.div
@@ -53,7 +55,12 @@ const Projects = () => {
                                 {project.timeline} | {project.tools.join(', ')}
                             </p>
                         </div>
-                        <Link href={project.link} className={`project-media ${index % 2 === 1 ? 'project-media--tilt-left' : 'project-media--tilt-right'}`} aria-label={project.header}>
+                        <Link
+                            href={project.link}
+                            className={`project-media ${index % 2 === 1 ? 'project-media--tilt-left' : 'project-media--tilt-right'}`}
+                            aria-label={project.header}
+                            style={{ ['--focus-border-color' as string]: colors[index % colors.length] }}
+                        >
                             <Image
                                 src={project.preview}
                                 alt={`${project.id}-Preview`}
