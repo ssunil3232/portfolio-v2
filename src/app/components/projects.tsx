@@ -11,6 +11,7 @@ const Projects = () => {
         "#eaf8bb", "#ffd1c7", "#ffe9c4", "#f9d7ea", "#e6d3f7", "#e7f0ff", "#f3c6f5", "#f4e6d8"
     ];
     const [hovered, setHovered] = React.useState(false);
+    const [hoveredProject, setHoveredProject] = React.useState<number | null>(null);
 
     const projectsRef = useRef<HTMLDivElement>(null);
 
@@ -60,14 +61,29 @@ const Projects = () => {
                             className={`project-media ${index % 2 === 1 ? 'project-media--tilt-left' : 'project-media--tilt-right'}`}
                             aria-label={project.header}
                             style={{ ['--focus-border-color' as string]: colors[index % colors.length] }}
+                            onMouseEnter={() => setHoveredProject(index)}
+                            onMouseLeave={() => setHoveredProject(null)}
+                            onFocus={() => setHoveredProject(index)}
+                            onBlur={() => setHoveredProject(null)}
                         >
-                            <Image
-                                src={project.preview}
-                                alt={`${project.id}-Preview`}
-                                width={900}
-                                height={700}
-                                className="project-image"
-                            />
+                            {project.previewVideo && hoveredProject === index ? (
+                                <video
+                                    className="project-image"
+                                    src={project.previewVideo}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                />
+                            ) : (
+                                <Image
+                                    src={project.preview}
+                                    alt={`${project.id}-Preview`}
+                                    width={900}
+                                    height={700}
+                                    className="project-image"
+                                />
+                            )}
                             {project.new && <span className="project-read">new!</span>}
                         </Link>
                 </motion.div>

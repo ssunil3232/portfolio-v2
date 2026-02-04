@@ -11,7 +11,8 @@
       "id": "project-insight-edge",
       "label": "Insight Edge",
       "new": false,
-      "timeline": "Jan - May 2024"
+      "timeline": "Jan - May 2024",
+      "previewVideo": "/assets/previews/insightEdge.mp4"
     },
     {
         "header": "Microsoft Course Registration",
@@ -25,7 +26,8 @@
         "id": "project-ms-course",
         "label": "Microsoft CR",
         "new": false,
-        "timeline": "Jul – Dec 2023"
+        "timeline": "Jul – Dec 2023",
+        "previewVideo": "/assets/previews/microsoft.mp4"
       },
     {
       "header": "Prisoner Express PWA App",
@@ -39,7 +41,8 @@
       "id": "project-prisoner-express",
       "label": "Prisoner Express",
       "new": false,
-      "timeline": "Jan – May 2024"
+      "timeline": "Jan – May 2024",
+      "previewVideo": ""
     },
     {
       "header": "BeautyAI",
@@ -53,7 +56,8 @@
       "id": "project-beauty-ai",
       "label": "Beauty AI",
       "new": false,
-      "timeline": "Jul - Dec 2023"
+      "timeline": "Jul - Dec 2023",
+      "previewVideo": ""
     },
     {
       "header": "Cherie",
@@ -68,7 +72,8 @@
       "id": "project-connections-cherished",
       "label": "Connections Cherished",
       "new": true,
-      "timeline": "Aug 2024"
+      "timeline": "Aug 2024",
+      "previewVideo": ""
     },
     {
       "header": "CaptionCore",
@@ -84,7 +89,8 @@
       "id": "project-caption-core",
       "label": "CaptionCore",
       "new": false,
-      "timeline": "Jan - May 2024"
+      "timeline": "Jan - May 2024",
+      "previewVideo": ""
     },
     {
       "header": "Swift Tunes Decoded",
@@ -99,7 +105,8 @@
       "id": "project-swift-tunes",
       "label": "Swift Tunes Decoded",
       "new": false,
-      "timeline": "Jan - May 2024"
+      "timeline": "Jan - May 2024",
+      "previewVideo": ""
     },
     {
       "header": "Under the Covers",
@@ -114,6 +121,7 @@
       "id": "project-under-covers",
       "label": "Under the Covers",
       "new": false,
-      "timeline": "Jan - May 2024"
+      "timeline": "Jan - May 2024",
+      "previewVideo": ""
     }
   ]
