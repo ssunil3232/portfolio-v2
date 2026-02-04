@@ -61,7 +61,7 @@ const Projects = () => {
                                 height={700}
                                 className="project-image"
                             />
-                            {/* <span className="project-read">5m read</span> */}
+                            {project.new && <span className="project-read">new!</span>}
                         </Link>
                 </motion.div>
             ))}

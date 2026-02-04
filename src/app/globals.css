@@ -697,14 +697,14 @@ body.about-scroll-snap {
   position: absolute;
   right: 1.25rem;
   bottom: 1.25rem;
-  background: #56b420;
-  color: #fff;
-  padding: 0.35rem 0.8rem;
+  /* background: #56b420; */
+  color: var(--focus-color);
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.03em;
+  font-family: var(--font-reenie-beanie);
 }
 
 @media (max-width: 1024px) {
