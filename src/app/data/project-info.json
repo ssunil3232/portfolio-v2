@@ -3,90 +3,88 @@
       "header": "Insight Edge",
       "name": "<div class='flex flex-row'><p>Insight Edge -&nbsp;</p><p class='text-italic'> Instagram Suite</p></div>",
       "preview": "/assets/insightEdge.webp",
-      "description": "Instagram's suite of tools to enhance content creation process",
+      "description": "I designed AI-powered creator tools for Instagram that reduce the barrier to discoverability for new influencers.",
       "link": "/projects/insightEdge",
       "tools": [
-        "UX Design",
-        "Product Management"
+        "AI", "Product Design", "UX Research"
       ],
       "id": "project-insight-edge",
       "label": "Insight Edge",
-      "new": false
+      "new": false,
+      "timeline": "Jan - May 2024"
     },
     {
         "header": "Microsoft Course Registration",
         "name": "<div class='flex flex-row'><p>Microsoft Course Registration System -&nbsp;</p><p class='text-italic'> MPS Project</p></div>",
         "preview": "/assets/microsoft.webp",
-        "description": "Microsoft Course Registration platform utilizing MS Azure and Angular",
+        "description": "I redesigned the university course registration flow with Microsoft, to make enrollment effortless instead of overwhelming.",
         "link": "/projects/microsoft",
-        "tools": [
-          "Angular",
-          "User Research",
-          "Figma"
+        "tools": [ "Frontend Dev",
+          "UX Design & Research"
         ],
         "id": "project-ms-course",
         "label": "Microsoft CR",
-        "new": false
+        "new": false,
+        "timeline": "Jul – Dec 2023"
       },
     {
       "header": "Prisoner Express PWA App",
       "name": "<div class='flex flex-row'><p>Prisoner Express App –&nbsp;</p><p class='text-italic'> App Design & Prototyping</p></div>",
       "preview": "/assets/prisonerExpress.webp",
-      "description": "PWA newsletter application for Prisoners by Prisoner Express",
+      "description": "I prototyped a digital newsletter experience that helps incarcerated individuals feel human connection.",
       "link": "/projects/prisonerExpress",
       "tools": [
-        "VueJS",
-        "Bootstrap",
-        "User Research"
+        "PWA", "UX Research", "Frontend Dev"
       ],
       "id": "project-prisoner-express",
       "label": "Prisoner Express",
-      "new": false
+      "new": false,
+      "timeline": "Jan – May 2024"
     },
     {
       "header": "BeautyAI",
       "name": "<div class='flex flex-row'><p>BeautyAI -&nbsp;</p><p class='text-italic'> Human Computer Interaction Project</p></div>",
       "preview": "/assets/beautyAi.webp",
-      "description": "AI driven makeup application tool for users with varied facial compositions",
+      "description": "I designed an AI-driven makeup experience that turns “I don’t know what works for me” into step-by-step, personalized guidance.",
       "link": "/projects/beautyAi",
       "tools": [
-        "User Research",
-        "Figma"
+        "HCI", "UX Research & Design"
       ],
       "id": "project-beauty-ai",
       "label": "Beauty AI",
-      "new": false
+      "new": false,
+      "timeline": "Jul - Dec 2023"
     },
     {
-      "header": "Connections Cherished",
-      "name": "<div class='flex flex-row'>Connections Cherished</div>",
+      "header": "Cherie",
+      "name": "<div class='flex flex-row'>Cherie</div>",
       "preview": "/assets/connectionsCherished.webp",
-      "description": "An application that allows users to cherish their connections",
+      "description": "I designed & built an AI-powered Smart Scheduler app to help friends turn “we should catch up” into real plans on the calendar.",
       "link": "/projects/connectionsCherished",
       "tools": [
         "Flutter",
-        "Firebase",
-        "Dart"
+        "AI", "Product Design", "Full-Stack Dev"
       ],
       "id": "project-connections-cherished",
       "label": "Connections Cherished",
-      "new": true
+      "new": true,
+      "timeline": "Aug 2024"
     },
     {
       "header": "CaptionCore",
       "name": "<div class='flex flex-row'><p>CaptionCore -&nbsp;</p><p class='text-italic'> Designing Data Products</p></div>",
       "preview": "/assets/captionCore.webp",
-      "description": "Data Product to generate brand-focused publicity post captions",
+      "description": "I built a tool that generates polished, brand-ready captions — so marketing teams spend less time writing and more time shipping posts.",
       "link": "https://github.com/ssunil3232/caption-generator",
       "tools": [
-        "Streamlit",
-        "BLIP",
         "AI",
-        "Figma"
+        "Streamlit",
+        "Product Owner"
       ],
       "id": "project-caption-core",
       "label": "CaptionCore",
-      "new": false
+      "new": false,
+      "timeline": "Jan - May 2024"
     },
     {
       "header": "Swift Tunes Decoded",
@@ -95,13 +93,13 @@
       "description": "Interactive analysis and breakdown of Taylor Swift's songs",
       "link": "https://sonia-sunil-d3.vercel.app/tswift-discography/",
       "tools": [
-        "Figma",
         "D3.js",
-        "Javascript"
+        "Interactive Data Visualization"
       ],
       "id": "project-swift-tunes",
       "label": "Swift Tunes Decoded",
-      "new": false
+      "new": false,
+      "timeline": "Jan - May 2024"
     },
     {
       "header": "Under the Covers",
@@ -110,12 +108,12 @@
       "description": "'Bridgerton' themed exploration of couples' sleeping apart habits",
       "link": "https://sonia-sunil-d3.vercel.app/under-the-covers/",
       "tools": [
-        "Figma",
         "D3.js",
-        "Javascript"
+        "Interactive Data Visualization"
       ],
       "id": "project-under-covers",
       "label": "Under the Covers",
-      "new": false
+      "new": false,
+      "timeline": "Jan - May 2024"
     }
   ]
