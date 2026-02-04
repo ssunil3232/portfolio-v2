@@ -6,26 +6,21 @@ import { Image as PrimeImage } from 'primereact/image';
 
 export default function BeautyAi () {
    const baseAssetUrl = "/assets/beautyAi/";
+   const commonAssetUrl = "/assets/common/";
     return (
         <div className="flex w-full min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
-            {/* <div className="absolute top-0">
-                <Image src={`${baseAssetUrl}backgroundReverse.webp`} alt="bg" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
-            </div> */}
             <div className="flex w-[80%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center px-4 pt-8">
                 <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center'>
                     <div className="flex flex-col w-full justify-center">
-                        <Image src={`${baseAssetUrl}logo3.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
-                        {/* <div className="pt-4 flex text-center justify-center" style={{color: '#4f293a', fontSize: 'larger'}}>AI-recommended makeup styles and techniques for you!</div> */}
-
-                        <Image src={`${baseAssetUrl}preview2.png`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+                        <Image src={`${baseAssetUrl}logo.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+                        <Image src={`${baseAssetUrl}preview.png`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
                     </div>
                 </div>
                 <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
-                    <Image src={`${baseAssetUrl}mockup2.gif`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                    <Image src={`${baseAssetUrl}mockup.gif`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
                 </div>
             </div>
-            
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%] pt-4'>
                 The aim of this project, was to utilise user-centered design concepts to address the challenges faced in <span className='bolder-text'>tailoring and learning makeup styles</span> and techniques suitable <span className='bolder-text'>for each unique facial structure, tone, complexion</span>.
             </div>
@@ -122,11 +117,8 @@ export default function BeautyAi () {
                 <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[90%]">
                   <PrimeImage src={`${baseAssetUrl}affinity.webp`} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                    {/* <a href="https://miro.com/app/board/uXjVIdsGogo=/?share_link_id=901207500131" target="_blank" rel="noopener noreferrer">
-                        <Image src={`${baseAssetUrl}affinity.webp`} alt="affinity" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a> */}
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     Insights Gathering
@@ -150,7 +142,6 @@ export default function BeautyAi () {
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
                   <PrimeImage src={`${baseAssetUrl}personaCard.webp`} alt="persona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                    {/* <Image src={`${baseAssetUrl}personaCard.webp`} alt="persona" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -179,15 +170,12 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[70%]">
-                    {/* <div className="relative"> */}
                     <div className="flex w-full justify-center items-center pb-2">
-                                        <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
+                                        <Image src={`${commonAssetUrl}point_arrow3.png`}  alt="arrow"  width={100} height={100}/>
                                     </div>
                         <a href="https://miro.com/app/board/uXjVIdsrtU4=/?share_link_id=285701816603" target="_blank" rel="noopener noreferrer">
                             <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
-                        {/* <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-15%] right-[-25%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" /> */}
-                    {/* </div> */}
                     <div className='description-text w-full justify-center text-center py-8'>
                         We then identified <span className='bolder-text' style={{ color: '#B93278' }}>4 primary pillars</span> to implement in our solution:
                     </div>
@@ -241,7 +229,7 @@ export default function BeautyAi () {
                      <Image src={`${baseAssetUrl}figma.webp`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${commonAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
             </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
@@ -251,14 +239,11 @@ export default function BeautyAi () {
                 <div className='header-underline mt-2 mb-4'></div>
                     <div className="flex w-full flex-row">
                         <a className='mx-1' href="https://www.figma.com/team_invite/redeem/nfmw77SfA9on5GZKD9I3TH" target="_blank" title="Figma">
-                            <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                         <a className='mx-1' href="https://miro.com/welcome/bHR5dG5ldVBBR3ljSWQ3K04yejdXNXFya1dDbkljT1BONTYyT3dtYnRWNzQ4Tmxhc0J3aHdNWGw0a3JCVGVyK0RUSis0VW96bm4yWnZOc00yYzZxd0FRcEFQdHkxclN3Wk5sZERDT1kyR1pPaHNPWjg0aHJxWXRSQUsxRmhpbExnbHpza3F6REdEcmNpNEFOMmJXWXBBPT0hdjE=?share_link_id=525723574784" target="_blank" title="Miro">
-                            <Image src={`${baseAssetUrl}miroLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={`${commonAssetUrl}miroLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
-                        {/* <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
-                            <Image src={`${baseAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
-                        </a> */}
                     </div>
                 </div>
            <ScrollTop /> 

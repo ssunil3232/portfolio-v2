@@ -1,6 +1,5 @@
 import IntroPage from "@/app/components/intro";
 import Navbar from "@/app/components/navbar";
-import Projects from "@/app/components/projects";
 import About from "./about";
 import Image from "next/image";
 import { bristol, poppins, reenie_beanie } from "@/app/ui/fonts";
@@ -145,31 +144,11 @@ export default function Home() {
       />
       <span className="flight-burst" />
     </div>
-    {/* <div className="flex w-full flex-row arrow-1">
-      <Image src="/assets/arrow-1.gif" alt="arrow" width={120} height={120} className="rounded-lg" />
-    </div> */}
-    {/* <div className="arrow-down flex  justify-center ml-auto z-10">
-      <Image src="/assets/arrow2.gif" alt="arrow" width={200} height={800} className="rounded-lg" />
-    </div> */}
     <div className="flex content-bg min-h-screen">
       <div className=" flex flex-col justify-between flex-grow w-full">
-        {/* <main className="content items-start lg:justify-items-start md:justify-items-center sm:justify-items-center flex w-full flex-grow">
-          <section id="projects-section" className="flex h-full">
-            <Projects />
-          </section>
-        </main> */}
-        {/* <div className="flex w-full flex-row arrow-2">
-          <Image src="/assets/arrow-2.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
-        </div> */}
         <div className="flex content-bg min-h-screen">
           <div className=" flex flex-col justify-between flex-grow w-full">
             <main className="relative justify-center items-start lg:justify-items-start md:justify-items-center sm:justify-items-center flex w-full flex-grow">
-              {/* <div className="arrow-down-about flex lg:w-2/3 sm:w-full mt-0 sm:mt-4 lg:mt-0 justify-center ml-auto z-10">
-                <Image src="/assets/arrow3.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
-              </div> */}
-              {/* <div className="flex w-full flex-row arrow-1">
-                <Image src="/assets/arrow3.gif" alt="arrow" width={200} height={200} className="rounded-lg" />
-              </div> */}
               <section
                 id="about-section"
                 ref={aboutSectionRef}

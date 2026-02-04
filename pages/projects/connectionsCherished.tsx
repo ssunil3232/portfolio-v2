@@ -6,16 +6,11 @@ import { Image as PrimeImage } from 'primereact/image';
 
 export default function ConnectionsCherished () {
    const baseAssetUrl = "/assets/connectionsCherished/";
+   const commonAssetUrl = "/assets/common/";
    
     return (
         <div className="flex w-screen min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
-            {/* <div className='flex w-[50%] lg:w-[30%] md:w-[30%] sm:w-[50%]  justify-center items-center pb-4'>
-                <Image src={`${baseAssetUrl}logo.webp`} alt="logo" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
-            </div>
-            <div className='flex w-[80%] lg:w-[70%] md:w-[70%] sm:w-[80%] justify-center items-center pb-8'>
-                <Image src={`${baseAssetUrl}preview2.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
-            </div> */}
             <div className='flex w-[80%] lg:w-[60%] md:w-[60%] sm:w-[80%] justify-center items-center pb-8'>
                 <Image src={`${baseAssetUrl}title.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
@@ -69,7 +64,6 @@ export default function ConnectionsCherished () {
                     To understand the problem space better - to understand the varying challenges, significance of this problem to individuals, current methods and their limitations, I started by conducting interviews with varied demographics. 
                     I recruited <span className='bolder-text'>8 individuals</span> from <span className='bolder-text'>different age groups, genders and professions</span>, as well as <span className='bolder-text'>varied social lifestyles (extroverts & introverts)</span> and those <span className='bolder-text'>living away from family and friends</span> as I felt there would be a significant difference in their approach to maintaining relationships.
                     I <span className='bolder-text'>supplemented this with a survey to gather quantitative data</span> on the frequency of communication and the challenges faced by individuals in maintaining relationships. The following are the breakdown of the interview pool:
-                    {/* <br/>Gathering the data from these interviews, I created activity notes and derived an affinity diagram to identify patterns and insights. */}
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                 <div className="flex flex-wrap justify-center w-full">
@@ -195,7 +189,6 @@ export default function ConnectionsCherished () {
                     </ol>
                 </div>
                 <div className='flex justify-center w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4' >
-                    {/* <div style={{color: 'var(--focus-color)'}}>Administrative User App View</div> */}
                     <video  height="auto" controls autoPlay muted loop>
                         <source src={`${baseAssetUrl}1.mp4`} type="video/mp4" />
                         Your browser does not support the video tag.
@@ -213,11 +206,6 @@ export default function ConnectionsCherished () {
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                {/* <div className="flex w-full justify-center items-center pt-4">
-                    <div className="w-[100%] ">
-                        <Image src={`${baseAssetUrl}media.gif`} alt="workflow"  width={100} height={100} layout="responsive" className="rounded-lg" unoptimized style={{ marginBottom: 10, borderRadius: 15 }} />
-                    </div>
-                </div> */}
                 
                 <div className="header-title pt-4">
                     Development details
@@ -298,15 +286,11 @@ export default function ConnectionsCherished () {
                             <div className='header-underline mt-2 mb-4'></div>
                                 <div className="flex w-full flex-row">
                                  <a className='mx-1' href="https://www.figma.com/team_invite/redeem/0awnUml3sAx1Qt4RaejGHz" target="_blank" title="Figma">
-                                    <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                                 </a>
                                 <a className='mx-1' href="https://github.com/ssunil3232/connections-cherished" target="_blank" title="Github Link">
-                                    <Image src={`${baseAssetUrl}gitLogo.svg`} alt="github" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    <Image src={`${commonAssetUrl}gitLogo.svg`} alt="github" width={100} height={100} layout="responsive" className="rounded-lg" />
                                 </a>
-                                    
-                                    {/* <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
-                                        <Image src={`${baseAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
-                                    </a> */}
                                 </div>
                             </div>
            <ScrollTop /> 

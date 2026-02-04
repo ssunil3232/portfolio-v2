@@ -3,19 +3,19 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
-import { PrimeIcons } from 'primereact/api';
 
 export default function Microsoft () {
    const baseAssetUrl = "/assets/microsoft/";
+   const commonAssetUrl = "/assets/common/";
    const painPoints = ["pt1.webp", "pt2.webp", "pt3.webp","pt4.webp","pt5.webp","pt6.webp"];
     return (
         <div className="flex w-screen min-h-screen flex-col items-center">
          <Navbar/>
             <div className='flex w-full lg:w-[45%] md:w-[50%] justify-center items-center px-4 py-4'>
-                <Image src={`${baseAssetUrl}title2.svg`} alt="logo" height={50} width={200}layout="responsive" className="flex w-full h-auto"/>
+                <Image src={`${baseAssetUrl}title.svg`} alt="logo" height={50} width={200}layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='flex w-full lg:w-[80%] md:w-[70%]  justify-center items-center'>
-                <Image src={`${baseAssetUrl}mockup5.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={`${baseAssetUrl}mockup.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Designed & Prototyped a high-fidelity university course registration system, alleviating the tedious and overwhelming pain experienced by students using existing systems, in collaboration with Microsoft clients.
@@ -127,15 +127,12 @@ export default function Microsoft () {
                 <div className='flex justify-center items-center flex-col lg:flex-row md:flex-row sm:flex-col gap-4' style={{ marginTop: '40px' }}>
                     <div className="w-[80%] lg:w-[31%] sm:w-[80%] md:w-[30%]">
                         <PrimeImage src={`${baseAssetUrl}cornellPrev.webp`} zoomSrc={`${baseAssetUrl}cornellPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                        {/* <Image src={`${baseAssetUrl}cornellPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" /> */}
                     </div>
                     <div className="w-[80%] lg:w-[30%] sm:w-[80%] md:w-[30%]">
                     <PrimeImage src={`${baseAssetUrl}cmuPrev.webp`} zoomSrc={`${baseAssetUrl}cmuPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                        {/* <Image src={`${baseAssetUrl}cmuPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" /> */}
                     </div>
                     <div className="w-[80%] lg:w-[28%] sm:w-[80%] md:w-[30%]">
                     <PrimeImage src={`${baseAssetUrl}nusPrev.webp`} zoomSrc={`${baseAssetUrl}nusPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                        {/* <Image src={`${baseAssetUrl}nusPrev.webp`}  alt="secondaryResearch" width={150} height={150} layout="responsive" className="rounded-lg" /> */}
                     </div>
                 </div>
                 <div className='description-text w-full pt-4'>
@@ -149,16 +146,13 @@ export default function Microsoft () {
                     <div className="picture-header pb-2">
                        Feature Analysis
                     </div>
-                    {/* <a href="https://www.figma.com/board/jeSb53KDMHuS19KytU4ipJ/Course-Registration_Case-Study-Feature-Synthesis?node-id=0-1&t=taHA45dyBOxfHHOS-1" target="_blank" rel="noopener noreferrer">
-                     <Image src={`${baseAssetUrl}featureAnalysis.webp`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    </a> */}
                     <PrimeImage src={`${baseAssetUrl}featureAnalysis.webp`} zoomSrc={`${baseAssetUrl}featureAnalysisPreview.png`} alt="featureAnalysis" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                     <div className="picture-header pb-2">
                        Information Architecture
                     </div>
                     <PrimeImage src={`${baseAssetUrl}infoArchitecture.png`} zoomSrc={`${baseAssetUrl}infoArchitecture.png`} alt="infoArchitecture" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title pt-4">
                     Figma Prototypes
@@ -168,7 +162,7 @@ export default function Microsoft () {
                     We then delved into detailing the Figma Prototype, including <span className='bolder-text'>Lo-fi, Mid-fi, and Hi-fi Prototypes</span>. This comprehensive approach ensures a clear and systematic understanding of the essential elements guiding the course registration system’s development.
                </div>
                <div className="flex w-full justify-center items-center pt-4">
-                    <Image src={`${baseAssetUrl}pointers_3.png`}  alt="arrow"  width={100} height={100}/>
+                    <Image src={`${commonAssetUrl}point_arrow3.png`}  alt="arrow"  width={100} height={100}/>
                </div>
                <div className='flex flex-col md:flex-row lg:flex-row sm:flex-col justify-center pt-4'>
                     <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/4Urpjn30p0MUpepNGaPuC5/Lo-fi-Prototype?node-id=0-1&t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Lo-Fi Prototype">
@@ -207,22 +201,12 @@ export default function Microsoft () {
                         <span className='bolder-text' style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Microsoft’s Dev Blogs</span>
                      </a>, indicating a successful demonstration of the system's capabilities.
             </div>
-            {/* <div className="flex w-full justify-center items-center pt-4">
-                  <div className="w-[80%] lg:w-[50%] sm:w-[80%] md:w-[60%]">
-                     <Image src={`${baseAssetUrl}final.gif`} alt="teamPicture"  width={100} height={100} layout="responsive" className="rounded-lg" unoptimized style={{ marginBottom: 10, borderRadius: 15 }} />
-                  </div>
-            </div> */}
             <div className='flex justify-center w-full py-4' >
                 <video className='w-[70%]' height="auto" controls autoPlay muted loop>
                     <source src={`${baseAssetUrl}msVideo.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
-            {/* <div className="header-title pb-12">
-                  <a href="https://github.com/ssunil3232/MPS_Project" target="_blank" title="Github Repository">
-                    <span  style={{ textDecoration: 'underline', fontSize: '25px' }}>Github Repository Link</span>
-                  </a>
-            </div> */}
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
                 <div className="header-title">
                 Artifacts
@@ -230,10 +214,10 @@ export default function Microsoft () {
                 <div className='header-underline mt-2 mb-4'></div>
                     <div className="flex w-full flex-row">
                         <a className='mx-1' href="https://www.figma.com/team_invite/redeem/bqGnTWc2AomnFRq7vDq82v" target="_blank" title="Figma">
-                            <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                         <a className='mx-1' href="https://github.com/ssunil3232/MPS_Project" target="_blank" title="Github">
-                            <Image src={`${baseAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={`${commonAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                     </div>
                 </div>

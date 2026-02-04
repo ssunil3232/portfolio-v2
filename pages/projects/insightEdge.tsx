@@ -3,10 +3,10 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
-import { PrimeIcons } from 'primereact/api';
 
 export default function InsightEdge () {
    const baseAssetUrl = "/assets/insightEdge/";
+   const commonAssetUrl = "/assets/common/";
    const features = [
       {
          "asset": "first.gif",
@@ -44,23 +44,15 @@ export default function InsightEdge () {
          <Navbar/>
             <div className="flex w-[100%] sm:w-[100%] md:w-[60%] lg:w-[50%] flex-row justify-center px-4">
                 <div className='flex w-[80%] justify-center items-center'>
-                    <Image src={`${baseAssetUrl}header4.svg`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
+                    <Image src={`${baseAssetUrl}header.svg`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
                 </div>
-                {/* <div className='flex w-[40%] justify-center items-center'>
-                  <Image src={`${baseAssetUrl}graphic1.webp`} alt="graphic1" height={450} width={450}layout="responsive" className="flex w-full h-auto"/> 
-                </div> */}
             </div>
-            {/* <div className='flex sm:flex-col lg:flex-row md:flex-col flex-col w-[70%] justify-center items-center px-4 pt-8'>
-               <Image src={`${baseAssetUrl}header.png`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
-               <Image src={`${baseAssetUrl}graphic1.webp`} alt="graphic1" height={450} width={450}layout="responsive" className="flex w-full h-auto"/> 
-            </div> */}
             <div>
                <Image src={`${baseAssetUrl}suiteDisplay.webp`} alt="suite" width={450} height={450} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                   Enhancements to alleviate the pains experienced by content creators on Instagram, to boost Meta's edge in the content creation landscape, in collaboration with Meta's Product Manager Richa Sood.
             </div>
-            {/* <div className='header-underline-overview mt-4 mb-4'></div> */}
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 gap-2 w-[90%]">
                   <div className="flex flex-col perspective-description">
@@ -163,12 +155,9 @@ export default function InsightEdge () {
                </div>
                <div className="flex w-full justify-center items-center mt-4 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                     {/* <a className='mx-5' href={`${baseAssetUrl}UserJourneyMapping.pdf`} target="_blank" title="Journey Mapping">
-                        <Image src={`${baseAssetUrl}userJouney.png`} alt="journeyMap" width={100} height={100} layout="responsive" className="rounded-lg" />
-                     </a> */}
                      <PrimeImage src={`${baseAssetUrl}userJouney.png`} zoomSrc={`${baseAssetUrl}UserJourneyMapPreview.png`} alt="journeyMap" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-10%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-10%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title pt-4">
                   Findings
@@ -198,7 +187,6 @@ export default function InsightEdge () {
                         Aspiring Content Creator
                      </div>
                      <PrimeImage src={`${baseAssetUrl}aspiring.webp`} alt="aspiring" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                     {/* <Image src={`${baseAssetUrl}aspiring.webp`} alt="aspiring" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                   </div>
                </div>
                <div className="flex w-full justify-center items-center">
@@ -207,7 +195,6 @@ export default function InsightEdge () {
                         Emerging Content Creator
                      </div>
                      <PrimeImage src={`${baseAssetUrl}emerging.webp`} alt="emerging" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                     {/* <Image src={`${baseAssetUrl}emerging.webp`} alt="emerging" width={100} height={100} layout="responsive" className="rounded-lg" /> */}
                   </div>
                </div>
                <div className="header-title pt-4">
@@ -241,7 +228,6 @@ export default function InsightEdge () {
                            <div className="flex w-full justify-center items-center pt-4">
                               <div className="w-[50%]">
                               <PrimeImage src={`${baseAssetUrl}${item.asset}`} alt="gif" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image expand-image-gif" />
-                                 {/* <Image src={`${baseAssetUrl}${item.asset}`} alt="gif" width={100} height={100} layout="responsive" className="rounded-lg" unoptimized /> */}
                               </div>
                            </div>
                         </div>
@@ -267,7 +253,7 @@ export default function InsightEdge () {
                         <Image src={`${baseAssetUrl}wireframe.webp`} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" />
                      </a>
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={`${commonAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title">
                Artifacts
@@ -275,13 +261,13 @@ export default function InsightEdge () {
                <div className='header-underline mt-2 mb-4'></div>
                <div className="flex w-full flex-row">
                   <a className='mx-1' href={`${baseAssetUrl}PRD_Document.pdf`} target="_blank" title="PRD Document">
-                     <Image src={`${baseAssetUrl}prdLogo.svg`} alt="Prd" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={`${commonAssetUrl}prdLogo.svg`} alt="Prd" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                   <a className='mx-1' href={`${baseAssetUrl}PitchDeck.pdf`} target="_blank" title="Pitch Deck">
-                     <Image src={`${baseAssetUrl}deckLogo.svg`} alt="Pitch Deck" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={`${commonAssetUrl}deckLogo.svg`} alt="Pitch Deck" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                   <a className='mx-1' href="https://www.figma.com/team_invite/redeem/Cq3UG3JRcQ3RSDPNTbWlMG" target="_blank" title="Figma">
-                     <Image src={`${baseAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                </div>
             </div>
