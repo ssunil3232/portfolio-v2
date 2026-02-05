@@ -15,7 +15,7 @@ export default function ConnectionsCherished () {
                 <Image src={`${baseAssetUrl}title.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
-                Connections Cherished is designed to help users nurture their friendships by providing <span className='bolder-text'>thoughtful reminders to stay in touch</span>. In today’s fast-paced world, maintaining meaningful relationships can often take a backseat and Cherished Connections seeks to make staying connected effortless.
+                Cherie is designed to help users nurture their friendships by providing <span className='bolder-text'>thoughtful reminders to stay in touch</span>. In today’s fast-paced world, maintaining meaningful relationships can often take a backseat and Cherie seeks to make staying connected effortless.
             </div>
             <div className="flex w-full justify-center perspective-container">
                <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-4 grid-cols-4 gap-2 w-[90%]">
@@ -54,7 +54,7 @@ export default function ConnectionsCherished () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    In a world dominated by busy schedules and digital distractions, many people struggle to maintain consistent communication with their friends and loved ones. Cherished Connections was born from the insight that small, regular interactions can greatly strengthen relationships, yet they are often overlooked.
+                    In a world dominated by busy schedules and digital distractions, many people struggle to maintain consistent communication with their friends and loved ones. Cherie was born from the insight that small, regular interactions can greatly strengthen relationships, yet they are often overlooked.
                </div>
                <div className="header-title pt-4">
                 User Research Process
@@ -142,7 +142,7 @@ export default function ConnectionsCherished () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    The design philosophy behind Cherished Connections was <span className='bolder-text'>centered around empathy and usability</span>.
+                    The design philosophy behind Cherie was <span className='bolder-text'>centered around empathy and usability</span>.
                     After identifying key pain points such as <span className='bolder-text'>forgetfulness, scheduling difficulties, and lack of conversation starters</span>, I designed a user-friendly interface that would help users overcome these challenges.
                     <ol className="bullet-list pt-4">
                         <li>
@@ -179,7 +179,7 @@ export default function ConnectionsCherished () {
                         </li>
                         <li>
                             <div className="description-text">
-                                Finally, I brainstormed on suitable color schemes and typography for varied demographics in age and gender, which allowed me to create the  
+                                Finally, I brainstormed on suitable color schemes and typography for varied demographics in age and gender, as well, continued user testing to further expand on functionalities, which allowed me to create the  
                                 &nbsp;<a href="https://www.figma.com/design/Vz1XrgPNydkdhwqEXVdSHL/Hi-Fi-Prototype-Design?node-id=1-2&t=yovivvfiiq1VSM0Z-1" target="_blank" title="Mid-Fi">
                                         <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>high-fidelity prototype</span>
                                     </a>&nbsp;
@@ -268,7 +268,7 @@ export default function ConnectionsCherished () {
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Building Cherished Connections was a deeply rewarding experience that allowed me to blend my technical expertise in Flutter with my passion for creating meaningful user experiences. The project taught me the importance of empathy-driven design and the value of user feedback in shaping a product that truly resonates.
+                    Building Cherie was a deeply rewarding experience that allowed me to blend my technical expertise in Flutter with my passion for creating meaningful user experiences. The project taught me the importance of empathy-driven design and the value of user feedback in shaping a product that truly resonates.
                 </div>
                 <div className="header-title pt-4">
                     Future Plans
