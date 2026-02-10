@@ -11,7 +11,7 @@ export default function BeautyAi () {
         <div className="flex w-full min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
             <div className="flex w-[80%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center px-4 pt-8">
-                <div className='flex w-full lg:w-[50%] md:w-[50%] justify-center items-center'>
+                <div className='flex w-full lg:w-[60%] md:w-[60%] justify-center items-center'>
                     <div className="flex flex-col w-full justify-center">
                         <Image src={`${baseAssetUrl}logo.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
                         <Image src={`${baseAssetUrl}preview.png`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
@@ -187,11 +187,11 @@ export default function BeautyAi () {
                   </div>
                 </div>
                 <div className="header-title pt-4">
-                    Paper Prototype (Lo-Fi)
+                    Paper Prototype
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Starting off the low-fidelity design of our solution, we created a paper prototype of the idea we envisioned. This <span className='bolder-text'>Paper Prototype was used to conduct Usability tests</span> to gather feedback and understand how the design and utility of the solution can be improved.
+                    Starting off the sketch design of our solution, we created a paper prototype of the idea we envisioned. This <span className='bolder-text'>Paper Prototype was used to conduct Usability tests</span> to gather feedback and understand how the design and utility of the solution can be improved.
                 </div>
                 <div className='flex justify-center w-full py-4' >
                     <video className='w-[70%]' height="auto" controls autoPlay muted loop>
@@ -200,15 +200,15 @@ export default function BeautyAi () {
                     </video>
                 </div>
                 <div className="header-title pt-4">
-                    Mid & Hi-Fidelity Prototype Designs
+                    Figma Prototype Designs
                 </div>
                 <div className='header-underline mt-2 mb-4'></div> 
                 <div className='description-text w-full'>
-                    Using the insights from the usability testing feedback with the paper prototype, it informed the creation of our <span className='bolder-text'>Mid-fidelity Figma prototype</span>. Post a design critique session, we were able to further improve the design, culminating in our <span className='bolder-text'>Hi-Fidelity Prototype</span>. We performed <span className='bolder-text'>heuristic evaluations</span> on the prototype based on <span className='bolder-text'>Nielsen’s 10 heuristics for user interface design</span>, which led to a few more iterations to match the goals and needs of our target users.
+                    Using the insights from the usability testing feedback with the paper prototype, it informed the creation of our <span className='bolder-text'>Lo-fi & Mid-fi Figma prototypes</span>. Post a design critique session, we were able to further improve the design, culminating in our <span className='bolder-text'>Hi-Fidelity Prototype</span>. We performed <span className='bolder-text'>heuristic evaluations</span> on the prototype based on <span className='bolder-text'>Nielsen’s 10 heuristics for user interface design</span>, which led to a few more iterations to match the goals and needs of our target users.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
-                  <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                    <Image src={`${baseAssetUrl}hifi.webp`} alt="hifi" width={100} height={100} layout="responsive" className="rounded-lg" />
+                  <div className="w-full">
+                    <Image src={`${baseAssetUrl}hifi.png`} alt="hifi" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
                 <div className='description-text flex flex-col w-full justify-center items-center text-center'>
@@ -226,7 +226,7 @@ export default function BeautyAi () {
                 <div className="flex w-full justify-center items-center pt-4 pb-12 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
                     <a href="https://www.figma.com/design/XguQMbQ4PK1XiE5dcndTkU/Prototype?node-id=1392-2757&t=oDMFZcWci2CiIwSS-1" target="_blank" rel="noopener noreferrer">
-                     <Image src={`${baseAssetUrl}figma.webp`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={`${baseAssetUrl}figma.png`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
                   <Image src={`${commonAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
