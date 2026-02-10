@@ -47,7 +47,7 @@
     {
       "header": "BeautyAI",
       "name": "<div class='flex flex-row'><p>BeautyAI -&nbsp;</p><p class='text-italic'> Human Computer Interaction Project</p></div>",
-      "preview": "/assets/beautyAi.webp",
+      "preview": "/assets/beautyAi.png",
       "description": "I designed an AI-driven makeup experience that turns “I don’t know what works for me” into step-by-step, personalized guidance.",
       "link": "/projects/beautyAi",
       "tools": [
@@ -57,7 +57,7 @@
       "label": "Beauty AI",
       "new": false,
       "timeline": "Jul - Dec 2023",
-      "previewVideo": ""
+      "previewVideo": "/assets/previews/beautyAi.mp4"
     },
     {
       "header": "Cherie",
