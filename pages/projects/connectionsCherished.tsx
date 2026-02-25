@@ -188,23 +188,8 @@ export default function ConnectionsCherished () {
                         </li>
                     </ol>
                 </div>
-                <div className='flex justify-center w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4' >
-                    <video  height="auto" controls autoPlay muted loop>
-                        <source src={`${baseAssetUrl}1.mp4`} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <video  height="auto" controls autoPlay muted loop>
-                        <source src={`${baseAssetUrl}2.mp4`} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <video height="auto" controls autoPlay muted loop>
-                        <source src={`${baseAssetUrl}3.mp4`} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <video  height="auto" controls autoPlay muted loop>
-                        <source src={`${baseAssetUrl}4.mp4`} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                <div className='flex justify-center w-full' >
+                    <PrimeImage src={`${baseAssetUrl}hifi.gif`} alt="hifi" indicatorIcon="pi pi-expand" zoomSrc={`${baseAssetUrl}hifi.gif`} preview className="rounded-lg expand-image" />
                 </div>
                 
                 <div className="header-title pt-4">
