@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { reenie_beanie, poppins } from "../ui/fonts";
+import { getCloudinaryDirectImageUrl } from "@/app/utils/cloudinary";
 
 type IntroProps = {
   flightOriginRef?: React.RefObject<HTMLDivElement>;
@@ -59,7 +60,7 @@ export default function Intro({ flightOriginRef, hideSonia }: IntroProps) {
           >
             <div ref={imageRef} className="relative intro-scroll-shift">
               <Image
-                src="/assets/common/sonia.svg"
+                src={getCloudinaryDirectImageUrl("common/sonia.svg")}
                 alt="Sonia Sunil illustration"
                 width={300}
                 height={400}
@@ -85,13 +86,15 @@ export default function Intro({ flightOriginRef, hideSonia }: IntroProps) {
         </div>
         <div className="absolute right-0 top-0 sm:right-6 sm:bottom-2 md:right-10 md:top-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade pb-8 w-[500px]">
           <Image
-                src="/assets/common/background_texts.gif"
-                alt=""
-                width={110}
-                height={110}
-                className="pointer-events-none absolute -top-4 -right-6 h-auto w-[110px] sm:-top-6 sm:-right-8 sm:w-[500px]"
-                priority
-              />
+            src={getCloudinaryDirectImageUrl("common/background_texts.gif")}
+            alt="Descriptors"
+            width={500}
+            height={500}
+            sizes="(max-width: 640px) 110px, 500px"
+            className="pointer-events-none absolute -top-4 -right-6 h-auto w-[110px] sm:-top-6 sm:-right-8 sm:w-[500px]"
+            unoptimized
+            priority
+          />
         </div>
 
         <div className="absolute right-0 bottom-0 sm:right-6 sm:bottom-2 md:right-10 md:bottom-6 grid grid-cols-3 grid-rows-2 gap-3 intro-fade pb-8">

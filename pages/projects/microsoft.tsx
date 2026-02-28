@@ -3,19 +3,19 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
+import { getCloudinaryDirectImageUrl, getCloudinaryRawFileUrl, getVideoSrc } from "@/app/utils/cloudinary";
 
 export default function Microsoft () {
    const baseAssetUrl = "/assets/microsoft/";
-   const commonAssetUrl = "/assets/common/";
    const painPoints = ["pt1.webp", "pt2.webp", "pt3.webp","pt4.webp","pt5.webp","pt6.webp"];
     return (
         <div className="flex w-screen min-h-screen flex-col items-center">
          <Navbar/>
             <div className='flex w-full lg:w-[45%] md:w-[50%] justify-center items-center px-4 py-4'>
-                <Image src={`${baseAssetUrl}title.svg`} alt="logo" height={50} width={200}layout="responsive" className="flex w-full h-auto"/>
+                <Image src={getCloudinaryDirectImageUrl("microsoft/title.svg")} alt="logo" height={50} width={200}layout="responsive" className="flex w-full h-auto"/>
             </div>
             <div className='flex w-full lg:w-[80%] md:w-[70%]  justify-center items-center'>
-                <Image src={`${baseAssetUrl}mockup.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={getCloudinaryDirectImageUrl("microsoft/mockup.png")} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto" priority/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Designed & Prototyped a high-fidelity university course registration system, alleviating the tedious and overwhelming pain experienced by students using existing systems, in collaboration with Microsoft clients.
@@ -78,7 +78,7 @@ export default function Microsoft () {
                <div className='header-underline mt-2 mb-4'></div>
                <div className='flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-between w-full'>
                     <div className='flex w-full lg:w-[60%] md:w-[50%] justify-center items-center' >
-                        <Image src={`${baseAssetUrl}goals.svg`} alt="goals" height={0} width={290} layout="responsive" className="flex w-full"/>
+                        <Image src={getCloudinaryDirectImageUrl("microsoft/goals.svg")} alt="goals" height={0} width={290} layout="responsive" className="flex w-full"/>
                     </div>
                     <div style={{ fontSize: '6rem', fontWeight:'600', color: 'var(--title-color)' }}>
                         👩🏽‍💻
@@ -104,14 +104,14 @@ export default function Microsoft () {
                </div>
                <div className='description-text w-full pt-2'>
                     The primary research for the course registration system is focused on understanding user behavior and pain points, particularly with Cornell’s Course Registration System. This involves using a <span className='bolder-text'>survey method to collect data for UI/UX enhancements</span>. We aimed to evaluate ease of use, function usability, and identify potential improvements. We collected <span className='bolder-text'>feedback from 28 respondents</span> and the comprehensive data on the survey method and results can be found&nbsp;
-                    <a href={`${baseAssetUrl}UserResearch.pdf`} target="_blank" title="Primary Research Findings">
+                    <a href={getCloudinaryRawFileUrl("UserResearch.pdf")} target="_blank" title="Primary Research Findings">
                     <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>here</span>
                     </a>. The following are user <span className='bolder-text'>pain points</span> highlighted by several respondents:
                </div>
                <div className="flex justify-center mt-3 items-center flex-row flex-wrap">
                 {painPoints.map((item)=>{
                     return (
-                        <Image src={`${baseAssetUrl}${item}`} alt="painpoint" width={120} height={120} className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl(`microsoft/${item}`)} alt="painpoint" width={120} height={120} className="rounded-lg" />
                     );
                 })}
                </div>
@@ -120,19 +120,19 @@ export default function Microsoft () {
                </div>
                <div className='description-text w-full pt-2'>
                     To grasp the intricacies of the course registration system’s information architecture, we conducted a thorough <span className="bolder-text">secondary analysis of existing university systems</span>. Specifically, we scrutinized the course registration processes at <span className="bolder-text">Cornell University, Carnegie Mellon University, and the National University of Singapore</span>. Future works would include analysis of a broader number of university course registration system to understand different university and student needs. Our thorough usability analysis was meticulously compiled into a comprehensive&nbsp;
-                        <a href={`${baseAssetUrl}CourseRegistrationFeatureAnalysis.pdf`} target="_blank" title="Secondary Research Case Study">
+                        <a href={getCloudinaryRawFileUrl("CourseRegistrationFeatureAnalysis.pdf")} target="_blank" title="Secondary Research Case Study">
                             <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Case Study slide deck</span>
                         </a>.
                 </div>
                 <div className='flex justify-center items-center flex-col lg:flex-row md:flex-row sm:flex-col gap-4' style={{ marginTop: '40px' }}>
                     <div className="w-[80%] lg:w-[31%] sm:w-[80%] md:w-[30%]">
-                        <PrimeImage src={`${baseAssetUrl}cornellPrev.webp`} zoomSrc={`${baseAssetUrl}cornellPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                        <PrimeImage src={getCloudinaryDirectImageUrl("microsoft/cornellPrev.webp")} zoomSrc={getCloudinaryDirectImageUrl("microsoft/cornellPreview.webp")} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                     </div>
                     <div className="w-[80%] lg:w-[30%] sm:w-[80%] md:w-[30%]">
-                    <PrimeImage src={`${baseAssetUrl}cmuPrev.webp`} zoomSrc={`${baseAssetUrl}cmuPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("microsoft/cmuPrev.webp")} zoomSrc={getCloudinaryDirectImageUrl("microsoft/cmuPreview.webp")} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                     </div>
                     <div className="w-[80%] lg:w-[28%] sm:w-[80%] md:w-[30%]">
-                    <PrimeImage src={`${baseAssetUrl}nusPrev.webp`} zoomSrc={`${baseAssetUrl}nusPreview.png`} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("microsoft/nusPrev.webp")} zoomSrc={getCloudinaryDirectImageUrl("microsoft/nusPreview.webp")} alt="secondaryResearch" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                     </div>
                 </div>
                 <div className='description-text w-full pt-4'>
@@ -146,13 +146,13 @@ export default function Microsoft () {
                     <div className="picture-header pb-2">
                        Feature Analysis
                     </div>
-                    <PrimeImage src={`${baseAssetUrl}featureAnalysis.webp`} zoomSrc={`${baseAssetUrl}featureAnalysisPreview.png`} alt="featureAnalysis" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("microsoft/featureAnalysis.webp")} zoomSrc={getCloudinaryDirectImageUrl("microsoft/featureAnalysisPreview.png")} alt="featureAnalysis" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                     <div className="picture-header pb-2">
                        Information Architecture
                     </div>
-                    <PrimeImage src={`${baseAssetUrl}infoArchitecture.png`} zoomSrc={`${baseAssetUrl}infoArchitecture.png`} alt="infoArchitecture" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("microsoft/infoArchitecture.png")} zoomSrc={getCloudinaryDirectImageUrl("microsoft/infoArchitecture.png")} alt="infoArchitecture" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title pt-4">
                     Figma Prototypes
@@ -162,17 +162,17 @@ export default function Microsoft () {
                     We then delved into detailing the Figma Prototype, including <span className='bolder-text'>Lo-fi, Mid-fi, and Hi-fi Prototypes</span>. This comprehensive approach ensures a clear and systematic understanding of the essential elements guiding the course registration system’s development.
                </div>
                <div className="flex w-full justify-center items-center pt-4">
-                    <Image src={`${commonAssetUrl}point_arrow3.png`}  alt="arrow"  width={100} height={100}/>
+                    <Image src={getCloudinaryDirectImageUrl("common/point_arrow3.png")}  alt="arrow"  width={100} height={100}/>
                </div>
                <div className='flex flex-col md:flex-row lg:flex-row sm:flex-col justify-center pt-4'>
                     <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/4Urpjn30p0MUpepNGaPuC5/Lo-fi-Prototype?node-id=0-1&t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Lo-Fi Prototype">
-                        <Image src={`${baseAssetUrl}lofiDesign.webp`}  alt="lofi"  width={100} height={100} layout="responsive" className="rounded-lg"/>
+                        <Image src={getCloudinaryDirectImageUrl("microsoft/lofiDesign.webp")}  alt="lofi"  width={100} height={100} layout="responsive" className="rounded-lg" priority/>
                     </a>
                     <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/jELe9TcBqsN50igb0pshwG/Mid-fi-Prototype?node-id=8-3713&t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Mid-Fi Prototype">
-                        <Image src={`${baseAssetUrl}midfiDesign.webp`}  alt="midfi"  width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("microsoft/midfiDesign.webp")}  alt="midfi"  width={100} height={100} layout="responsive" className="rounded-lg" priority/>
                     </a>
                     <a className='mx-5 lg:w-[30%]' href="https://www.figma.com/design/cKqZcpNPCRXtxWIM81qJuL/Hi-fi-Prototype?t=6nfUP1Ou6biBf6Ch-1" target="_blank" title="Hi-Fi Prototype">
-                        <Image src={`${baseAssetUrl}hifiDesign.webp`}  alt="hifi"  width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("microsoft/hifiDesign.webp")}  alt="hifi"  width={100} height={100} layout="responsive" className="rounded-lg" priority/>
                     </a>
                 </div>
                 <div className='description-text w-full pt-8'>
@@ -191,7 +191,7 @@ export default function Microsoft () {
                </div>
                <div className="flex w-full justify-center items-center py-4">
                   <div className="w-[80%] lg:w-[50%] md:w-[70%] sm:w-[80%]">
-                     <Image src={`${baseAssetUrl}frontend.webp`} alt="frontend" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("microsoft/frontend.webp")} alt="frontend" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                </div>
             </div>
@@ -203,7 +203,7 @@ export default function Microsoft () {
             </div>
             <div className='flex justify-center w-full py-4' >
                 <video className='w-[70%]' height="auto" controls autoPlay muted loop>
-                    <source src={`${baseAssetUrl}msVideo.mp4`} type="video/mp4" />
+                    <source src={getVideoSrc("microsoft/msVideo.mp4")} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -214,10 +214,10 @@ export default function Microsoft () {
                 <div className='header-underline mt-2 mb-4'></div>
                     <div className="flex w-full flex-row">
                         <a className='mx-1' href="https://www.figma.com/team_invite/redeem/bqGnTWc2AomnFRq7vDq82v" target="_blank" title="Figma">
-                            <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={getCloudinaryDirectImageUrl("common/figmaLogo.svg")} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                         <a className='mx-1' href="https://github.com/ssunil3232/MPS_Project" target="_blank" title="Github">
-                            <Image src={`${commonAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={getCloudinaryDirectImageUrl("common/gitLogo.svg")} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                     </div>
                 </div>

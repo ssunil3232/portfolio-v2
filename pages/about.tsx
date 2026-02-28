@@ -3,6 +3,7 @@ import HowInfo from '@/app/components/how';
 import { poppins, reenie_beanie } from '@/app/ui/fonts';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
+import { getCloudinaryDirectImageUrl } from '@/app/utils/cloudinary';
 
 export default function About () {
   const getYearsExperience = () => {
@@ -91,7 +92,8 @@ export default function About () {
     <div className="about-page flex flex-col justify-start w-full min-h-screen">
       <div className="about-id-row flex flex-col lg:flex-row w-full items-end gap-6 lg:gap-[5%] md:gap-[5%] pt-4 pb-12">
         <div className="about-id-wrap w-[40%] flex justify-center">
-          <Image src="/assets/common/id_card.svg" alt="ID card illustration" width={520} height={520} priority className="about-id-card top-[15%]" />
+          <Image 
+          src={getCloudinaryDirectImageUrl("common/id_card.svg")} alt="ID card illustration" width={520} height={520} priority className="about-id-card top-[15%]" />
         </div>
         <div className="flex flex-col w-full lg:w-[60%] gap-6 pr-8 justify-end">
           <div className={`${poppins.className} font-light text-[2rem] leading-[0.95] text-[#111111]`}>
@@ -118,7 +120,8 @@ export default function About () {
         </div>
       </div>
       <div className="flex w-full flex-row arrow-2 content ml-[10%]">
-        <Image src="/assets/common/curly-arrow.gif" alt="arrow" width={100} height={100} className="rounded-lg" />
+        <Image 
+        src={getCloudinaryDirectImageUrl("common/curly-arrow.gif")} alt="arrow" width={100} height={100} className="rounded-lg" />
       </div>
       <div className="flex flex-col w-full">
         <section className="timeline-section" ref={timelineSectionRef}>
@@ -133,11 +136,14 @@ export default function About () {
               width={160}
               height={160}
               className="timeline-title-gif"
-              priority
             />
           </div>
           <div className="timeline-scroll h-screen" ref={timelineScrollRef}>
-            <img src="/assets/common/timeline.svg" alt="Timeline of my journey" className="timeline-svg h-[50%]" />
+            <img
+              src={getCloudinaryDirectImageUrl("common/timeline.svg")}
+              alt="Timeline of my journey" 
+              className="timeline-svg h-[50%]" 
+            />
           </div>
         </section>
       </div>
@@ -145,16 +151,15 @@ export default function About () {
         <div className="skills-orbit-wrap">
           {showTapArrow && (
             <Image
-              src="/assets/common/arrow_tap.svg"
+              src={getCloudinaryDirectImageUrl("common/arrow_tap.svg")}
               alt="Tap arrow"
               width={140}
               height={140}
               className="skills-arrow-tap"
-              priority
             />
           )}
           <Image
-            src="/assets/common/cherry.gif"
+            src={getCloudinaryDirectImageUrl("common/cherry.gif")}
             alt="Cherry"
             width={500}
             height={500}

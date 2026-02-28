@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { crafty_girls, poppins, reenie_beanie } from '../ui/fonts';
 import '../globals.css';
+import { getCloudinaryDirectImageUrl } from '../utils/cloudinary';
 
 const HowInfo = () => {
   const howSectionRef = useRef<HTMLElement | null>(null);
@@ -139,7 +140,7 @@ const HowInfo = () => {
         </div>
         <div className="how-illustration" style={{width: '300px!important'}}>
           <Image
-            src="/assets/common/how_2.gif"
+            src={getCloudinaryDirectImageUrl("common/how_2.gif")}
             alt="Thinking character"
             width={420}
             height={360}
@@ -158,7 +159,7 @@ const HowInfo = () => {
         </div>
         <div className="how-illustration" style={{ width: '100vw!important', marginTop: '-15%!important' }}>
           <Image
-            src="/assets/common/how_3.gif"
+            src={getCloudinaryDirectImageUrl("common/how_3.gif")}
             alt="Thinking character"
             width={420}
             height={360}
@@ -183,28 +184,28 @@ const HowInfo = () => {
         </div>
         <div className="how-pop-grid">
           <Image
-            src="/assets/common/how_4a.svg"
+            src={getCloudinaryDirectImageUrl("common/how_4a.svg")}
             alt="How sequence step one"
             width={220}
             height={220}
             className="how-pop-item"
           />
           <Image
-            src="/assets/common/how_4b.svg"
+            src={getCloudinaryDirectImageUrl("common/how_4b.svg")}
             alt="How sequence step two"
             width={220}
             height={220}
             className="how-pop-item"
           />
           <Image
-            src="/assets/common/how_4c.svg"
+            src={getCloudinaryDirectImageUrl("common/how_4c.svg")}
             alt="How sequence step three"
             width={220}
             height={220}
             className="how-pop-item"
           />
           <Image
-            src="/assets/common/how_4d.svg"
+            src={getCloudinaryDirectImageUrl("common/how_4d.svg")}
             alt="How sequence step four"
             width={220}
             height={220}
@@ -245,7 +246,7 @@ const HowInfo = () => {
           >
             And then bringing it all together.
             <Image
-            src="/assets/common/how_6.svg"
+            src={getCloudinaryDirectImageUrl("common/how_6.gif")}
             alt="How sequence finale"
             width={520}
             height={420}
@@ -255,7 +256,7 @@ const HowInfo = () => {
           </div>
           
           <Image
-            src="/assets/common/typography.svg"
+            src={getCloudinaryDirectImageUrl("common/typography.svg")}
             alt="Typography"
             width={360}
             height={260}
@@ -263,7 +264,7 @@ const HowInfo = () => {
             priority
           />
           <Image
-            src="/assets/common/components.svg"
+            src={getCloudinaryDirectImageUrl("common/components.svg")}
             alt="Components"
             width={360}
             height={260}
@@ -271,7 +272,7 @@ const HowInfo = () => {
             priority
           />
           <Image
-            src="/assets/common/comp-states.svg"
+            src={getCloudinaryDirectImageUrl("common/comp-states.svg")}
             alt="Component states"
             width={360}
             height={260}
@@ -279,7 +280,7 @@ const HowInfo = () => {
             priority
           />
           <Image
-            src="/assets/common/color-palette.svg"
+            src={getCloudinaryDirectImageUrl("common/color-palette.svg")}
             alt="Color palette"
             width={360}
             height={260}

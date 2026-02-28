@@ -4,6 +4,7 @@ import About from "./about";
 import Image from "next/image";
 import { bristol, poppins, reenie_beanie } from "@/app/ui/fonts";
 import React, { useEffect, useRef, useState } from "react";
+import { getCloudinaryDirectImageUrl } from "@/app/utils/cloudinary";
 
 export default function Home() {
   const introFlightOriginRef = useRef<HTMLDivElement | null>(null);
@@ -127,7 +128,7 @@ export default function Home() {
     </div>
     <div className="flight-layer" ref={flightLayerRef} aria-hidden="true">
       <Image
-        src="/assets/common/sonia.svg"
+        src={getCloudinaryDirectImageUrl("common/sonia.svg")}
         alt=""
         width={300}
         height={400}
@@ -135,12 +136,12 @@ export default function Home() {
         priority
       />
       <Image
-        src="/assets/common/tea_time.gif"
+        src={getCloudinaryDirectImageUrl("common/tea_time.gif")}
         alt=""
         width={300}
         height={300}
         className="flight-tea"
-        priority
+        unoptimized
       />
       <span className="flight-burst" />
     </div>
@@ -194,7 +195,10 @@ export default function Home() {
         <p className={`${reenie_beanie.className} footer-signoff`}>© 2024 Sonia Sunil · Developed with React ✨</p>
 
         <div className="footer-portrait" aria-hidden="true">
-          <Image src="/assets/common/me.svg" alt="Sonia" width={480} height={520} priority />
+          <Image 
+            src={getCloudinaryDirectImageUrl("common/me.svg")}
+            alt="Sonia" width={480} height={520}
+          />
         </div>
       </div>
     </footer>

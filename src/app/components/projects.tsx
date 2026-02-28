@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { reenie_beanie } from '../ui/fonts';
 import '../globals.css'; 
 import { motion } from 'framer-motion';
+import { getVideoSrc } from '@/app/utils/cloudinary';
 
 const Projects = () => {
     const colors = [
@@ -69,7 +70,7 @@ const Projects = () => {
                             {project.previewVideo && hoveredProject === index ? (
                                 <video
                                     className="project-image"
-                                    src={project.previewVideo}
+                                    src={getVideoSrc(project.previewVideo)}
                                     autoPlay
                                     loop
                                     muted

@@ -3,10 +3,10 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
+import { getCloudinaryDirectImageUrl, getCloudinaryRawFileUrl } from "@/app/utils/cloudinary";
 
 export default function InsightEdge () {
    const baseAssetUrl = "/assets/insightEdge/";
-   const commonAssetUrl = "/assets/common/";
    const features = [
       {
          "asset": "first.gif",
@@ -44,11 +44,11 @@ export default function InsightEdge () {
          <Navbar/>
             <div className="flex w-[100%] sm:w-[100%] md:w-[60%] lg:w-[50%] flex-row justify-center px-4">
                 <div className='flex w-[80%] justify-center items-center'>
-                    <Image src={`${baseAssetUrl}header.svg`} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
+                    <Image src={getCloudinaryDirectImageUrl("insightEdge/header.svg")} alt="graphic1" height={450} width={450} layout="responsive" className="flex w-full h-auto"/> 
                 </div>
             </div>
             <div>
-               <Image src={`${baseAssetUrl}suiteDisplay.webp`} alt="suite" width={450} height={450} layout="responsive" className="flex w-full h-auto"/>
+               <Image src={getCloudinaryDirectImageUrl("insightEdge/suiteDisplay.webp")} alt="suite" width={450} height={450} layout="responsive" className="flex w-full h-auto" priority/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                   Enhancements to alleviate the pains experienced by content creators on Instagram, to boost Meta's edge in the content creation landscape, in collaboration with Meta's Product Manager Richa Sood.
@@ -119,19 +119,19 @@ export default function InsightEdge () {
                <div className="flex w-full justify-center items-center">
                   <div className="flex flex-row w-[80%] justify-center items-center mt-2 mb-4 flex-wrap">
                      <div className="">
-                        <Image src={`${baseAssetUrl}comp1.svg`} alt="responses" width={100} height={100} layout="responsive" />
+                        <Image src={getCloudinaryDirectImageUrl("insightEdge/comp1.svg")} alt="responses" width={100} height={100} layout="responsive" />
                      </div>
                      <div className="">
-                        <Image src={`${baseAssetUrl}comp2.svg`} alt="responses" width={100} height={100} layout="responsive" />
+                        <Image src={getCloudinaryDirectImageUrl("insightEdge/comp2.svg")} alt="responses" width={100} height={100} layout="responsive" />
                      </div>
                      <div className="">
-                        <Image src={`${baseAssetUrl}comp3.svg`} alt="responses" width={100} height={100} layout="responsive" />
+                        <Image src={getCloudinaryDirectImageUrl("insightEdge/comp3.svg")} alt="responses" width={100} height={100} layout="responsive" />
                      </div>
                      <div className="">
-                        <Image src={`${baseAssetUrl}comp4.svg`} alt="responses" width={100} height={100} layout="responsive" />
+                        <Image src={getCloudinaryDirectImageUrl("insightEdge/comp4.svg")} alt="responses" width={100} height={100} layout="responsive" />
                      </div>
                      <div className="">
-                        <Image src={`${baseAssetUrl}comp5.svg`} alt="responses" width={100} height={100} layout="responsive" />
+                        <Image src={getCloudinaryDirectImageUrl("insightEdge/comp5.svg")} alt="responses" width={100} height={100} layout="responsive" />
                      </div>
                   </div>
                </div>
@@ -141,7 +141,7 @@ export default function InsightEdge () {
                </div>
                <div className="flex w-full justify-center items-center">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[80%]">
-                     <PrimeImage src={`${baseAssetUrl}dtiResponses.webp`} alt="responses" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     <PrimeImage src={getCloudinaryDirectImageUrl("insightEdge/dtiResponses.webp")} alt="responses" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                </div>
                <div className="header-title">
@@ -155,9 +155,9 @@ export default function InsightEdge () {
                </div>
                <div className="flex w-full justify-center items-center mt-4 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                     <PrimeImage src={`${baseAssetUrl}userJouney.png`} zoomSrc={`${baseAssetUrl}UserJourneyMapPreview.png`} alt="journeyMap" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     <PrimeImage src={getCloudinaryDirectImageUrl("insightEdge/userJouney.png")} zoomSrc={getCloudinaryDirectImageUrl("insightEdge/UserJourneyMapPreview.png")} alt="journeyMap" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-10%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-10%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title pt-4">
                   Findings
@@ -168,7 +168,7 @@ export default function InsightEdge () {
                </div>
                <div className="flex w-full justify-center items-center">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[80%]">
-                     <Image src={`${baseAssetUrl}findings.webp`} alt="findings" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("insightEdge/findings.webp")} alt="findings" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                </div>
                <div className='description-text w-full'>
@@ -186,7 +186,7 @@ export default function InsightEdge () {
                      <div className="picture-header pt-4">
                         Aspiring Content Creator
                      </div>
-                     <PrimeImage src={`${baseAssetUrl}aspiring.webp`} alt="aspiring" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     <PrimeImage src={getCloudinaryDirectImageUrl("insightEdge/aspiring.webp")} alt="aspiring" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                </div>
                <div className="flex w-full justify-center items-center">
@@ -194,7 +194,7 @@ export default function InsightEdge () {
                      <div className="picture-header pt-4">
                         Emerging Content Creator
                      </div>
-                     <PrimeImage src={`${baseAssetUrl}emerging.webp`} alt="emerging" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                     <PrimeImage src={getCloudinaryDirectImageUrl("insightEdge/emerging.webp")} alt="emerging" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                </div>
                <div className="header-title pt-4">
@@ -206,12 +206,12 @@ export default function InsightEdge () {
                </div>
                <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-[60%] lg:w-[30%] sm:w-[60%] md:w-[40%]">
-                     <Image src={`${baseAssetUrl}logo.webp`} alt="logo" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("insightEdge/logo.webp")} alt="logo" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                </div>
                <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[50%] sm:w-full md:w-[60%]">
-                     <Image src={`${baseAssetUrl}toolDetails.webp`} alt="toolDetails" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("insightEdge/toolDetails.webp")} alt="toolDetails" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                </div>
             </div>
@@ -239,7 +239,7 @@ export default function InsightEdge () {
             </div>
             <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-[80%] lg:w-[50%] sm:w-[80%] md:w-[60%]">
-                     <Image src={`${baseAssetUrl}teamPicture.png`} alt="teamPicture"  width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("insightEdge/teamPicture.png")} alt="teamPicture"  width={100} height={100} layout="responsive" className="rounded-lg" priority />
                   </div>
             </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col pt-8 pb-12">
@@ -250,24 +250,24 @@ export default function InsightEdge () {
                <div className="flex w-full justify-center items-center relative">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
                      <a href="https://www.figma.com/design/BI2XetztSbvG5K00XR1eOT/User-Stories?m=auto&t=ofbK0Fn1ltTrWqia-1" target="_blank" rel="noopener noreferrer" title="Wireframe user story">
-                        <Image src={`${baseAssetUrl}wireframe.webp`} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("insightEdge/wireframe.webp")} alt="responses" width={100} height={100} layout="responsive" className="rounded-lg" priority />
                      </a>
                   </div>
-                  <Image src={`${commonAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow2.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-25%] right-[0%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                </div>
                <div className="header-title">
                Artifacts
                </div>
                <div className='header-underline mt-2 mb-4'></div>
                <div className="flex w-full flex-row">
-                  <a className='mx-1' href={`${baseAssetUrl}PRD_Document.pdf`} target="_blank" title="PRD Document">
-                     <Image src={`${commonAssetUrl}prdLogo.svg`} alt="Prd" width={100} height={100} layout="responsive" className="rounded-lg" />
+                  <a className='mx-1' href={getCloudinaryRawFileUrl("insightEdge/PRD_Document.pdf")} target="_blank" title="PRD Document">
+                     <Image src={getCloudinaryDirectImageUrl("common/prdLogo.svg")} alt="Prd" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                   <a className='mx-1' href={`${baseAssetUrl}PitchDeck.pdf`} target="_blank" title="Pitch Deck">
-                     <Image src={`${commonAssetUrl}deckLogo.svg`} alt="Pitch Deck" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("common/deckLogo.svg")} alt="Pitch Deck" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                   <a className='mx-1' href="https://www.figma.com/team_invite/redeem/Cq3UG3JRcQ3RSDPNTbWlMG" target="_blank" title="Figma">
-                     <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("common/figmaLogo.svg")} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                </div>
             </div>

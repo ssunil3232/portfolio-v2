@@ -3,10 +3,11 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
+import { getCloudinaryDirectImageUrl, getVideoSrc } from "@/app/utils/cloudinary";
 
 export default function PrisonerExpress () {
    const baseAssetUrl = "/assets/prisonerExpress/";
-   const commonAssetUrl = "/assets/common/";
+
    const keyFindings = [
     {
         text: 'Illuminated the need to create ',
@@ -42,8 +43,8 @@ export default function PrisonerExpress () {
         <div className="flex w-screen min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
             <div className='flex flex-col w-full lg:w-[50%] md:w-[50%]  justify-center items-center'>
-                <Image src={`${baseAssetUrl}headliner.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
-                <Image src={`${baseAssetUrl}preview.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={getCloudinaryDirectImageUrl("prisonerExpress/headliner.png")} alt="logo" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={getCloudinaryDirectImageUrl("prisonerExpress/preview.png")} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto" priority/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Prisoner Express creates an opportunity for incarcerated individuals to get information, education and a public forum for creative self-expression. Through newsletters and programs they hope to step through the isolation and alienation of prison life, bringing hope and fostering a sense of community among prisoners.
@@ -143,9 +144,9 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[80%]">
-                  <PrimeImage src={`${baseAssetUrl}affinity.webp`} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                  <PrimeImage src={getCloudinaryDirectImageUrl("prisonerExpress/affinity.webp")} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     User Personas & Task Scenarios
@@ -165,11 +166,11 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                    <PrimeImage src={`${baseAssetUrl}prisonerPersona.webp`} alt="prisonerPersona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("prisonerExpress/prisonerPersona.webp")} alt="prisonerPersona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                      <div className="w-full picture-header justify-start py-4">
                         Goals & Task Scenarios
                      </div>
-                     <Image src={`${baseAssetUrl}prisonerTasks.svg`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("prisonerExpress/prisonerTasks.svg")} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
                 <div className="w-full picture-header justify-start pt-8" style={{fontWeight: '600'}}>
@@ -180,11 +181,11 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                  <PrimeImage src={`${baseAssetUrl}adminPersona.webp`} alt="adminPersona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                  <PrimeImage src={getCloudinaryDirectImageUrl("prisonerExpress/adminPersona.webp")} alt="adminPersona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                      <div className="w-full picture-header justify-start py-4">
                         Goals & Task Scenarios
                      </div>
-                     <Image src={`${baseAssetUrl}adminTasks.svg`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("prisonerExpress/adminTasks.svg")} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -195,12 +196,12 @@ export default function PrisonerExpress () {
                     We then proceeded to research existing reading app interfaces, pasting them on an <span className='bolder-text'>“Idea Board”</span> and highlighting features we felt gelled and wanted our app to consider incorporating. We reviewed apps like <span className='bolder-text'>FBReader, Kindle, AppleBooks, Barnes & Noble, and RecipeKeeper</span> to brainstorm ideas for our Primary users. For the Administrative users, we referenced apps like <span className='bolder-text'>Cornell’s Canvas and Quizlet</span> app.
                 </div>
                 <div className="flex w-full justify-center items-center pt-2">
-                    <Image src={`${commonAssetUrl}point_arrow3.png`}  alt="arrow"  width={100} height={100}/>
+                    <Image src={getCloudinaryDirectImageUrl("common/point_arrow3.png")}  alt="arrow"  width={100} height={100}/>
                 </div>
                 <div className="flex w-full justify-center items-center pt-6">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
                     <a href="https://www.figma.com/board/ZhovCH4zplCXi5do2lVPFF/Idea-Board-for-Prisoner-Express-App?node-id=0-1&t=qqnfSlB1AGa8EbD4-1" target="_blank" rel="noopener noreferrer">
-                     <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("prisonerExpress/ideaBoard.webp")} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </a>
                   </div>
                 </div>
@@ -222,9 +223,9 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-6 relative">
                   <div className="w-full lg:w-[100%] sm:w-full md:w-[90%]">
-                    <PrimeImage src={`${baseAssetUrl}final.webp`} alt="final" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("prisonerExpress/final.webp")} alt="final" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${baseAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[5%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     Prototyping in VueJS
@@ -238,10 +239,10 @@ export default function PrisonerExpress () {
                 </div>
                 <div className='flex flex-row flex-wrap w-full justify-center gap-2'>
                     <div className="w-full lg:w-[48%] sm:w-full md:w-full ">
-                        <Image src={`${baseAssetUrl}implement1.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("prisonerExpress/implement1.webp")} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </div>
                     <div className="w-full lg:w-[48%] sm:w-full md:w-full ">
-                        <Image src={`${baseAssetUrl}implement2.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("prisonerExpress/implement2.webp")} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
                     </div>
                </div>
                <div className="w-full picture-header justify-start pt-4">
@@ -250,14 +251,15 @@ export default function PrisonerExpress () {
                 <div className='flex justify-center w-full py-4 flex-col items-center' >
                     <div style={{color: 'var(--focus-color)'}}>Primary User App View</div>
                 <video className='w-[80%]' height="auto" controls autoPlay muted loop>
-                    <source src={`${baseAssetUrl}prisonerEVideo.mp4`} type="video/mp4" />
+                    <source 
+                    src={getVideoSrc("prisonerExpress/prisonerEVideo.mp4")} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div className='flex justify-center w-full py-4 flex-col items-center' >
                 <div style={{color: 'var(--focus-color)'}}>Administrative User App View</div>
                 <video className='w-[80%]' height="auto" controls autoPlay muted loop>
-                    <source src={`${baseAssetUrl}adminEVideo.mp4`} type="video/mp4" />
+                    <source src={getVideoSrc("prisonerExpress/adminEVideo.mp4")} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -270,7 +272,7 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                    <Image src={`${baseAssetUrl}testing.svg`} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <Image src={getCloudinaryDirectImageUrl("prisonerExpress/testing.svg")} alt="featureAnalysis" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
             </div>
@@ -278,7 +280,7 @@ export default function PrisonerExpress () {
                 Our Prisoner Express received high praise from the client and was awarded the <span className='bolder-text'>“Best Prototype”</span> title! It was an honor to work with Prisoner Express on this project and to be given the opportunity to create an app that could potentially bring hope and foster a sense of community among prisoners.
             </div>
             <div className="flex w-[60%] px-2">
-                <Image src={`${baseAssetUrl}groupPic.png`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg object-cover" />
+                <Image src={getCloudinaryDirectImageUrl("prisonerExpress/groupPic.png")} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg object-cover" />
             </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
                             <div className="header-title">
@@ -287,16 +289,16 @@ export default function PrisonerExpress () {
                             <div className='header-underline mt-2 mb-4'></div>
                                 <div className="flex w-full flex-row">
                                     <a className='mx-1' href="https://www.figma.com/team_invite/redeem/gHUUg5J8xkMKfBUQa4agdC" target="_blank" title="Figma">
-                                        <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                        <Image src={getCloudinaryDirectImageUrl("common/figmaLogo.svg")} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
                                     <a className='mx-1' href="https://github.com/ssunil3232/prisoner-express-24" target="_blank" title="Github">
-                                        <Image src={`${commonAssetUrl}gitLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                        <Image src={getCloudinaryDirectImageUrl("common/gitLogo.svg")} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
                                     <a className='mx-1' href={`${baseAssetUrl}FinalReport.pdf`} target="_blank" title="Report">
-                                        <Image src={`${commonAssetUrl}reportLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                        <Image src={getCloudinaryDirectImageUrl("common/reportLogo.svg")} alt="Report" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
                                     <a className='mx-1' href="https://ssunil3232.github.io/prisoner-express-24/" target="_blank" title="PWA App">
-                                        <Image src={`${commonAssetUrl}pwaLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                        <Image src={getCloudinaryDirectImageUrl("common/pwaLogo.svg")} alt="PWA App" width={100} height={100} layout="responsive" className="rounded-lg" />
                                     </a>
                                 </div>
                             </div>

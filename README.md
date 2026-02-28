@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Cloudinary Setup
+
+This project is wired to use Cloudinary for project card preview images when configured.
+
+1. Copy `.env.example` to `.env.local`.
+2. Set `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` to your Cloudinary cloud name.
+3. Upload preview images to Cloudinary using the public IDs in `src/app/data/project-info.json` (for example `portfolio-v2/assets/insightEdge`).
+
+If Cloudinary is not configured, the app falls back to local images in `public/assets`.
+
 ## Getting Started
 
 First, run the development server:

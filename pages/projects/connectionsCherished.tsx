@@ -3,16 +3,16 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
+import { getCloudinaryDirectImageUrl } from "@/app/utils/cloudinary";
 
 export default function ConnectionsCherished () {
    const baseAssetUrl = "/assets/connectionsCherished/";
-   const commonAssetUrl = "/assets/common/";
    
     return (
         <div className="flex w-screen min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
             <div className='flex w-[80%] lg:w-[60%] md:w-[60%] sm:w-[80%] justify-center items-center pb-8'>
-                <Image src={`${baseAssetUrl}title.png`} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto"/>
+                <Image src={getCloudinaryDirectImageUrl("cherie/title.png")} alt="mockup" height={50} width={290} layout="responsive" className="flex w-full h-auto" priority/>
             </div>
             <div className='header-text w-[80%] md:w-[60%] lg:w-[60%] sm:w-[80%]'>
                 Cherie is designed to help users nurture their friendships by providing <span className='bolder-text'>thoughtful reminders to stay in touch</span>. In today’s fast-paced world, maintaining meaningful relationships can often take a backseat and Cherie seeks to make staying connected effortless.
@@ -68,19 +68,19 @@ export default function ConnectionsCherished () {
                 <div className="flex w-full justify-center items-center pt-4">
                 <div className="flex flex-wrap justify-center w-full">
                         <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3">
-                        <Image src={`${baseAssetUrl}data1.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("cherie/data1.png")} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                         <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3">
-                        <Image src={`${baseAssetUrl}data2.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("cherie/data2.png")} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                         <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3">
-                        <Image src={`${baseAssetUrl}data3.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("cherie/data3.png")} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                         <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3">
-                        <Image src={`${baseAssetUrl}data4.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("cherie/data4.png")} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                         <div className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3">
-                        <Image src={`${baseAssetUrl}data5.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("cherie/data5.png")} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                     </div>
                 </div>
@@ -96,9 +96,9 @@ export default function ConnectionsCherished () {
                     </a>&nbsp;
                     that was created, followed by a summary of the insights gathered.
                 </div>
-                <PrimeImage src={`${baseAssetUrl}affinity.png`} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image " />
+                <PrimeImage src={getCloudinaryDirectImageUrl("cherie/affinity.png")} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image " />
                 <div className="flex w-full justify-center items-center pt-4">
-                <PrimeImage src={`${baseAssetUrl}summary.png`} alt="summary" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image w-[50%]" />
+                <PrimeImage src={getCloudinaryDirectImageUrl("cherie/summary.png")} alt="summary" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image w-[50%]" />
                 </div>
                 <div className="header-title pt-4">
                     Persona
@@ -109,7 +109,7 @@ export default function ConnectionsCherished () {
                     living away from family and friends and those with busy schedules</span>. The persona was created to help guide the design process and ensure that the application would cater to the needs of the target user group.
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
-                <PrimeImage src={`${baseAssetUrl}persona.png`} alt="persona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image w-[70%]" />
+                <PrimeImage src={getCloudinaryDirectImageUrl("cherie/persona.png")} alt="persona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image w-[70%]" />
                 </div>
                 <div className="header-title pt-4">
                     Requirements gathered
@@ -119,9 +119,9 @@ export default function ConnectionsCherished () {
                     Based on the insights gathered from the user research, I identified the key requirements for the application. These <span className='bolder-text'>main 3 requirements</span> were critical challenges faced by the user and would make the defining deliverable of the application.
                 </div>
                 <div className='project-section w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-3 mt-6 pb-8'>
-                    <Image src={`${baseAssetUrl}req1.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    <Image src={`${baseAssetUrl}req2.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
-                    <Image src={`${baseAssetUrl}req3.png`} alt="data" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/req1.png")} alt="data" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/req2.png")} alt="data" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/req3.png")} alt="data" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                 </div>
                 <div className="header-title pt-4">
                     User Journey Mapping & test scenarios
@@ -133,9 +133,9 @@ export default function ConnectionsCherished () {
                     The following are the <span className='bolder-text'>3 test scenarios</span> that were created to test the application:
                 </div>
                 <div className='project-section w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 mt-6 pb-8'>
-                    <PrimeImage src={`${baseAssetUrl}test-case-1.png`} alt="testcase1" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                    <PrimeImage src={`${baseAssetUrl}test-case-2.png`} alt="testcase2" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
-                    <PrimeImage src={`${baseAssetUrl}test-case-3.png`} alt="testcase3" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/test-case-1.png")} alt="testcase1" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/test-case-2.png")} alt="testcase2" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/test-case-3.png")} alt="testcase3" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                 </div>
                <div className="header-title pt-4">
                     Lo-Fi, Mid-Fi & Hi-Fi Prototypes
@@ -156,7 +156,7 @@ export default function ConnectionsCherished () {
                                 </div>
                                 
                                 <div className="w-[30%]">
-                                    <PrimeImage src={`${baseAssetUrl}lofi.png`} alt="lofi" indicatorIcon="pi pi-expand" zoomSrc={`${baseAssetUrl}lofi.gif`} preview className="rounded-lg expand-image" />
+                                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/lofi.png")} alt="lofi" indicatorIcon="pi pi-expand" zoomSrc={`${baseAssetUrl}lofi.gif`} preview className="rounded-lg expand-image" />
                                 </div>
                             </div>
                             
@@ -173,7 +173,7 @@ export default function ConnectionsCherished () {
                                 </div>
                                 
                                 <div className="w-[30%]">
-                                    <PrimeImage src={`${baseAssetUrl}midfi.png`} alt="midfi" indicatorIcon="pi pi-expand" zoomSrc={`${baseAssetUrl}midfi.gif`} preview className="rounded-lg expand-image" />
+                                    <PrimeImage src={getCloudinaryDirectImageUrl("cherie/midfi.png")}alt="midfi" indicatorIcon="pi pi-expand" zoomSrc={`${baseAssetUrl}midfi.gif`} preview className="rounded-lg expand-image" />
                                 </div>
                             </div>
                         </li>
@@ -271,10 +271,10 @@ export default function ConnectionsCherished () {
                             <div className='header-underline mt-2 mb-4'></div>
                                 <div className="flex w-full flex-row">
                                  <a className='mx-1' href="https://www.figma.com/team_invite/redeem/0awnUml3sAx1Qt4RaejGHz" target="_blank" title="Figma">
-                                    <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    <Image src={getCloudinaryDirectImageUrl("common/figmaLogo.svg")} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                                 </a>
                                 <a className='mx-1' href="https://github.com/ssunil3232/connections-cherished" target="_blank" title="Github Link">
-                                    <Image src={`${commonAssetUrl}gitLogo.svg`} alt="github" width={100} height={100} layout="responsive" className="rounded-lg" />
+                                    <Image src={getCloudinaryDirectImageUrl("common/gitLogo.svg")} alt="github" width={100} height={100} layout="responsive" className="rounded-lg" />
                                 </a>
                                 </div>
                             </div>

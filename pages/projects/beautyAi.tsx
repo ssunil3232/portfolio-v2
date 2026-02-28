@@ -3,18 +3,18 @@ import "./project.css";
 import Navbar from "@/app/components/navbar";
 import { ScrollTop } from 'primereact/scrolltop';
 import { Image as PrimeImage } from 'primereact/image';
+import { getCloudinaryDirectImageUrl, getVideoSrc } from "@/app/utils/cloudinary";
 
 export default function BeautyAi () {
    const baseAssetUrl = "/assets/beautyAi/";
-   const commonAssetUrl = "/assets/common/";
     return (
         <div className="flex w-full min-h-screen flex-col items-center  bg-no-repeat bg-cover">
          <Navbar/>
             <div className="flex w-[80%] lg:flex-row md:flex-col sm:flex-col flex-col justify-center px-4 pt-8">
                 <div className='flex w-full lg:w-[60%] md:w-[60%] justify-center items-center'>
                     <div className="flex flex-col w-full justify-center">
-                        <Image src={`${baseAssetUrl}logo.png`} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
-                        <Image src={`${baseAssetUrl}preview.png`} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto"/>
+                        <Image src={getCloudinaryDirectImageUrl("beautyAi/logo.png")} alt="logo" height={50} width={290}layout="responsive" className="flex w-full h-auto" priority/>
+                        <Image src={getCloudinaryDirectImageUrl("beautyAi/preview.png")} alt="preview" height={50} width={290}layout="responsive" className="flex w-full h-auto" priority/>
                     </div>
                 </div>
                 <div className='flex w-full lg:w-[40%] md:w-[40%]  justify-center items-center'>
@@ -88,10 +88,10 @@ export default function BeautyAi () {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full py-4 ">
                     <div className="w-full">
-                    <Image src={`${baseAssetUrl}participants.webp`} alt="participants" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }} />
+                    <Image src={getCloudinaryDirectImageUrl("beautyAi/participants.webp")}  alt="participants" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }} />
                     </div>
                     <div className="w-full">
-                    <Image src={`${baseAssetUrl}recruitment.webp`} alt="recruitment" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }}/>
+                    <Image src={getCloudinaryDirectImageUrl("beautyAi/recruitment.webp")} alt="recruitment" width={100} height={100} layout="responsive" className="rounded-lg" style={{ borderRadius: 10 }}/>
                     </div>
                 </div>
                 <div className='flex justify-center w-full'>
@@ -101,7 +101,7 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                    <Image src={`${baseAssetUrl}interview.webp`} alt="interview" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <Image src={getCloudinaryDirectImageUrl("beautyAi/interview.webp")} alt="interview" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -116,9 +116,9 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4 relative">
                   <div className="w-full lg:w-[90%] sm:w-full md:w-[90%]">
-                  <PrimeImage src={`${baseAssetUrl}affinity.webp`} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                  <PrimeImage src={getCloudinaryDirectImageUrl("beautyAi/affinity.webp")} alt="affinity" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
-                  <Image src={`${commonAssetUrl}point_arrow.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute bottom-[-18%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
                 <div className="header-title pt-4">
                     Insights Gathering
@@ -129,7 +129,8 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[60%] sm:w-full md:w-[60%]">
-                    <Image src={`${baseAssetUrl}insights.svg`} alt="insights" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <Image 
+                    src={getCloudinaryDirectImageUrl("beautyAi/insights.svg")} alt="insights" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -141,7 +142,7 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
-                  <PrimeImage src={`${baseAssetUrl}personaCard.webp`} alt="persona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
+                  <PrimeImage src={getCloudinaryDirectImageUrl("beautyAi/personaCard.webp")} alt="persona" indicatorIcon="pi pi-expand" preview className="rounded-lg expand-image" />
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -153,7 +154,7 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[60%] sm:w-full md:w-[60%]">
-                    <Image src={`${baseAssetUrl}requirements.svg`} alt="requirements" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <Image src={getCloudinaryDirectImageUrl("beautyAi/requirements.svg")} alt="requirements" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </div>
                 </div>
                 <div className="header-title pt-4">
@@ -171,17 +172,18 @@ export default function BeautyAi () {
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full lg:w-[70%] sm:w-full md:w-[70%]">
                     <div className="flex w-full justify-center items-center pb-2">
-                                        <Image src={`${commonAssetUrl}point_arrow3.png`}  alt="arrow"  width={100} height={100}/>
-                                    </div>
-                        <a href="https://miro.com/app/board/uXjVIdsrtU4=/?share_link_id=285701816603" target="_blank" rel="noopener noreferrer">
-                            <Image src={`${baseAssetUrl}ideaBoard.webp`} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
-                        </a>
+                        <Image src={getCloudinaryDirectImageUrl("common/point_arrow3.png")}  alt="arrow"  width={100} height={100}/>
+                    </div>
+                    <a href="https://miro.com/app/board/uXjVIdsrtU4=/?share_link_id=285701816603" target="_blank" rel="noopener noreferrer">
+                        <Image 
+                        src={getCloudinaryDirectImageUrl("beautyAi/ideaBoard.webp")} alt="ideaBoard" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    </a>
                     <div className='description-text w-full justify-center text-center py-8'>
                         We then identified <span className='bolder-text' style={{ color: '#B93278' }}>4 primary pillars</span> to implement in our solution:
                     </div>
                     <div className="flex w-full justify-center items-center">
                         <div className="w-full lg:w-[60%] sm:w-full md:w-[60%]">
-                        <Image src={`${baseAssetUrl}pillars.webp`} alt="pillars" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("beautyAi/pillars.webp")} alt="pillars" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </div>
                     </div>
                   </div>
@@ -195,7 +197,7 @@ export default function BeautyAi () {
                 </div>
                 <div className='flex justify-center w-full py-4' >
                     <video className='w-[70%]' height="auto" controls autoPlay muted loop>
-                        <source src={`${baseAssetUrl}paperPrototype.mp4`} type="video/mp4" />
+                        <source src={getVideoSrc("beautyAi/paperPrototype.mp4")} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -208,7 +210,8 @@ export default function BeautyAi () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-4">
                   <div className="w-full">
-                    <Image src={`${baseAssetUrl}hifi.png`} alt="hifi" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <Image 
+                    src={getCloudinaryDirectImageUrl("beautyAi/hifi.png")} alt="hifi" width={100} height={100} layout="responsive" className="rounded-lg" priority />
                   </div>
                 </div>
                 <div className='description-text flex flex-col w-full justify-center items-center text-center'>
@@ -216,7 +219,7 @@ export default function BeautyAi () {
                         We showcased our Figma Prototype during a Poster Presentation event and managed to clinch the prestigious <span className='bolder-text'>'Most Creative' project award</span> for the most innovative and imaginative prototype.
                     </div>
                     <div className="lg:w-[40%] sm:w-full md:w-[40%]">
-                        <Image src={`${baseAssetUrl}presentation.webp`} alt="presentation" width={100} height={100} layout="responsive" className="rounded-lg" />
+                        <Image src={getCloudinaryDirectImageUrl("beautyAi/presentation.webp")} alt="presentation" width={100} height={100} layout="responsive" className="rounded-lg" priority/>
                     </div>
                 </div>
                 <div className="header-title pt-4">
@@ -226,10 +229,10 @@ export default function BeautyAi () {
                 <div className="flex w-full justify-center items-center pt-4 pb-12 relative">
                   <div className="w-full lg:w-[80%] sm:w-full md:w-[80%]">
                     <a href="https://www.figma.com/design/XguQMbQ4PK1XiE5dcndTkU/Prototype?node-id=1392-2757&t=oDMFZcWci2CiIwSS-1" target="_blank" rel="noopener noreferrer">
-                     <Image src={`${baseAssetUrl}figma.png`} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                     <Image src={getCloudinaryDirectImageUrl("beautyAi/figma.png")} alt="figma" width={100} height={100} layout="responsive" className="rounded-lg" priority />
                     </a>
                   </div>
-                  <Image src={`${commonAssetUrl}point_arrow2.gif`} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
+                  <Image src={getCloudinaryDirectImageUrl("common/point_arrow2.gif")} alt="arrow_pt" width={80} height={80} className="rounded-lg absolute top-[-15%] right-[5%] lg:w-[80px] md:w-[70px] sm:w-[50px] w-[50px]" />
                 </div>
             </div>
             <div className="flex w-[90%] md:w-[80%] lg:w-[70%] sm:w-[90%] flex-col">
@@ -239,10 +242,10 @@ export default function BeautyAi () {
                 <div className='header-underline mt-2 mb-4'></div>
                     <div className="flex w-full flex-row">
                         <a className='mx-1' href="https://www.figma.com/team_invite/redeem/nfmw77SfA9on5GZKD9I3TH" target="_blank" title="Figma">
-                            <Image src={`${commonAssetUrl}figmaLogo.svg`} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={getCloudinaryDirectImageUrl("common/figmaLogo.svg")} alt="Figma" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                         <a className='mx-1' href="https://miro.com/welcome/bHR5dG5ldVBBR3ljSWQ3K04yejdXNXFya1dDbkljT1BONTYyT3dtYnRWNzQ4Tmxhc0J3aHdNWGw0a3JCVGVyK0RUSis0VW96bm4yWnZOc00yYzZxd0FRcEFQdHkxclN3Wk5sZERDT1kyR1pPaHNPWjg0aHJxWXRSQUsxRmhpbExnbHpza3F6REdEcmNpNEFOMmJXWXBBPT0hdjE=?share_link_id=525723574784" target="_blank" title="Miro">
-                            <Image src={`${commonAssetUrl}miroLogo.svg`} alt="Git" width={100} height={100} layout="responsive" className="rounded-lg" />
+                            <Image src={getCloudinaryDirectImageUrl("common/miroLogo.svg")} alt="Miro" width={100} height={100} layout="responsive" className="rounded-lg" />
                         </a>
                     </div>
                 </div>
