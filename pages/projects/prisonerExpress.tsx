@@ -218,7 +218,7 @@ export default function PrisonerExpress () {
                 </div>
                 <div className="flex w-full justify-center items-center pt-6">
                   <div className="w-full lg:w-[60%] sm:w-full md:w-[60%]">
-                    <Image src={`${baseAssetUrl}initialDesign.png`} alt="intialDesign" width={100} height={100} layout="responsive" className="rounded-lg" />
+                    <Image src={getCloudinaryDirectImageUrl("prisonerExpress/initialD.webp")} alt="initialDesign" width={100} height={100} layout="responsive" className="rounded-lg" unoptimized />
                   </div>
                 </div>
                 <div className="flex w-full justify-center items-center pt-6 relative">
