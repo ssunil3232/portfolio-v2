@@ -118,12 +118,13 @@ const HowInfo = () => {
         </div>
         <div className="how-illustration">
           <Image
-            src="/assets/common/how_1.gif"
+            src={getCloudinaryDirectImageUrl("common/how_1.gif")}
             alt="Thinking character"
             width={420}
             height={360}
             className="how-gif"
             priority
+            unoptimized
           />
         </div>
       </section>
@@ -227,7 +228,7 @@ const HowInfo = () => {
         </div>
         <div className="how-illustration">
           <Image
-            src="/assets/common/how_5.gif"
+            src={getCloudinaryDirectImageUrl("common/how_5.gif")}
             alt="Thinking character"
             width={420}
             height={360}

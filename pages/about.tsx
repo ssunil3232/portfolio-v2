@@ -131,11 +131,12 @@ export default function About () {
               across a timeline
             </div>
             <Image
-              src="/assets/common/moving_girl.gif"
+              src={getCloudinaryDirectImageUrl("common/moving_girl")}
               alt="Moving girl walking"
               width={160}
               height={160}
               className="timeline-title-gif"
+              unoptimized
             />
           </div>
           <div className="timeline-scroll h-screen" ref={timelineScrollRef}>
