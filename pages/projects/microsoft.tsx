@@ -104,7 +104,7 @@ export default function Microsoft () {
                </div>
                <div className='description-text w-full pt-2'>
                     The primary research for the course registration system is focused on understanding user behavior and pain points, particularly with Cornell’s Course Registration System. This involves using a <span className='bolder-text'>survey method to collect data for UI/UX enhancements</span>. We aimed to evaluate ease of use, function usability, and identify potential improvements. We collected <span className='bolder-text'>feedback from 28 respondents</span> and the comprehensive data on the survey method and results can be found&nbsp;
-                    <a href={getCloudinaryRawFileUrl("UserResearch.pdf")} target="_blank" title="Primary Research Findings">
+                    <a href={`${baseAssetUrl}UserResearch.pdf`} target="_blank" title="Primary Research Findings">
                     <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>here</span>
                     </a>. The following are user <span className='bolder-text'>pain points</span> highlighted by several respondents:
                </div>
@@ -120,7 +120,7 @@ export default function Microsoft () {
                </div>
                <div className='description-text w-full pt-2'>
                     To grasp the intricacies of the course registration system’s information architecture, we conducted a thorough <span className="bolder-text">secondary analysis of existing university systems</span>. Specifically, we scrutinized the course registration processes at <span className="bolder-text">Cornell University, Carnegie Mellon University, and the National University of Singapore</span>. Future works would include analysis of a broader number of university course registration system to understand different university and student needs. Our thorough usability analysis was meticulously compiled into a comprehensive&nbsp;
-                        <a href={getCloudinaryRawFileUrl("CourseRegistrationFeatureAnalysis.pdf")} target="_blank" title="Secondary Research Case Study">
+                        <a href={`${baseAssetUrl}CourseRegistrationFeatureAnalysis.pdf`} target="_blank" title="Secondary Research Case Study">
                             <span className="bolder-text" style={{ textDecoration: 'underline', color: 'var(--focus-color)' }}>Case Study slide deck</span>
                         </a>.
                 </div>

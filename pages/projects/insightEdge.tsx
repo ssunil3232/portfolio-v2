@@ -260,7 +260,7 @@ export default function InsightEdge () {
                </div>
                <div className='header-underline mt-2 mb-4'></div>
                <div className="flex w-full flex-row">
-                  <a className='mx-1' href={getCloudinaryRawFileUrl("insightEdge/PRD_Document.pdf")} target="_blank" title="PRD Document">
+                  <a className='mx-1' href={`${baseAssetUrl}PRD_Document.pdf`} target="_blank" title="PRD Document">
                      <Image src={getCloudinaryDirectImageUrl("common/prdLogo.svg")} alt="Prd" width={100} height={100} layout="responsive" className="rounded-lg" />
                   </a>
                   <a className='mx-1' href={`${baseAssetUrl}PitchDeck.pdf`} target="_blank" title="Pitch Deck">
